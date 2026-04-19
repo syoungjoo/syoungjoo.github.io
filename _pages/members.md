@@ -81,8 +81,8 @@ nav_order: 1
     border-radius: 6px;
   }
   .member-professor img {
-    width: 170px;
-    height: 170px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
