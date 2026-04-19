@@ -288,4 +288,12 @@ You do **not** have to preview locally — pushing to `main` will rebuild on Git
 - Build failing or something broken after a push → check the GitHub **Actions** tab, post the red log in the lab chat.
 - Adding a new section, navbar item, or changing the layout → ping Prof. Shin first.
 
+---
+
+## 9. Further reference
+
+This site is built on the **al-folio** Jekyll theme. For anything beyond the day-to-day edits covered above — deeper theme customization, new layouts, plugin configuration, advanced features, or upstream updates — refer to the upstream project:
+
+👉 [https://github.com/alshedivat/al-folio](https://github.com/alshedivat/al-folio)
+
 Happy maintaining.
