@@ -16,8 +16,8 @@ nav_order: 1
   }
   .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 1rem;
   }
   .member-card {
     padding: 0;

@@ -8,10 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
-  more_info: >
-    <p><strong>Robot Convergence Bld. Office 212</strong></p>
-    <p>145 Anam-ro, Seongbuk-gu</p>
-    <p>Seoul 02841, Korea</p>
+  more_info:
 
 selected_papers: false
 social: false
@@ -37,11 +34,13 @@ Our research has appeared in top-tier venues including *IEEE S&P, ACM CCS, USENI
 
 **We are always looking for motivated students** interested in systems security. If you would like to join, please contact Prof. Shin by email.
 
-<div class="site-logos" style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; margin: 2.5rem 0 1rem; padding-top: 2rem; border-top: 1px solid var(--global-divider-color);">
-  <a href="https://css.korea.ac.kr" target="_blank" rel="noopener">
+<div class="site-footer-block" style="margin: 3rem 0 1rem; padding-top: 2rem; border-top: 1px solid var(--global-divider-color); text-align: center;">
+  <div class="site-logos" style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 1.2rem;">
     <img src="{{ '/assets/img/site/lab_logo.png' | relative_url }}" alt="Computer Systems Security Lab" style="max-height: 60px; width: auto;">
-  </a>
-  <a href="https://korea.ac.kr" target="_blank" rel="noopener">
     <img src="{{ '/assets/img/site/ku_logo.png' | relative_url }}" alt="Korea University" style="max-height: 60px; width: auto;">
-  </a>
+  </div>
+  <div class="site-address" style="color: var(--global-text-color-light); font-size: 0.9rem; line-height: 1.6;">
+    <strong>Robot Convergence Bld. Office 212</strong><br>
+    145 Anam-ro, Seongbuk-gu, Seoul 02841, Korea
+  </div>
 </div>
