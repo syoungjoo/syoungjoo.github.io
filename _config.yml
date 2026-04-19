@@ -3,9 +3,6 @@
 # -----------------------------------------------------------------------------
 
 title: Computer Systems Security Lab
-#first_name: Computer
-#middle_name: Systems
-#last_name: Security Lab
 contact_note: >
   Robot Convergence Bld. Office 212, 145 Anam-ro, Seongbuk-gu, Seoul 02841, Korea
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -18,7 +15,8 @@ keywords: computer systems security, side-channel attack, cloud security, Korea 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: site/lab_mark.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://syoungjoo.github.io
+$url: https://syoungjoo.github.io
+url: https://css.korea.ac.kr
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
