@@ -16,7 +16,7 @@ nav_order: 1
   }
   .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(178px, 1fr));
     gap: 1rem;
   }
   .member-card {
@@ -81,8 +81,8 @@ nav_order: 1
     border-radius: 6px;
   }
   .member-professor img {
-    width: 120px;
-    height: 120px;
+    width: 138px;
+    height: 138px;
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
