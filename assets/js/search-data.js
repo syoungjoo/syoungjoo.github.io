@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-deadlines",
           title: "deadlines",
-          description: "",
+          description: "Upcoming submission deadlines for security, privacy, and cryptography venues.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/deadlines/";
