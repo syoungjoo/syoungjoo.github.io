@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-members",
           title: "members",
-          description: "Members of the Computer Systems Security Lab at Korea University.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/members/";
