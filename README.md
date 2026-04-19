@@ -2,12 +2,13 @@
 
 This is the source of the [Computer Systems Security Lab](https://syoungjoo.github.io) website, built on [Jekyll](https://jekyllrb.com/) with the [al-folio](https://github.com/alshedivat/al-folio) theme and served from GitHub Pages.
 
-Most day-to-day edits are just changes to a few text files — you do **not** need to touch HTML or CSS. This guide covers the two tasks you will do most often:
+Most day-to-day edits are just changes to a few text files — you do **not** need to touch HTML or CSS. This guide covers the three tasks you will do most often:
 
 1. **Updating members** (`_data/members.yml`)
 2. **Adding publications** (`_bibliography/papers.bib`)
+3. **Adding gallery photos** (`assets/img/gallery/` + optional `_data/gallery/`)
 
-Plus a short section on news items and local previewing.
+Plus shorter sections on news, repositories, and local previewing.
 
 ---
 
@@ -122,26 +123,92 @@ The file is grouped by year with `%` comment banners. When adding a new paper, p
 ### 2.2 Optional fields
 
 ```bibtex
-  pdf       = {your_paper.pdf},              % file in /assets/pdf/
-  html      = {https://arxiv.org/abs/...},   % external link (arxiv / publisher)
-  code      = {https://github.com/koreacsl/YourRepo},
-  slides    = {talk.pdf},                    % file in /assets/pdf/
-  award     = {Best Paper Award},
-  note      = {to appear},
+  pdf             = {your_paper.pdf},              % file in /assets/pdf/
+  html            = {https://arxiv.org/abs/...},   % external link (arxiv / publisher)
+  code            = {https://github.com/koreacsl/YourRepo},
+  slides          = {talk.pdf},                    % file in /assets/pdf/
+  award           = {Best Paper Award},
+  additional_info = {[BK21 IF=4]},                 % appears inline with the venue label
+  note            = {to appear},
 ```
 
-Each of these adds a small button next to the entry on the publications page.
+Each of these adds a small button (or inline tag, for `additional_info`) next to the entry on the publications page.
 
-### 2.3 Typical flow for a new paper
+### 2.3 Listing authors
+
+**All authors must be listed in full** — never use `and others`. The site is configured
+(`max_author_limit:` empty in `_config.yml`) to always display every author, and a
+truncated list would silently hide co-authors.
+
+Use the `Last, First and Last, First and …` format:
+
+```bibtex
+author = {Kim, Taehun and Jang, Hyerean and Shin, Youngjoo},
+```
+
+### 2.4 Typical flow for a new paper
 
 1. Drop the PDF (and any slides) into `assets/pdf/`.
 2. Add the `@inproceedings{...}` entry at the top of the correct year block in `papers.bib`.
-3. If it's a flagship result, add `selected = {true}`.
-4. Commit and push.
+3. List every co-author (see 2.3).
+4. Add `code = {…}` if the artifact repo is public on [github.com/koreacsl](https://github.com/koreacsl).
+5. Add `additional_info = {[BK21 IF=N]}` if the paper has a BK21 evaluation score.
+6. If it's a flagship result, add `selected = {true}`.
+7. Commit and push.
 
 ---
 
-## 3. News items (home page announcements)
+## 3. Adding gallery photos
+
+The gallery page (`/gallery/`) is **folder-based** — in most cases you just drop
+photos into a folder and the site auto-discovers them. No YAML editing required.
+
+### 3.1 The easy path (no metadata)
+
+1. Create a folder under `assets/img/gallery/` with a slug.
+   **Prefix with `YYYY-MM-DD-` so events sort chronologically:**
+   ```
+   assets/img/gallery/2026-03-15-kickoff/
+   ```
+2. Drop your photos in. `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif` are all auto-detected.
+3. Commit and push. Done.
+
+The folder name becomes the event title (hyphens → spaces). Events are sorted
+newest-first. Photos within an event are sorted alphabetically by filename —
+name them `01-group.jpg`, `02-stage.jpg`, … if you want a specific order.
+
+### 3.2 With metadata (title / date / place)
+
+For a prettier title or to show a venue, add an optional YAML file:
+
+```
+_data/gallery/<same-slug>.yml
+```
+
+Example — `_data/gallery/2026-03-15-kickoff.yml`:
+
+```yaml
+title: Spring Semester Kickoff
+date:  2026-03-15
+place: Anam Campus, Korea University
+# cover: 01-group.jpg   # optional; defaults to first photo alphabetically
+```
+
+Every field is optional. Missing fields fall back to the auto-derived values
+from the folder name.
+
+### 3.3 Photo tips
+
+- Downsize large files (> 3 MB) before committing. Roughly 1600 px on the long
+  edge is plenty. Heavy pages load slowly and eat GitHub Pages bandwidth.
+- Tiles are displayed as a uniform square grid, so center-weighted photos look best.
+- Clicking a tile opens a full-screen lightbox (←/→ to navigate, Esc to close).
+
+See also `_data/gallery/README.md` for a shorter reference.
+
+---
+
+## 4. News items (home page announcements)
 
 The scrollable list on the home page is built from `_news/`.
 Each item is a separate Markdown file:
@@ -169,7 +236,7 @@ Our paper *Paper Title* has been accepted to **USENIX Security 2026**! 🎉
 
 ---
 
-## 4. Repositories page
+## 5. Repositories page
 
 The repositories page (`/repositories/`) is driven by:
 
@@ -189,7 +256,7 @@ Cards are rendered via `github-readme-stats.vercel.app`, so the repo must be **p
 
 ---
 
-## 5. Previewing locally (optional)
+## 6. Previewing locally (optional)
 
 You can build the site without pushing if you want to check something first. Requirements: Ruby 3.x + Bundler.
 
@@ -206,7 +273,7 @@ You do **not** have to preview locally — pushing to `main` will rebuild on Git
 
 ---
 
-## 6. Common gotchas
+## 7. Common gotchas
 
 - **YAML is indentation-sensitive.** Use 2 spaces per level and never use tabs. If the site stops building after a members edit, 99% of the time this is why.
 - **Strings with a colon, `#`, or leading/trailing spaces must be quoted.** Example: `cohort: "45th"`. When in doubt, wrap in double quotes.
@@ -216,7 +283,7 @@ You do **not** have to preview locally — pushing to `main` will rebuild on Git
 
 ---
 
-## 7. Who to ask
+## 8. Who to ask
 
 - Build failing or something broken after a push → check the GitHub **Actions** tab, post the red log in the lab chat.
 - Adding a new section, navbar item, or changing the layout → ping Prof. Shin first.
