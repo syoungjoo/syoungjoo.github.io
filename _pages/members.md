@@ -31,7 +31,7 @@ nav_order: 1
   .member-card .photo {
     width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    object-fit: contain;
     background: var(--global-divider-color);
     transform: scale(0.9);
     transform-origin: center;
@@ -85,7 +85,7 @@ nav_order: 1
   .member-professor img {
     width: 138px;
     height: 138px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 6px;
     flex-shrink: 0;
     transform: scale(0.9);
