@@ -6,9 +6,10 @@ subtitle: <strong>Computer Systems Security Lab</strong> · School of Cybersecur
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: site/lab_logo.png
   image_circular: false
   more_info: >
+    <p><img src="/assets/img/site/ku_logo.png" alt="Korea University" style="max-width: 180px; margin-bottom: 0.8rem;"></p>
     <p><strong>Robot Convergence Bld. Office 212</strong></p>
     <p>145 Anam-ro, Seongbuk-gu</p>
     <p>Seoul 02841, Korea</p>
