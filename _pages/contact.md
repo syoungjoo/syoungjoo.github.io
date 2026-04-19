@@ -91,7 +91,7 @@ nav_order: 7
     <span class="ico"><i class="fa-solid fa-envelope"></i></span>
     <span class="label">Email</span>
     <span class="val">
-      <a href="mailto:syoungjoo@korea.ac.kr">syoungjoo [at] korea.ac.kr</a>
+      syoungjoo [at] korea.ac.kr
       <span class="sub">General inquiries &amp; prospective students — contact Prof. Youngjoo Shin</span>
     </span>
   </div>
