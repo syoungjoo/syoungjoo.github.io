@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: research
-description: Research areas of the Computer Systems Security Lab.
+#description: Research areas of the Computer Systems Security Lab.
 nav: true
 nav_order: 2
 ---
