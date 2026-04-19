@@ -1,35 +1,38 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <strong>Computer Systems Security Lab</strong> · School of Cybersecurity, Korea University
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p><strong>Robot Convergence Bld. Office 212</strong></p>
+    <p>145 Anam-ro, Seongbuk-gu</p>
+    <p>Seoul 02841, Korea</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit: 8
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Hello world
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+The **Computer Systems Security Lab (CSS Lab)** at [Korea University](https://korea.ac.kr) is led by Prof. [Youngjoo Shin](mailto:syoungjoo@korea.ac.kr) and based in the [School of Cybersecurity](https://cybersecurity.korea.ac.kr).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+We investigate security and privacy issues that arise across the computer systems stack — from microarchitecture up to the cloud. Our recent work spans:
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+- **Microarchitectural side-channel attacks** on CPUs, GPUs, and trusted execution environments (Intel SGX / TDX, Apple Silicon).
+- **System security**: OS kernel, system call filtering, fuzzing, and binary analysis.
+- **Cloud and network security**: container / Kubernetes isolation, TLS, and network function virtualization.
+
+Our research has appeared in top-tier venues including *IEEE S&P, ACM CCS, USENIX Security, NDSS, INFOCOM, ESORICS, ASIACCS, ACSAC,* and *ACM Computing Surveys*, as well as industry venues such as *Black Hat Europe*.
+
+**We are always looking for motivated students** interested in systems security. If you would like to join, please contact Prof. Shin by email.

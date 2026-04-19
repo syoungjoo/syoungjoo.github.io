@@ -1,0 +1,87 @@
+# Lab members, grouped by category.
+# Categories are rendered in the order they appear in _pages/members.md.
+
+professor:
+  - name: Youngjoo Shin
+    role: Professor
+    email: syoungjoo
+    image: members/syoungjoo.jpg
+    website: https://sites.google.com/view/youngjoo-shin/
+    interests: System Security, Microarchitectural Side-channel Attacks, Cloud Security, Network Security
+
+phd:
+  - name: Taehun Kim
+    cohort: "45th"
+    email: taehunk
+    interests: System Security, Microarchitectural Side-channel Attacks, Network Security, Binary Analysis
+  - name: Chanhee Park
+    cohort: "45th"
+    email: pch2180
+    interests: System Security, Binary Analysis, Network Security
+  - name: Jihye Lee
+    cohort: "46th"
+    email: jh_kor
+    interests: System Security, Binary Analysis
+  - name: Dongjoo Kim
+    cohort: "47th"
+    email: d05004
+    interests: System Security, Binary Analysis, Fuzzing
+
+ms:
+  - name: Junseok Ko
+    cohort: "47th"
+    email: junseokk
+    interests: System Security, Microarchitectural Side-channel Attacks
+  - name: Serin Kim
+    cohort: "49th"
+    email: se1ynn22
+    interests: System Security, Side-channel Attacks
+  - name: Seonghun Park
+    cohort: "49th"
+    email: qkrtjdgns147
+    interests: System Security, Binary Analysis, Network Security, AI Security
+  - name: Jeongsu Kim
+    cohort: "50th"
+    email: integer0132
+    interests: System Security, Microarchitectural Side-channel Attacks
+  - name: Geonung Kim
+    cohort: "50th"
+    email: kimgu
+    interests: Binary Analysis, Embedded Systems Security
+  - name: Seungjun Oh
+    cohort: "51st"
+    email: joon0228
+    interests: Side-channel Attacks, Binary Analysis
+  - name: Junho Lee
+    cohort: "51st"
+    email: sol0211
+    interests: System Security, Binary Analysis, Cloud Security
+  - name: Donghyun Seo
+    cohort: "51st"
+    email: dhseo
+    interests: Binary Analysis, Network Security
+  - name: Minchang Kim
+    cohort: "51st"
+    email: mckim2762
+    interests: Network Security, Cloud Security, Binary Analysis
+
+undergrad:
+  - name: Hojun Lee
+    email: leehojune
+    interests: System Security, Binary Analysis, Fuzzing
+  - name: Jihoon Kwon
+    email: jimmyxyz
+    interests: Side-channel Attacks, System Security, Fuzzing
+  - name: Jihu Cha
+    email: stark0809
+    interests: Embedded Systems Security, Side-channel Attacks, IoMT Security
+
+staff:
+  - name: Mihyun Park
+    role: Administrative Staff
+
+alumni:
+  - note: >
+      Our graduates are working at Samsung Electronics, Samsung SDS,
+      Ministry of National Defense, Hyundai Motor Company, and other leading
+      institutions.
