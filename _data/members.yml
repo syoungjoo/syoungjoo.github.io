@@ -1,12 +1,18 @@
 # Lab members, grouped by category.
 
+# Each member may have a `links:` block. Supported keys (all optional):
+#   homepage, github, scholar, linkedin, twitter, orcid, dblp
+# Leave a key out (or leave the value blank) to hide that icon.
+
 professor:
   - name: Youngjoo Shin
     role: Professor
     email: syoungjoo
     image: members/syoungjoo.jpg
-    website: https://sites.google.com/view/youngjoo-shin/
     interests: System Security, Microarchitectural Side-channel Attacks, Cloud Security, Network Security
+    links:
+      homepage: https://sites.google.com/view/youngjoo-shin/
+      scholar: https://scholar.google.com/citations?user=qc6CJjYAAAAJ
 
 phd:
   - name: Taehun Kim
@@ -14,21 +20,25 @@ phd:
     email: taehunk
     image: members/taehunk.jpg
     interests: System Security, Microarchitectural Side-channel Attacks, Network Security, Binary Analysis
+    links: {}
   - name: Chanhee Park
     cohort: "45th"
     email: pch2180
     image: members/pch2180.jpg
     interests: System Security, Binary Analysis, Network Security
+    links: {}
   - name: Jihye Lee
     cohort: "46th"
     email: jh_kor
     image: members/jh_kor.jpg
     interests: System Security, Binary Analysis
+    links: {}
   - name: Dongjoo Kim
     cohort: "47th"
     email: d05004
     image: members/d05004.jpg
     interests: System Security, Binary Analysis, Fuzzing
+    links: {}
 
 ms:
   - name: Serin Kim
@@ -36,60 +46,72 @@ ms:
     email: se1ynn22
     image: members/se1ynn22.jpg
     interests: System Security, Side-channel Attacks
+    links: {}
   - name: Junseok Ko
     cohort: "47th"
     email: junseokk
     image: members/junseokk.jpg
     interests: System Security, Microarchitectural Side-channel Attacks
+    links: {}
   - name: Seonghun Park
     cohort: "49th"
     email: qkrtjdgns147
     image: members/qkrtjdgns147.jpg
     interests: System Security, Binary Analysis, Network Security, AI Security
+    links: {}
   - name: Jeongsu Kim
     cohort: "50th"
     email: integer0132
     image: members/integer0132.jpg
     interests: System Security, Microarchitectural Side-channel Attacks
+    links: {}
   - name: Geonung Kim
     cohort: "50th"
     email: kimgu
     image: members/kimgu.jpg
     interests: Binary Analysis, Embedded Systems Security
+    links: {}
   - name: Seungjun Oh
     cohort: "51st"
     email: joon0228
     image: members/joon0228.jpg
     interests: Side-channel Attacks, Binary Analysis
+    links: {}
   - name: Junho Lee
     cohort: "51st"
     email: sol0211
     image: members/sol0211.jpg
     interests: System Security, Binary Analysis, Cloud Security
+    links: {}
   - name: Donghyun Seo
     cohort: "51st"
     email: dhseo
     image: members/dhseo.jpg
     interests: Binary Analysis, Network Security
+    links: {}
   - name: Minchang Kim
     cohort: "51st"
     email: mckim2762
     image: members/mckim2762.jpg
     interests: Network Security, Cloud Security, Binary Analysis
+    links: {}
 
 undergrad:
   - name: Hojun Lee
     email: leehojune
     image: members/leehojune.png
     interests: System Security, Binary Analysis, Fuzzing
+    links: {}
   - name: Jihoon Kwon
     email: jimmyxyz
     image: members/jimmyxyz.jpg
     interests: Side-channel Attacks, System Security, Fuzzing
+    links: {}
   - name: Jihu Cha
     email: stark0809
     image: members/stark0809.jpg
     interests: Embedded Systems Security, Side-channel Attacks, IoMT Security
+    links: {}
 
 staff:
   - name: Mihyun Park

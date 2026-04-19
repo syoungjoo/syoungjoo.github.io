@@ -56,6 +56,22 @@ nav_order: 1
     color: var(--global-text-color);
     line-height: 1.45;
   }
+  .member-links {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .member-links a {
+    color: var(--global-text-color-light);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .member-links a:hover {
+    color: var(--global-theme-color, #b509ac);
+  }
+  .member-professor .member-links { margin-top: 0.6rem; font-size: 1.1rem; }
   .member-professor {
     display: flex;
     gap: 1.5rem;
@@ -99,11 +115,12 @@ nav_order: 1
       {% endif %}
       <div>
         <div style="font-weight: 600; font-size: 1.3rem; margin-bottom: 0.2rem;">
-          {% if p.website %}<a href="{{ p.website }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
+          {% if p.links.homepage %}<a href="{{ p.links.homepage }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
         </div>
         <div style="color: var(--global-text-color-light); margin-bottom: 0.5rem;">{{ p.role }}</div>
         {% if p.email %}<div style="font-family: var(--global-code-font-family, monospace); font-size: 0.9rem; margin-bottom: 0.5rem;">{{ p.email }} [at] korea.ac.kr</div>{% endif %}
         {% if p.interests %}<div><strong>Research:</strong> {{ p.interests }}</div>{% endif %}
+        {% include member_links.liquid links=p.links email=p.email %}
       </div>
     </div>
   {% endfor %}
@@ -118,10 +135,13 @@ nav_order: 1
       <div class="member-card">
         {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
         <div class="body">
-          <div class="name">{{ s.name }}</div>
+          <div class="name">
+            {% if s.links.homepage %}<a href="{{ s.links.homepage }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+          </div>
           {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
           {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+          {% include member_links.liquid links=s.links email=s.email %}
         </div>
       </div>
     {% endfor %}
@@ -138,10 +158,13 @@ nav_order: 1
       <div class="member-card">
         {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
         <div class="body">
-          <div class="name">{{ s.name }}</div>
+          <div class="name">
+            {% if s.links.homepage %}<a href="{{ s.links.homepage }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+          </div>
           {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
           {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+          {% include member_links.liquid links=s.links email=s.email %}
         </div>
       </div>
     {% endfor %}
@@ -158,9 +181,12 @@ nav_order: 1
       <div class="member-card">
         {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
         <div class="body">
-          <div class="name">{{ s.name }}</div>
+          <div class="name">
+            {% if s.links.homepage %}<a href="{{ s.links.homepage }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+          </div>
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
           {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+          {% include member_links.liquid links=s.links email=s.email %}
         </div>
       </div>
     {% endfor %}

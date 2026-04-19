@@ -1,0 +1,30 @@
+{%- assign L = include.links -%}
+{%- assign E = include.email -%}
+{%- if L or E -%}
+<div class="member-links">
+  {%- if E and E != '' -%}
+    <a href="mailto:{{ E }}@korea.ac.kr" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  {%- endif -%}
+  {%- if L.homepage and L.homepage != '' -%}
+    <a href="{{ L.homepage }}" title="Homepage" aria-label="Homepage" target="_blank" rel="noopener"><i class="fa-solid fa-house"></i></a>
+  {%- endif -%}
+  {%- if L.scholar and L.scholar != '' -%}
+    <a href="{{ L.scholar }}" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+  {%- endif -%}
+  {%- if L.github and L.github != '' -%}
+    <a href="{{ L.github }}" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+  {%- endif -%}
+  {%- if L.linkedin and L.linkedin != '' -%}
+    <a href="{{ L.linkedin }}" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+  {%- endif -%}
+  {%- if L.twitter and L.twitter != '' -%}
+    <a href="{{ L.twitter }}" title="X / Twitter" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+  {%- endif -%}
+  {%- if L.orcid and L.orcid != '' -%}
+    <a href="{{ L.orcid }}" title="ORCID" aria-label="ORCID" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i></a>
+  {%- endif -%}
+  {%- if L.dblp and L.dblp != '' -%}
+    <a href="{{ L.dblp }}" title="DBLP" aria-label="DBLP" target="_blank" rel="noopener"><i class="ai ai-dblp"></i></a>
+  {%- endif -%}
+</div>
+{%- endif -%}
