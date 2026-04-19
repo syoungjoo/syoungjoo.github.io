@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-gallery",
           title: "gallery",
-          description: "Lab life — retreats, conferences, and moments worth remembering.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/gallery/";
