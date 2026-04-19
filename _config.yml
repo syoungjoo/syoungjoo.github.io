@@ -3,9 +3,9 @@
 # -----------------------------------------------------------------------------
 
 title: Computer Systems Security Lab
-first_name: Computer
-middle_name: Systems
-last_name: Security Lab
+#first_name: Computer
+#middle_name: Systems
+#last_name: Security Lab
 contact_note: >
   Robot Convergence Bld. Office 212, 145 Anam-ro, Seongbuk-gu, Seoul 02841, Korea
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
