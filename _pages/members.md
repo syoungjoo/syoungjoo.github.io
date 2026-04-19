@@ -33,6 +33,8 @@ nav_order: 1
     aspect-ratio: 1 / 1;
     object-fit: cover;
     background: var(--global-divider-color);
+    transform: scale(0.9);
+    transform-origin: center;
   }
   .member-card .body { padding: 0.8rem 1rem 1rem; }
   .member-card .name {
@@ -86,6 +88,8 @@ nav_order: 1
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
+    transform: scale(0.9);
+    transform-origin: center;
   }
   .alumni-table {
     width: 100%;
