@@ -51,6 +51,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/gallery/";
           },
+        },{id: "nav-contact",
+          title: "contact",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/contact/";
+          },
         },{id: "news-our-paper-devious-device-driven-side-channel-attacks-on-the-iommu-has-been-accepted-to-ieee-s-amp-amp-p-2023",
           title: 'Our paper DevIOus: Device-Driven Side-Channel Attacks on the IOMMU has been accepted to...',
           description: "",
