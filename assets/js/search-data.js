@@ -18,21 +18,21 @@ ninja.data = [{
           },
         },{id: "nav-research",
           title: "research",
-          description: "Research areas of the Computer Systems Security Lab.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
           },
         },{id: "nav-publications",
           title: "publications",
-          description: "Publications by the Computer Systems Security Lab, in reverse chronological order.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Open-source code and artifacts from the Computer Systems Security Lab.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
