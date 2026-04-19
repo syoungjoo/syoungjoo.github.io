@@ -17,7 +17,7 @@ nav_order: 1
   .member-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1rem;
+    gap: 1.8rem 1.6rem;
   }
   .member-card {
     padding: 0;
