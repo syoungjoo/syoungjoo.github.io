@@ -2,7 +2,6 @@
 layout: page
 permalink: /gallery/
 title: gallery
-#description: Lab life — retreats, conferences, and moments worth remembering.
 nav: true
 nav_order: 6
 ---
@@ -50,6 +49,19 @@ nav_order: 6
     transition: transform 0.25s ease;
   }
   .gal-tile:hover img { transform: scale(1.04); }
+
+  .gal-empty {
+    padding: 2rem;
+    text-align: center;
+    color: var(--global-text-color-light);
+    border: 1px dashed var(--global-divider-color);
+    border-radius: 6px;
+  }
+  .gal-empty code {
+    background: var(--global-divider-color);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
 
   /* Lightbox */
   .gal-lightbox {
@@ -105,27 +117,98 @@ nav_order: 6
   }
 </style>
 
-{% assign events = site.data.gallery %}
-{% for event in events %}
+{%- comment -%}
+  Auto-discover events by scanning assets/img/gallery/<slug>/*.{jpg,png,...}
+  Optional metadata: _data/gallery/<slug>.yml  (title / date / place / cover)
+{%- endcomment -%}
+
+{%- assign image_exts = "jpg,jpeg,png,webp,gif,JPG,JPEG,PNG" | split: "," -%}
+{%- assign gallery_files = site.static_files | where_exp: "f", "f.path contains '/assets/img/gallery/'" -%}
+
+{%- comment -%} Build a comma-delimited blob of unique slugs {%- endcomment -%}
+{%- assign slug_blob = "" -%}
+{%- for f in gallery_files -%}
+  {%- assign parts = f.path | split: '/' -%}
+  {%- if parts.size >= 6 -%}
+    {%- assign fname = parts[5] -%}
+    {%- assign ext = fname | split: '.' | last -%}
+    {%- if image_exts contains ext -%}
+      {%- assign slug_blob = slug_blob | append: parts[4] | append: "," -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign slugs_raw = slug_blob | split: "," | uniq -%}
+
+{%- comment -%} Build events list with a sortable key (date || slug), then sort desc {%- endcomment -%}
+{%- assign ev_lines = "" -%}
+{%- for slug in slugs_raw -%}
+  {%- if slug == "" -%}{%- continue -%}{%- endif -%}
+  {%- assign meta = site.data.gallery[slug] -%}
+  {%- if meta.date -%}
+    {%- assign sort_key = meta.date -%}
+  {%- else -%}
+    {%- assign sort_key = slug -%}
+  {%- endif -%}
+  {%- assign ev_lines = ev_lines | append: sort_key | append: "::" | append: slug | append: "|" -%}
+{%- endfor -%}
+{%- assign events_sorted = ev_lines | split: "|" | sort | reverse -%}
+
+{%- assign rendered = 0 -%}
+{%- for ev in events_sorted -%}
+  {%- if ev == "" -%}{%- continue -%}{%- endif -%}
+  {%- assign slug = ev | split: "::" | last -%}
+  {%- assign meta = site.data.gallery[slug] -%}
+
+  {%- comment -%} Defaults derived from slug if no meta {%- endcomment -%}
+  {%- assign default_title = slug | replace: "-", " " | replace: "_", " " -%}
+  {%- assign ev_title = meta.title | default: default_title -%}
+  {%- assign ev_date = meta.date -%}
+  {%- assign ev_place = meta.place -%}
+
+  {%- comment -%} Collect photos for this slug, cover first {%- endcomment -%}
+  {%- assign dir_path = "/assets/img/gallery/" | append: slug | append: "/" -%}
+  {%- assign event_photos = gallery_files | where_exp: "f", "f.path contains dir_path" | sort: "path" -%}
+
+  {%- assign valid_photos = "" -%}
+  {%- for p in event_photos -%}
+    {%- assign pname = p.path | split: '/' | last -%}
+    {%- assign pext = pname | split: '.' | last -%}
+    {%- if image_exts contains pext -%}
+      {%- assign valid_photos = valid_photos | append: p.path | append: "|" -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign photo_paths = valid_photos | split: "|" -%}
+  {%- if photo_paths.size == 0 -%}{%- continue -%}{%- endif -%}
+
+  {%- assign rendered = rendered | plus: 1 -%}
 <div class="gal-event">
   <div class="gal-head">
-    <h3>{{ event.title }}</h3>
+    <h3>{{ ev_title | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
     <div class="gal-meta">
-      <span class="date">{{ event.date }}</span>
-      {% if event.place %}<span class="dot">·</span>{{ event.place }}{% endif %}
+      {% if ev_date %}<span class="date">{{ ev_date }}</span>{% endif %}
+      {% if ev_date and ev_place %}<span class="dot">·</span>{% endif %}
+      {% if ev_place %}{{ ev_place }}{% endif %}
     </div>
   </div>
-  <div class="gal-grid" data-event="{{ event.slug }}">
-    {% for photo in event.photos %}
-      {% assign src = photo | prepend: '/assets/img/gallery/' | prepend: event.slug | prepend: '/assets/img/gallery/' %}
-      {% capture path %}/assets/img/gallery/{{ event.slug }}/{{ photo }}{% endcapture %}
+  <div class="gal-grid">
+    {%- for path in photo_paths -%}
+      {%- if path == "" -%}{%- continue -%}{%- endif -%}
+      {%- assign fname = path | split: '/' | last -%}
+      {%- if meta.cover and fname == meta.cover -%}{%- assign is_cover = true -%}{%- endif -%}
       <div class="gal-tile" data-full="{{ path | relative_url }}">
-        <img src="{{ path | relative_url }}" alt="{{ event.title }}" loading="lazy">
+        <img src="{{ path | relative_url }}" alt="{{ ev_title }}" loading="lazy">
       </div>
-    {% endfor %}
+    {%- endfor -%}
   </div>
 </div>
-{% endfor %}
+{%- endfor -%}
+
+{% if rendered == 0 %}
+<div class="gal-empty">
+  No photos yet. Drop images into <code>assets/img/gallery/&lt;event-slug&gt;/</code> and they'll appear here automatically.
+  See <code>_data/gallery/README.md</code> for optional per-event metadata.
+</div>
+{% endif %}
 
 <div class="gal-lightbox" id="gal-lightbox">
   <button class="close" aria-label="Close">×</button>
