@@ -133,7 +133,7 @@ latest_posts:
     <p>
       The <strong>Computer Systems Security Lab (CSS Lab)</strong> at
       <a href="https://korea.ac.kr">Korea University</a> is led by
-      Prof. <a href="mailto:syoungjoo@korea.ac.kr">Youngjoo Shin</a> and based in the
+      Prof. <a href="https://sites.google.com/view/youngjoo-shin/" target="_blank" rel="noopener">Youngjoo Shin</a> and based in the
       <a href="https://security.korea.ac.kr">School of Cybersecurity</a>.
       We investigate how modern systems — from CPUs and GPUs to kernels, containers,
       and cloud fabrics — leak information or fail under adversarial conditions, and
