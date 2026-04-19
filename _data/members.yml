@@ -20,25 +20,29 @@ phd:
     email: taehunk
     image: members/taehunk.jpg
     interests: System Security, Microarchitectural Side-channel Attacks, Network Security, Binary Analysis
-    links: {}
+    links:
+      homepage: https://sites.google.com/view/ktaehun/
   - name: Chanhee Park
     cohort: "45th"
     email: pch2180
     image: members/pch2180.jpg
     interests: System Security, Binary Analysis, Network Security
-    links: {}
+    links:
+      homepage: https://ch4rli3kop.notion.site/Who-am-I-996551d8de634f8993b7954643afeda8
   - name: Jihye Lee
     cohort: "46th"
     email: jh_kor
     image: members/jh_kor.jpg
     interests: System Security, Binary Analysis
-    links: {}
+    links:
+      homepage: https://thirsty-doolgibi.notion.site/LEE-JIHYE-54136dc166c74ba18b501fa2f3d2353a
   - name: Dongjoo Kim
     cohort: "47th"
     email: d05004
     image: members/d05004.jpg
     interests: System Security, Binary Analysis, Fuzzing
-    links: {}
+    links:
+      homepage: https://d05004.notion.site/CV-922d7120fd8b46049af096fcb5ac6b57
 
 ms:
   - name: Serin Kim
@@ -46,72 +50,84 @@ ms:
     email: se1ynn22
     image: members/se1ynn22.jpg
     interests: System Security, Side-channel Attacks
-    links: {}
+    links:
+      homepage: https://holly-bush-0cc.notion.site/Se-Lynn-Kim-843ff95c9df941fe9cf12581bd426797
   - name: Junseok Ko
     cohort: "47th"
     email: junseokk
     image: members/junseokk.jpg
     interests: System Security, Microarchitectural Side-channel Attacks
-    links: {}
+    links:
+      homepage: https://www.notion.so/CV-of-Jun-Seok-Ko-fea7fff4592d4a999b9f0ee33edc637e
   - name: Seonghun Park
     cohort: "49th"
     email: qkrtjdgns147
     image: members/qkrtjdgns147.jpg
     interests: System Security, Binary Analysis, Network Security, AI Security
-    links: {}
+    links:
+      homepage: https://www.notion.so/CV-3041246c0cf2802ca179cdeffc8c0c19
   - name: Jeongsu Kim
     cohort: "50th"
     email: integer0132
     image: members/integer0132.jpg
     interests: System Security, Microarchitectural Side-channel Attacks
-    links: {}
+    links:
+      homepage: https://abstracted-piccolo-dba.notion.site/Jeongsu-Kim-2104f1b2303980e9bfcfd1a715a1e8eb
   - name: Geonung Kim
     cohort: "50th"
     email: kimgu
     image: members/kimgu.jpg
     interests: Binary Analysis, Embedded Systems Security
-    links: {}
+    links:
+      homepage: https://exuberant-verdict-759.notion.site/GEONUNG-KIM-a59902c29cc3449a951e76e924c36335
   - name: Seungjun Oh
     cohort: "51st"
     email: joon0228
     image: members/joon0228.jpg
     interests: Side-channel Attacks, Binary Analysis
-    links: {}
+    links:
+      homepage: https://www.notion.so/Seung-Jun-Oh-2d590061274a809793d0c9bd0deb2c4a
   - name: Junho Lee
     cohort: "51st"
     email: sol0211
     image: members/sol0211.jpg
     interests: System Security, Binary Analysis, Cloud Security
-    links: {}
+    links:
+      homepage: https://cloud-tea.notion.site/Junho-Lee-3063ddbf1e5280259fbaee6bbe62b909
   - name: Donghyun Seo
     cohort: "51st"
     email: dhseo
     image: members/dhseo.jpg
     interests: Binary Analysis, Network Security
-    links: {}
+    links:
+      homepage: https://www.notion.so/Dong-Hyun-Seo-1e8e13dc98338018b2a6fc78d8f207cf
   - name: Minchang Kim
     cohort: "51st"
     email: mckim2762
     image: members/mckim2762.jpg
     interests: Network Security, Cloud Security, Binary Analysis
-    links: {}
+    links:
+      homepage: https://www.notion.so/CV-de3770dca0d28245a3be81086d4562a4
 
 undergrad:
   - name: Hojun Lee
     email: leehojune
     image: members/leehojune.png
     interests: System Security, Binary Analysis, Fuzzing
-    links: {}
+    links:
+      homepage: https://www.notion.so/Hojun-Lee-2a330016da9780888c4fe1bf63f7d0bb
   - name: Jihoon Kwon
     email: jimmyxyz
     image: members/jimmyxyz.jpg
     interests: Side-channel Attacks, System Security, Fuzzing
-    links: {}
+    links:
+      homepage: https://cliff-noise-9bf.notion.site/Jihoon-Kwon-305fe5564fb48005b7fef298aee0977e
   - name: Jihu Cha
     email: stark0809
     image: members/stark0809.jpg
     interests: Embedded Systems Security, Side-channel Attacks, IoMT Security
-    links: {}
+    links:
+      homepage: https://www.notion.so/CV-304f5ee55a8a80b1b684fbd8402aaf87
 
 staff:
   - name: Mihyun Park
