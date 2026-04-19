@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://css.korea.ac.kr/sitemap.xml
+Sitemap: https://syoungjoo.github.io/sitemap.xml
