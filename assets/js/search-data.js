@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
+        },{id: "nav-deadlines",
+          title: "deadlines",
+          description: "Upcoming submission deadlines for security, privacy, and cryptography venues.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/deadlines/";
+          },
         },{id: "news-our-paper-devious-device-driven-side-channel-attacks-on-the-iommu-has-been-accepted-to-ieee-s-amp-amp-p-2023",
           title: 'Our paper DevIOus: Device-Driven Side-Channel Attacks on the IOMMU has been accepted to...',
           description: "",
