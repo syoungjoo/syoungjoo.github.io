@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: <strong>Computer Systems Security Lab</strong> · School of Cybersecurity, Korea University
+#subtitle: <strong>Computer Systems Security Lab</strong> · School of Cybersecurity, Korea University
 
 profile:
   align: right
