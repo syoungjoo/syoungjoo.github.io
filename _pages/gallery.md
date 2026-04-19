@@ -2,7 +2,7 @@
 layout: page
 permalink: /gallery/
 title: gallery
-description: Lab life — retreats, conferences, and moments worth remembering.
+#description: Lab life — retreats, conferences, and moments worth remembering.
 nav: true
 nav_order: 6
 ---
