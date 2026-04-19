@@ -44,6 +44,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/deadlines/";
           },
+        },{id: "nav-gallery",
+          title: "gallery",
+          description: "Lab life — retreats, conferences, and moments worth remembering.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/gallery/";
+          },
         },{id: "news-our-paper-devious-device-driven-side-channel-attacks-on-the-iommu-has-been-accepted-to-ieee-s-amp-amp-p-2023",
           title: 'Our paper DevIOus: Device-Driven Side-Channel Attacks on the IOMMU has been accepted to...',
           description: "",
