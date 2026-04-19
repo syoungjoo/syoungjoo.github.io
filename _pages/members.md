@@ -8,7 +8,7 @@ nav_order: 1
 ---
 
 <style>
-  .member-group { margin-top: 2rem; }
+  .member-group { margin-top: 2.2rem; }
   .member-group h2 {
     border-bottom: 1px solid var(--global-divider-color);
     padding-bottom: 0.3rem;
@@ -16,18 +16,28 @@ nav_order: 1
   }
   .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.2rem;
   }
   .member-card {
-    padding: 1rem 1.1rem;
+    padding: 0;
     border: 1px solid var(--global-divider-color);
     border-radius: 6px;
     background: var(--global-card-bg-color, transparent);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
+  .member-card .photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: var(--global-divider-color);
+  }
+  .member-card .body { padding: 0.8rem 1rem 1rem; }
   .member-card .name {
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-bottom: 0.15rem;
   }
   .member-card .cohort {
@@ -36,15 +46,15 @@ nav_order: 1
     margin-bottom: 0.35rem;
   }
   .member-card .email {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-family: var(--global-code-font-family, monospace);
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.4rem;
     word-break: break-all;
   }
   .member-card .interests {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--global-text-color);
-    line-height: 1.4;
+    line-height: 1.45;
   }
   .member-professor {
     display: flex;
@@ -55,10 +65,23 @@ nav_order: 1
     border-radius: 6px;
   }
   .member-professor img {
-    width: 140px;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
   }
+  .alumni-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .alumni-table th, .alumni-table td {
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .alumni-table th { font-weight: 600; }
   @media (max-width: 576px) {
     .member-professor { flex-direction: column; align-items: center; text-align: center; }
   }
@@ -75,12 +98,12 @@ nav_order: 1
         <img src="{{ p.image | prepend: '/assets/img/' | relative_url }}" alt="{{ p.name }}">
       {% endif %}
       <div>
-        <div class="name" style="font-size: 1.25rem;">
+        <div style="font-weight: 600; font-size: 1.3rem; margin-bottom: 0.2rem;">
           {% if p.website %}<a href="{{ p.website }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
         </div>
         <div style="color: var(--global-text-color-light); margin-bottom: 0.5rem;">{{ p.role }}</div>
-        {% if p.email %}<div class="email">{{ p.email }} [at] korea.ac.kr</div>{% endif %}
-        {% if p.interests %}<div class="interests"><strong>Research:</strong> {{ p.interests }}</div>{% endif %}
+        {% if p.email %}<div style="font-family: var(--global-code-font-family, monospace); font-size: 0.9rem; margin-bottom: 0.5rem;">{{ p.email }} [at] korea.ac.kr</div>{% endif %}
+        {% if p.interests %}<div><strong>Research:</strong> {{ p.interests }}</div>{% endif %}
       </div>
     </div>
   {% endfor %}
@@ -93,10 +116,13 @@ nav_order: 1
   <div class="member-grid">
     {% for s in m.phd %}
       <div class="member-card">
-        <div class="name">{{ s.name }}</div>
-        {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
-        {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
-        {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+        {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
+        <div class="body">
+          <div class="name">{{ s.name }}</div>
+          {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
+          {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
+          {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -110,10 +136,13 @@ nav_order: 1
   <div class="member-grid">
     {% for s in m.ms %}
       <div class="member-card">
-        <div class="name">{{ s.name }}</div>
-        {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
-        {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
-        {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+        {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
+        <div class="body">
+          <div class="name">{{ s.name }}</div>
+          {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
+          {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
+          {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -127,9 +156,12 @@ nav_order: 1
   <div class="member-grid">
     {% for s in m.undergrad %}
       <div class="member-card">
-        <div class="name">{{ s.name }}</div>
-        {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
-        {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+        {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
+        <div class="body">
+          <div class="name">{{ s.name }}</div>
+          {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
+          {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -143,8 +175,11 @@ nav_order: 1
   <div class="member-grid">
     {% for s in m.staff %}
       <div class="member-card">
-        <div class="name">{{ s.name }}</div>
-        {% if s.role %}<div class="cohort">{{ s.role }}</div>{% endif %}
+        {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
+        <div class="body">
+          <div class="name">{{ s.name }}</div>
+          {% if s.role %}<div class="cohort">{{ s.role }}</div>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -155,8 +190,22 @@ nav_order: 1
 {% if m.alumni and m.alumni.size > 0 %}
 <div class="member-group">
   <h2>Alumni</h2>
-  {% for a in m.alumni %}
-    {% if a.note %}<p>{{ a.note }}</p>{% endif %}
-  {% endfor %}
+  <table class="alumni-table">
+    <thead>
+      <tr><th>Name</th><th>Degree / Cohort</th><th>Current Affiliation</th></tr>
+    </thead>
+    <tbody>
+      {% for a in m.alumni %}
+        <tr>
+          <td>{{ a.name }}</td>
+          <td>
+            {% if a.degree %}{{ a.degree }}{% endif %}
+            {% if a.cohort %} · {{ a.cohort }}{% endif %}
+          </td>
+          <td>{{ a.affiliation }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 {% endif %}

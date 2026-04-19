@@ -1,5 +1,4 @@
 # Lab members, grouped by category.
-# Categories are rendered in the order they appear in _pages/members.md.
 
 professor:
   - name: Youngjoo Shin
@@ -13,75 +12,170 @@ phd:
   - name: Taehun Kim
     cohort: "45th"
     email: taehunk
+    image: members/taehunk.jpg
     interests: System Security, Microarchitectural Side-channel Attacks, Network Security, Binary Analysis
   - name: Chanhee Park
     cohort: "45th"
     email: pch2180
+    image: members/pch2180.jpg
     interests: System Security, Binary Analysis, Network Security
   - name: Jihye Lee
     cohort: "46th"
     email: jh_kor
+    image: members/jh_kor.jpg
     interests: System Security, Binary Analysis
   - name: Dongjoo Kim
     cohort: "47th"
     email: d05004
+    image: members/d05004.jpg
     interests: System Security, Binary Analysis, Fuzzing
 
 ms:
-  - name: Junseok Ko
-    cohort: "47th"
-    email: junseokk
-    interests: System Security, Microarchitectural Side-channel Attacks
   - name: Serin Kim
     cohort: "49th"
     email: se1ynn22
+    image: members/se1ynn22.jpg
     interests: System Security, Side-channel Attacks
+  - name: Junseok Ko
+    cohort: "47th"
+    email: junseokk
+    image: members/junseokk.jpg
+    interests: System Security, Microarchitectural Side-channel Attacks
   - name: Seonghun Park
     cohort: "49th"
     email: qkrtjdgns147
+    image: members/qkrtjdgns147.jpg
     interests: System Security, Binary Analysis, Network Security, AI Security
   - name: Jeongsu Kim
     cohort: "50th"
     email: integer0132
+    image: members/integer0132.jpg
     interests: System Security, Microarchitectural Side-channel Attacks
   - name: Geonung Kim
     cohort: "50th"
     email: kimgu
+    image: members/kimgu.jpg
     interests: Binary Analysis, Embedded Systems Security
   - name: Seungjun Oh
     cohort: "51st"
     email: joon0228
+    image: members/joon0228.jpg
     interests: Side-channel Attacks, Binary Analysis
   - name: Junho Lee
     cohort: "51st"
     email: sol0211
+    image: members/sol0211.jpg
     interests: System Security, Binary Analysis, Cloud Security
   - name: Donghyun Seo
     cohort: "51st"
     email: dhseo
+    image: members/dhseo.jpg
     interests: Binary Analysis, Network Security
   - name: Minchang Kim
     cohort: "51st"
     email: mckim2762
+    image: members/mckim2762.jpg
     interests: Network Security, Cloud Security, Binary Analysis
 
 undergrad:
   - name: Hojun Lee
     email: leehojune
+    image: members/leehojune.png
     interests: System Security, Binary Analysis, Fuzzing
   - name: Jihoon Kwon
     email: jimmyxyz
+    image: members/jimmyxyz.jpg
     interests: Side-channel Attacks, System Security, Fuzzing
   - name: Jihu Cha
     email: stark0809
+    image: members/stark0809.jpg
     interests: Embedded Systems Security, Side-channel Attacks, IoMT Security
 
 staff:
   - name: Mihyun Park
     role: Administrative Staff
+    image: members/mhpark.png
 
 alumni:
-  - note: >
-      Our graduates are working at Samsung Electronics, Samsung SDS,
-      Ministry of National Defense, Hyundai Motor Company, and other leading
-      institutions.
+  - name: Hyerean Jang
+    degree: Ph.D. Course
+    cohort: "42nd"
+    affiliation: Samsung Research
+  - name: Taehun Kim
+    degree: M.S. Course
+    cohort: "41st"
+    affiliation: Korea University
+  - name: Seungil Noh
+    degree: M.S. Course
+    cohort: "41st"
+    affiliation: Defense Agency for Technology and Quality
+  - name: Seungyeon Bae
+    degree: M.S. Course
+    cohort: "42nd"
+    affiliation: SGS Korea
+  - name: Wonseok Choi
+    degree: M.S. Course
+    cohort: "43rd"
+    affiliation: Ministry of Defense
+  - name: Seokmin Lee
+    degree: M.S. Course
+    cohort: "43rd"
+    affiliation: Samsung SDS
+  - name: Jimin Choi
+    degree: M.S. Course
+    cohort: "43rd"
+    affiliation: Samsung SDS
+  - name: Changhee Han
+    degree: M.S. Course
+    cohort: "44th"
+    affiliation: Samsung Electronics
+  - name: Dummim Lee
+    degree: M.S. Course
+    cohort: "45th"
+    affiliation: Ministry of Defense
+  - name: Sangyub Kim
+    degree: M.S. Course
+    cohort: "45th"
+    affiliation: Samsung SDS
+  - name: Taiho Kim
+    degree: M.S. Course
+    cohort: "45th"
+    affiliation: Hyundai Motor Company
+  - name: Euiseong Moon
+    degree: M.S. Course
+    cohort: "45th"
+    affiliation: Samsung Electronics
+  - name: Dongsoo Kim
+    degree: M.S. Course
+    cohort: "45th"
+    affiliation: Government of the Republic of Korea
+  - name: Woomin Lee
+    degree: M.S. Course
+    cohort: "47th"
+    affiliation: Samsung SDS
+  - name: Songah Joo
+    degree: M.S. Course
+    cohort: "47th"
+    affiliation: Samsung SDS
+  - name: Yiju Jung
+    degree: M.S. Course
+    cohort: "47th"
+    affiliation: Samsung SDS
+  - name: Juryeok Kim
+    degree: M.S. Course
+    cohort: "47th"
+    affiliation: Samsung SDS
+  - name: Miok Im
+    affiliation: TmaxSoft
+  - name: Soojin Kim
+    affiliation: TmaxSoft
+  - name: Youngrak Choi
+    affiliation: Samsung Electronics
+  - name: Taehyun Kim
+    affiliation: CISPA Helmholtz Center for Information Security, Germany
+  - name: Jonghyeon Cho
+    affiliation: Samsung Electronics
+  - name: Dohyun Ryu
+    affiliation: Korea University
+  - name: Hoyoung Yu
+    affiliation: Qualitas Semiconductor
