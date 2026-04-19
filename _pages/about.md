@@ -29,7 +29,13 @@ latest_posts:
     border-bottom: 1px solid var(--global-divider-color);
     margin-bottom: 2.5rem;
   }
-  .hero-logo img { max-height: 110px; width: auto; }
+  .hero-photo { flex: 0 0 52%; }
+  .hero-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+  }
   .hero-text { flex: 1; }
   .hero-text h2 {
     font-weight: 600;
@@ -119,8 +125,8 @@ latest_posts:
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-logo">
-    <img src="{{ '/assets/img/site/lab_logo.png' | relative_url }}" alt="CSL">
+  <div class="hero-photo">
+    <img src="{{ '/assets/img/site/lab_photo.jpg' | relative_url }}" alt="CSS Lab members">
   </div>
   <div class="hero-text">
     <h2>Security of computer systems, from the microarchitecture to the cloud.</h2>
@@ -172,17 +178,9 @@ latest_posts:
   </div>
 </div>
 
-<!-- NEWS + SELECTED PUBLICATIONS -->
-<div class="twocol">
-  <div>
-    <div class="section-head"><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></div>
-    {% include news.liquid limit=true %}
-  </div>
-  <div>
-    <div class="section-head"><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></div>
-    {% include selected_papers.liquid %}
-  </div>
-</div>
+<!-- NEWS -->
+<div class="section-head"><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></div>
+{% include news.liquid limit=true %}
 
 <!-- JOIN US -->
 <div class="section-head">Join Us</div>
