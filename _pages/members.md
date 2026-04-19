@@ -2,7 +2,7 @@
 layout: page
 permalink: /members/
 title: members
-description: Members of the Computer Systems Security Lab at Korea University.
+#description: Members of the Computer Systems Security Lab at Korea University.
 nav: true
 nav_order: 1
 ---
