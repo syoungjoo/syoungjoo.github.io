@@ -25,24 +25,27 @@ If something looks broken after your push, check the **Actions** tab of the repo
 
 ## 1. Updating members
 
-All member information lives in a single YAML file:
+Member information is split across three places:
 
-```
-_data/members.yml
-```
+1. **`_data/members.yml`** — roster data (name, cohort, email, photo, links, etc.). Drives both the Members overview page and each individual profile page.
+2. **`_pages/members/<first-last>.md`** — one stub page per student. Renders the individual profile page at `/members/<first-last>/`.
+3. **`_pages/professor.md`** — standalone page at `/members/professor/` with the full professor profile (bio, timeline, talks, service).
 
-It has six sections: `professor`, `phd`, `ms`, `undergrad`, `staff`, `alumni`.
-Entries appear on the site in the same order as they appear in the file.
+### 1.1 How the pieces fit together
 
-### 1.1 Adding a new student
+- The **Members page** (`/members/`) shows compact cards. Student cards intentionally show **only name + cohort + icons** (we hide email, research interests, homepage, and Google Scholar icons here to keep the page tidy — those are reserved for the per-student profile page). Clicking a name opens that student's profile.
+- The **Professor card** on `/members/` also hides homepage/scholar/github/linkedin icons — clicking the professor's name opens `/members/professor/`.
+- **Student profile pages** pull the hero block (photo, cohort, interests, icons) from `_data/members.yml` via the shared include `_includes/student_profile.liquid`. Biography, Education, and Honors & Awards sections live as plain HTML in each student's `.md` stub — placeholder `TBA` blocks are filled in manually as content arrives.
 
-Find the right section (`phd`, `ms`, or `undergrad`) and append an entry using this template:
+### 1.2 Adding a new student
+
+**Step A — add the roster entry** in `_data/members.yml`. Find the right section (`phd`, `ms`, or `undergrad`) and append:
 
 ```yaml
   - name: Gildong Hong               # English name, "First Last"
     cohort: "52nd"                   # enrollment cohort; omit for undergrads
     email: ghong                     # KU email local-part only (no @korea.ac.kr)
-    image: members/ghong.jpg         # profile photo filename (see 1.3)
+    image: members/ghong.jpg         # profile photo filename (see 1.5)
     interests: System Security, Side-channel Attacks
     links:
       homepage: https://...          # optional — personal site / Notion CV
@@ -54,18 +57,54 @@ Find the right section (`phd`, `ms`, or `undergrad`) and append an entry using t
       dblp:     https://dblp.org/pid/...
 ```
 
-**Rules:**
+**Step B — create the profile stub** at `_pages/members/<first-last>.md` where the slug is the English name lowercased with spaces → hyphens (e.g. `gildong-hong.md`). Copy this template:
+
+```markdown
+---
+layout: page
+permalink: /members/gildong-hong/
+title: Gildong Hong
+nav: false
+---
+
+{% include student_profile.liquid group="phd" slug="ghong" %}
+
+<div class="stu-section">
+  <h2>Biography</h2>
+  <p class="tba">TBA — to be filled in.</p>
+</div>
+
+<div class="stu-section">
+  <h2>Education</h2>
+  <p class="tba">TBA — to be filled in.</p>
+</div>
+
+<div class="stu-section">
+  <h2>Honors &amp; Awards</h2>
+  <p class="tba">TBA — to be filled in.</p>
+</div>
+```
+
+**Important details:**
+- `permalink` must be `/members/<first-last>/` — this is what the Members page links to (it derives the slug from `name | downcase | replace: " ", "-"`).
+- `group="phd"` must match the roster section (`phd`, `ms`, or `undergrad`).
+- `slug="ghong"` must match the `email` field in the roster entry — that's how the include looks up the right person.
+- Fill in `Biography`, `Education`, and `Honors & Awards` whenever content is available; leave the `TBA` block in place otherwise.
+
+### 1.3 Rules & tips for the roster entry
+
 - Every field except `name` is optional. Leave out any key you don't need — icons auto-hide.
 - `links:` must be present even if empty; use `links: {}`.
-- `email` is shown as `<email> [at] korea.ac.kr` on the card. It is **not** a clickable link.
 - Supported link types and their icons are: `homepage`, `scholar`, `github`, `linkedin`, `twitter`, `orcid`, `dblp`. Other keys are ignored.
+- On the Members overview page, `homepage` and `scholar` are hidden for all members; the remaining icons appear on student cards if present. On each student's individual profile page, **all** link icons are shown.
 
-### 1.2 Moving a student to Alumni
+### 1.4 Moving a student to Alumni
 
 When a student graduates:
 
-1. Delete their entry from `phd` / `ms` / `undergrad`.
-2. Add a new entry to `alumni:`:
+1. Delete their entry from `phd` / `ms` / `undergrad` in `_data/members.yml`.
+2. Delete the matching stub file `_pages/members/<first-last>.md`.
+3. Add a new entry under `alumni:`:
 
 ```yaml
   - name: Gildong Hong
@@ -74,14 +113,24 @@ When a student graduates:
     affiliation: Samsung Research    # current employer
 ```
 
-Alumni are rendered as a simple table (no photo, no links).
+Alumni are rendered as a simple table (no photo, no links, no profile page).
 
-### 1.3 Profile photos
+### 1.5 Profile photos
 
 - Put photos in: `assets/img/members/`
 - Filename convention: `<email_local_part>.jpg` (e.g. `ghong.jpg`).
 - Use a **square crop**, ~400×400 px is plenty. Bigger files just slow down the page.
 - `.jpg`, `.png`, and `.webp` all work — match the extension in the `image:` field.
+- **Optional `card_image:` override** — if the main photo doesn't crop nicely into a square on the Members card (e.g. full-body portrait), add a square version and reference it via an extra `card_image:` field. The Members page uses `card_image` when present and falls back to `image` otherwise; the full profile page always uses `image`. Example:
+
+  ```yaml
+  image: members/ghong.jpg              # full-body / used on profile page
+  card_image: members/ghong_card.jpg    # square crop / used on Members card
+  ```
+
+### 1.6 The professor profile page
+
+The professor has a bespoke page at `_pages/professor.md` (`permalink: /members/professor/`). The roster entry in `_data/members.yml` still drives the hero block (photo, name, email, icons), but the body sections (Biography, Research Interests, Education, Professional Experience, Invited Talks, Professional Service, Publications) are hand-authored HTML in that file — edit them directly when updating the CV.
 
 ---
 
