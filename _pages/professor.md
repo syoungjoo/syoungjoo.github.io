@@ -215,8 +215,6 @@ nav: false
     <li><div class="period">2019</div><div class="desc">KAIST; Korea University; SeoulTech; Sejong University; Hansung University; Kookmin University; WISC 2019; Side-Channel Analysis Workshop</div></li>
     <li><div class="period">2018</div><div class="desc">NetSec-KR 2018; KICS; ETRI; NSR; WISC 2018; Side-Channel Analysis Workshop; Sejong / Kookmin / Hansung / Hannam Universities</div></li>
     <li><div class="period">2017</div><div class="desc">KCC 2017; SDN/NFV Forum Security WG; NSR; Korea / Kookmin / Hansung Universities</div></li>
-    <li><div class="period">2016</div><div class="desc">Research Briefing on Security-Equipment Analysis</div></li>
-    <li><div class="period">2015</div><div class="desc">Best of the Best (BoB) Lecture</div></li>
   </ul>
 </div>
 
