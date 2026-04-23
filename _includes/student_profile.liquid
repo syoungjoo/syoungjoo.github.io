@@ -146,7 +146,8 @@
   {% endif %}
 </div>
 
-{%- assign detail = site.data.students[slug] -%}
+{%- assign name_slug = s.name | downcase | replace: " ", "-" -%}
+{%- assign detail = site.data.students[name_slug] -%}
 {% if detail %}
 
 {% if detail.biography %}
