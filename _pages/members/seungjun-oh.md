@@ -9,15 +9,26 @@ nav: false
 
 <div class="stu-section">
   <h2>Biography</h2>
-  <p class="tba">TBA — to be filled in.</p>
+  <p>
+    Seungjun Oh is an M.S. student in the Computer Systems Security Lab at Korea
+    University, advised by Prof. Youngjoo Shin. His research interests include
+    system security, microarchitectural side-channel attacks, and trusted
+    execution environments.
+  </p>
 </div>
 
 <div class="stu-section">
   <h2>Education</h2>
-  <p class="tba">TBA — to be filled in.</p>
+  <ul class="prof-timeline">
+    <li><div class="period">present</div><div class="desc">M.S., School of Cybersecurity<div class="where">Korea University</div></div></li>
+    <li><div class="period">2021 – 2025</div><div class="desc">B.S. in Smart Security<div class="where">Korea University</div></div></li>
+  </ul>
 </div>
 
 <div class="stu-section">
   <h2>Honors &amp; Awards</h2>
-  <p class="tba">TBA — to be filled in.</p>
+  <ul>
+    <li>CISC-W'25 — poster (messenger security) and oral (SEV-Step)</li>
+    <li>Language: TOEIC 865</li>
+  </ul>
 </div>

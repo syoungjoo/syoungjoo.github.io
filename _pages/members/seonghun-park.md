@@ -9,15 +9,25 @@ nav: false
 
 <div class="stu-section">
   <h2>Biography</h2>
-  <p class="tba">TBA — to be filled in.</p>
+  <p>
+    Seonghun Park is an M.S. student in the Computer Systems Security Lab at Korea
+    University, advised by Prof. Youngjoo Shin. His research interests include
+    system security, binary analysis, network security, and AI security.
+  </p>
 </div>
 
 <div class="stu-section">
   <h2>Education</h2>
-  <p class="tba">TBA — to be filled in.</p>
+  <ul class="prof-timeline">
+    <li><div class="period">2025 – 2027</div><div class="desc">M.S., School of Cybersecurity<div class="where">Korea University</div></div></li>
+    <li><div class="period">2017 – 2023</div><div class="desc">B.S. in Mathematics and Information Security<div class="where">Korea University</div></div></li>
+  </ul>
 </div>
 
 <div class="stu-section">
   <h2>Honors &amp; Awards</h2>
-  <p class="tba">TBA — to be filled in.</p>
+  <ul>
+    <li>S-Developer 2nd Cohort</li>
+    <li>SQLD Certification</li>
+  </ul>
 </div>
