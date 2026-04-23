@@ -84,6 +84,24 @@
   @media (max-width: 576px) {
     .stu-hero { flex-direction: column; align-items: center; text-align: center; }
   }
+
+  /* Simplified publications list for student profiles */
+  .stu-section .publications h2.bibliography { display: none; }
+  .stu-section .publications ol.bibliography { padding-left: 0; list-style: none; margin: 0; }
+  .stu-section .publications ol.bibliography li {
+    border: none !important;
+    padding: 0.35rem 0;
+    margin: 0;
+  }
+  .stu-section .publications ol.bibliography li + li {
+    border-top: none;
+  }
+  .stu-section .publications .col.abbr,
+  .stu-section .publications .col-sm-2.abbr { display: none !important; }
+  .stu-section .publications .row > div:not(.abbr) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 </style>
 
 <a class="stu-back" href="{{ '/members/' | relative_url }}">&larr; Back to members</a>
@@ -121,7 +139,7 @@
 <div class="stu-section">
   <h2>Publications</h2>
   <div class="publications">
-    {% bibliography --query @*[students~={{slug}}]* %}
+    {% bibliography --group_by none --query @*[students~={{slug}}]* %}
   </div>
 </div>
 
