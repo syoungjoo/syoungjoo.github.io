@@ -92,24 +92,9 @@ nav_order: 7
     <span class="label">Email</span>
     <span class="val">
       syoungjoo [at] korea.ac.kr
-      <span class="sub">General inquiries &amp; prospective students — contact Prof. Youngjoo Shin</span>
-    </span>
-  </div>
-
-  <div class="contact-row">
-    <span class="ico"><i class="fa-solid fa-phone"></i></span>
-    <span class="label">Phone</span>
-    <span class="val">
-      +82-2-3290-XXXX
-      <span class="sub">Office hours: Mon–Fri, 10:00–18:00 (KST)</span>
-    </span>
-  </div>
-
-  <div class="contact-row">
-    <span class="ico"><i class="fa-solid fa-globe"></i></span>
-    <span class="label">Web</span>
-    <span class="val">
-      <a href="https://sites.google.com/view/youngjoo-shin/" target="_blank" rel="noopener">sites.google.com/view/youngjoo-shin</a>
+      <span class="sub">Prof. Youngjoo Shin — general inquiries &amp; prospective students</span>
+      <div style="margin-top: 0.4rem;">taehunk [at] korea.ac.kr</div>
+      <span class="sub">Taehun Kim — lab manager</span>
     </span>
   </div>
 </div>
