@@ -227,7 +227,7 @@ nav: false
   <ul>
     <li>IITP Preliminary Feasibility Study, <em>Intelligent Cyber-Shield Dome</em> Program — Subcommittee Member (2025–)</li>
     <li>Cloud Security Assurance Program (CSAP) Certification Committee (2023–2024)</li>
-    <li>National Security Research Institute (NSR) &amp; Ministry of the Interior — Digital-Signature Advisory (2022)</li>
+    <li>National Security Research Institute (NSR) — Digital-Signature Advisory (2022)</li>
     <li>National Intelligence Service — Mid-/Long-Term Security Strategy Advisory (2019)</li>
     <li>IITP Preliminary Feasibility Study on Connected-Device Security — Committee Member (2017)</li>
   </ul>
