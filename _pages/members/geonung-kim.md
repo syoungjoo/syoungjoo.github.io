@@ -31,3 +31,5 @@ nav: false
     <li><div class="period">2023 – 2025</div><div class="desc">Source Code Security Engineer<div class="where">Fin Security</div></div></li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="kimgu" %}

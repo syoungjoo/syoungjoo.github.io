@@ -33,3 +33,5 @@ nav: false
     <li><div class="period">2021 – 2024</div><div class="desc">Cyber Operations Officer<div class="where">Republic of Korea Army</div></div></li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="mckim2762" %}

@@ -32,3 +32,5 @@ nav: false
     <li>Language: TOEIC 865</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="joon0228" %}

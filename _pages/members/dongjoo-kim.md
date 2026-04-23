@@ -33,3 +33,5 @@ nav: false
     <li>Groom OS vulnerability analysis project; MECCI project</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="d05004" %}

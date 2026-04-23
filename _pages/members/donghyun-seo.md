@@ -33,3 +33,5 @@ nav: false
     <li>Certifications: ADsP, 정보보안기사 (Information Security Engineer)</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="dhseo" %}

@@ -43,3 +43,5 @@ nav: false
     <li>Duolingo English Test: Advanced, CEFR C1 (145)</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="stark0809" %}

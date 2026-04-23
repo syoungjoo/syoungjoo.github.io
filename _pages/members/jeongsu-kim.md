@@ -31,3 +31,5 @@ nav: false
     <li>CVE-2025-4437, CVE-2025-4853, CVE-2025-4854 (Kubernetes)</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="integer0132" %}

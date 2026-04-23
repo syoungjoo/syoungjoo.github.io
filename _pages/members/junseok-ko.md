@@ -32,3 +32,5 @@ nav: false
     <li>Dean's List (×2)</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="junseokk" %}

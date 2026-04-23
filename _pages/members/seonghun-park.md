@@ -31,3 +31,5 @@ nav: false
     <li>SQLD Certification</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="qkrtjdgns147" %}

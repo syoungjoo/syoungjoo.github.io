@@ -33,3 +33,5 @@ nav: false
     <li>Language: TOEIC 820, HSK Level 5</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="jh_kor" %}

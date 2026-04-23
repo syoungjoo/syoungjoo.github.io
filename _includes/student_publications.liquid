@@ -1,0 +1,14 @@
+{%- comment -%}
+  Renders a student's publication list filtered from _bibliography/papers.bib
+  via the `students` custom field.
+  Usage (at bottom of a student profile page):
+    {% include student_publications.liquid slug="taehunk" %}
+{%- endcomment -%}
+{%- assign slug = include.slug -%}
+
+<div class="stu-section">
+  <h2>Publications</h2>
+  <div class="publications">
+    {% bibliography --group_by none --query @*[students~={{slug}}]* %}
+  </div>
+</div>

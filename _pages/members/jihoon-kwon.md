@@ -41,3 +41,5 @@ nav: false
     <li>Linux Kernel Library (LKL) for filesystem vulnerability detection in exFAT and ntfs3</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="jimmyxyz" %}

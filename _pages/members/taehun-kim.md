@@ -37,3 +37,5 @@ nav: false
     <li>Multiple conference presentation awards (2019–2023)</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="taehunk" %}

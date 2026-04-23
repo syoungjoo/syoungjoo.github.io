@@ -35,3 +35,5 @@ nav: false
     <li>WISA 2025 — poster</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="se1ynn22" %}

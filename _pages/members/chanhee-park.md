@@ -21,3 +21,5 @@ nav: false
   <h2>Honors &amp; Awards</h2>
   <p class="tba">TBA — to be filled in.</p>
 </div>
+
+{% include student_publications.liquid slug="pch2180" %}

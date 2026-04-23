@@ -32,3 +32,5 @@ nav: false
     <li>Dean's List, Fall 2024</li>
   </ul>
 </div>
+
+{% include student_publications.liquid slug="sol0211" %}
