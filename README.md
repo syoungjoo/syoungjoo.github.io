@@ -151,13 +151,16 @@ nav: false
   <h2>Honors &amp; Awards</h2>
   <p class="tba">TBA — to be filled in.</p>
 </div>
+
+{% include student_publications.liquid slug="ghong" %}
 ```
 
 **Important details:**
 - `permalink` must be `/members/<first-last>/` — this is what the Members page links to (it derives the slug from `name | downcase | replace: " ", "-"`).
 - `group="phd"` must match the roster section (`phd`, `ms`, or `undergrad`).
-- `slug="ghong"` must match the `email` field in the roster entry — that's how the include looks up the right person.
+- `slug="ghong"` must match the `email` field in the roster entry — that's how the include looks up the right person (used by both `student_profile.liquid` and `student_publications.liquid`).
 - Fill in `Biography`, `Education`, and `Honors & Awards` whenever content is available; leave the `TBA` block in place otherwise.
+- The trailing `{% include student_publications.liquid slug="..." %}` auto-renders that student's publication list at the bottom of the page, filtered from `_bibliography/papers.bib` via the `students` field (see §3.5).
 
 ### 2.3 Rules & tips for the roster entry
 
@@ -165,7 +168,7 @@ nav: false
 - `links:` must be present even if empty; use `links: {}`.
 - Supported link types and their icons are: `homepage`, `scholar`, `github`, `linkedin`, `twitter`, `orcid`, `dblp`. Other keys are ignored.
 - On the Members overview page, `homepage` and `scholar` are hidden for all members; the remaining icons appear on student cards if present. On each student's individual profile page, **all** link icons are shown.
-- **Per-student publication lists** are driven from `_bibliography/papers.bib` via a custom `students` field on each entry — **not** from `_data/members.yml`. See §3.5 below.
+- **Per-student publication lists** are driven from `_bibliography/papers.bib` via a custom `students` field on each entry — **not** from `_data/members.yml`. See §3.4 below.
 
 ### 2.4 Moving a student to Alumni
 
