@@ -120,15 +120,9 @@
 
 <div class="stu-section">
   <h2>Publications</h2>
-  {% if s.papers and s.papers.size > 0 %}
-    <div class="publications">
-      {% for pkey in s.papers %}
-        {% bibliography --query @{{pkey}} %}
-      {% endfor %}
-    </div>
-  {% else %}
-    <p class="tba">No publications yet.</p>
-  {% endif %}
+  <div class="publications">
+    {% bibliography --query @*[students~={{slug}}]* %}
+  </div>
 </div>
 
 {% else %}
