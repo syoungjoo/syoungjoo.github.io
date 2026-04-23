@@ -120,20 +120,9 @@
 
 <div class="stu-section">
   <h2>Publications</h2>
-  {% if s.papers and s.papers.size > 0 %}
-    <div class="publications">
-      {%- assign keys_regex = s.papers | join: "|" -%}
-      {% bibliography --query "@*[key~=^({{ keys_regex }})$]" %}
-    </div>
-    <p class="tba" style="margin-top: 0.6rem;">
-      See the <a href="{{ '/publications/' | relative_url }}">lab publications page</a> for the full list.
-    </p>
-  {% else %}
-    <p class="tba">
-      No publications yet — see the
-      <a href="{{ '/publications/' | relative_url }}">lab publications page</a>.
-    </p>
-  {% endif %}
+  <div class="publications">
+    {% bibliography --query "@*[students~={{ slug }}]" %}
+  </div>
 </div>
 
 {% else %}

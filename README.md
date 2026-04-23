@@ -123,9 +123,6 @@ Member information is split across three places:
       twitter:  https://x.com/...
       orcid:    https://orcid.org/...
       dblp:     https://dblp.org/pid/...
-    papers:                          # optional — BibTeX cite keys from papers.bib
-      - kim2025cache                 # renders as a filtered publication list on the profile page
-      - jang2024sysbumps
 ```
 
 **Step B — create the profile stub** at `_pages/members/<first-last>.md` where the slug is the English name lowercased with spaces → hyphens (e.g. `gildong-hong.md`). Copy this template:
@@ -168,7 +165,7 @@ nav: false
 - `links:` must be present even if empty; use `links: {}`.
 - Supported link types and their icons are: `homepage`, `scholar`, `github`, `linkedin`, `twitter`, `orcid`, `dblp`. Other keys are ignored.
 - On the Members overview page, `homepage` and `scholar` are hidden for all members; the remaining icons appear on student cards if present. On each student's individual profile page, **all** link icons are shown.
-- **`papers:`** lists the BibTeX cite keys (from `_bibliography/papers.bib`) of papers the student co-authored. The profile page renders exactly these entries — in the order listed — under the "Publications" section. When a new paper is added to `papers.bib`, remember to add its cite key to every co-author's `papers:` list. If `papers:` is missing or empty, the profile page shows "No publications yet."
+- **Per-student publication lists** are driven from `_bibliography/papers.bib` via a custom `students` field on each entry — **not** from `_data/members.yml`. See §3.5 below.
 
 ### 2.4 Moving a student to Alumni
 
@@ -267,7 +264,26 @@ Use the `Last, First and Last, First and …` format:
 author = {Kim, Taehun and Jang, Hyerean and Shin, Youngjoo},
 ```
 
-### 3.4 Typical flow for a new paper
+### 3.4 Tagging lab-member authors (for profile pages)
+
+Each student's profile page (`/members/<first-last>/`) auto-renders a "Publications" section filtered to papers they co-authored. The filter uses a custom `students` field on the BibTeX entry — a comma-separated list of the authors' **email local-parts** (the same slug used as the `email:` in `_data/members.yml`):
+
+```bibtex
+@inproceedings{park2026sysdiver,
+  ...
+  author   = {Park, Chanhee and Kim, Dongjoo and Shin, Youngjoo},
+  students = {pch2180,d05004}        % <-- email local-parts, comma-separated, no spaces
+}
+```
+
+Rules of thumb:
+
+- Add one slug per current lab member who co-authored the paper.
+- Do **not** list the professor, external collaborators, or alumni (alumni don't have profile pages, so tagging them has no effect).
+- Use **no spaces** around the commas — the query matches literally.
+- When a student graduates, leave the `students` field alone — past papers should still show on history even if the student is moved to alumni.
+
+### 3.5 Typical flow for a new paper
 
 1. Drop the PDF (and any slides) into `assets/pdf/`.
 2. Add the `@inproceedings{...}` entry at the top of the correct year block in `papers.bib`.
@@ -275,7 +291,8 @@ author = {Kim, Taehun and Jang, Hyerean and Shin, Youngjoo},
 4. Add `code = {…}` if the artifact repo is public on [github.com/koreacsl](https://github.com/koreacsl).
 5. Add `additional_info = {[BK21 IF=N]}` if the paper has a BK21 evaluation score.
 6. If it's a flagship result, add `selected = {true}`.
-7. Open a PR (see §1).
+7. Add `students = {slug1,slug2}` listing every current lab-member co-author (see §3.4) so the paper shows up on their profile pages.
+8. Open a PR (see §1).
 
 ---
 
