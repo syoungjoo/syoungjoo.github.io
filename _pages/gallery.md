@@ -185,9 +185,7 @@ nav_order: 7
   <div class="gal-head">
     <h3>{{ ev_title | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
     <div class="gal-meta">
-      {% if ev_date %}<span class="date">{{ ev_date }}</span>{% endif %}
-      {% if ev_date and ev_place %}<span class="dot">·</span>{% endif %}
-      {% if ev_place %}{{ ev_place }}{% endif %}
+      {% if ev_date %}<span class="date">{{ ev_date | date: "%Y-%m" }}</span>{% endif %}
     </div>
   </div>
   <div class="gal-grid">
