@@ -31,12 +31,12 @@ nav_order: 7
 
   .gal-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 0.6rem;
   }
   .gal-tile {
     position: relative;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
     border-radius: 4px;
     background: var(--global-divider-color);
