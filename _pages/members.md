@@ -115,7 +115,7 @@ nav_order: 1
       {% endif %}
       <div>
         <div style="font-weight: 600; font-size: 1.3rem; margin-bottom: 0.2rem;">
-          {% if p.links.homepage %}<a href="{{ p.links.homepage }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
+          <a href="{{ '/members/professor/' | relative_url }}">{{ p.name }}</a>
         </div>
         <div style="color: var(--global-text-color-light); margin-bottom: 0.5rem;">{{ p.role }}</div>
         {% if p.email %}<div style="font-family: var(--global-code-font-family, monospace); font-size: 0.9rem; margin-bottom: 0.5rem;">{{ p.email }} [at] korea.ac.kr</div>{% endif %}
