@@ -2,28 +2,95 @@
 
 This is the source of the [Computer Systems Security Lab](https://syoungjoo.github.io) website, built on [Jekyll](https://jekyllrb.com/) with the [al-folio](https://github.com/alshedivat/al-folio) theme and served from GitHub Pages.
 
-Most day-to-day edits are just changes to a few text files — you do **not** need to touch HTML or CSS. This guide covers the three tasks you will do most often:
+This guide is organized around the four things lab members actually do:
 
-1. **Updating members** (`_data/members.yml`)
-2. **Adding publications** (`_bibliography/papers.bib`)
-3. **Adding gallery photos** (`assets/img/gallery/` + optional `_data/gallery/`)
+1. **How to contribute updates** — the Fork + Pull Request workflow (read this first).
+2. **Updating member profiles** — roster entries and per-student profile pages.
+3. **Adding publications** — `_bibliography/papers.bib`.
+4. **Adding gallery photos** — `assets/img/gallery/` + optional per-event metadata.
 
-Plus shorter sections on news, repositories, and local previewing.
-
----
-
-## Quick workflow (all edits)
-
-1. Create a branch (or edit directly on GitHub via the web editor for small changes).
-2. Edit the relevant file (see sections below).
-3. Commit and push to `main`.
-4. GitHub Actions rebuilds the site in ~1–2 minutes. Refresh the page.
-
-If something looks broken after your push, check the **Actions** tab of the repo for the red build log.
+Shorter sections on news, repositories, local preview, and common gotchas follow at the end.
 
 ---
 
-## 1. Updating members
+## 1. How to contribute updates (Fork + Pull Request)
+
+The repository lives under **Prof. Shin's personal GitHub account** (`syoungjoo/syoungjoo.github.io`). Students do **not** have direct write access. Instead, all contributions go through a standard GitHub **Fork + Pull Request** workflow — the same one used in open-source projects.
+
+### 1.1 One-time setup
+
+1. Open [https://github.com/syoungjoo/syoungjoo.github.io](https://github.com/syoungjoo/syoungjoo.github.io) while signed in with your own GitHub account and click **Fork** (top-right). GitHub creates a copy under your account: `https://github.com/<your-id>/syoungjoo.github.io`.
+2. Clone **your fork** locally:
+
+   ```bash
+   git clone git@github.com:<your-id>/syoungjoo.github.io.git
+   cd syoungjoo.github.io
+   ```
+3. Add the upstream repo (the professor's copy) as a second remote so you can pull in new changes:
+
+   ```bash
+   git remote add upstream https://github.com/syoungjoo/syoungjoo.github.io.git
+   git remote -v   # sanity check
+   ```
+
+### 1.2 Every-time routine
+
+Before you start editing, pull the latest `main` from upstream so you don't work on stale files:
+
+```bash
+git checkout main
+git pull upstream main
+git push origin main        # keep your fork's main in sync (optional but clean)
+```
+
+Then make a **new branch** named after the change you're about to do — never commit straight to `main`:
+
+```bash
+git checkout -b update/<short-topic>
+# examples:
+#   update/taehun-profile
+#   update/pub-usenix26-pathfault
+#   update/gallery-2026-kickoff
+```
+
+Edit the relevant files (see §2–§4 below). Commit in small logical chunks with a short, imperative subject:
+
+```bash
+git add <files>
+git commit -m "add Taehun Kim biography and awards"
+```
+
+Push the branch to **your fork**:
+
+```bash
+git push origin update/taehun-profile
+```
+
+### 1.3 Opening the Pull Request
+
+Go to your fork on GitHub — a yellow banner "Compare & pull request" appears. Click it (or open `https://github.com/<your-id>/syoungjoo.github.io` → *Pull requests* → *New pull request*).
+
+- **Base repository:** `syoungjoo/syoungjoo.github.io`, **base:** `main`
+- **Head repository:** `<your-id>/syoungjoo.github.io`, **compare:** `update/taehun-profile`
+
+Write a short title (same as your commit subject is fine) and a one-paragraph description of what changed and why. Submit the PR.
+
+Prof. Shin reviews the PR, requests changes if needed (just push more commits to the same branch — the PR updates automatically), and merges when it's ready. GitHub Actions then rebuilds the site in 1–2 minutes.
+
+### 1.4 Contribution ground rules
+
+- **Never push directly to `main`.** All changes go through a PR.
+- **One PR = one logical change.** Don't bundle an unrelated bib update with a gallery upload.
+- **Branch names:** `update/<topic>` is the convention. Use hyphens, lowercase, no spaces.
+- **Commit messages:** short, imperative, present tense. "add Taehun Kim profile" — not "added" or "adding".
+- **Check the Actions tab after merge.** If the build goes red, fix it in a new PR rather than force-pushing.
+- **Large files** (photos, PDFs): downsize before committing. Aim for ≤ 500 KB per image, ≤ 5 MB per PDF. Heavy files eat GitHub Pages bandwidth.
+- **Don't commit secrets** (API keys, personal emails, private photos). Repo history is public forever.
+- **If your fork falls behind `main`:** on GitHub your fork shows a "This branch is N commits behind upstream" banner — click **Sync fork**. Or locally: `git checkout main && git pull upstream main && git push origin main`.
+
+---
+
+## 2. Updating member profiles
 
 Member information is split across three places:
 
@@ -31,13 +98,13 @@ Member information is split across three places:
 2. **`_pages/members/<first-last>.md`** — one stub page per student. Renders the individual profile page at `/members/<first-last>/`.
 3. **`_pages/professor.md`** — standalone page at `/members/professor/` with the full professor profile (bio, timeline, talks, service).
 
-### 1.1 How the pieces fit together
+### 2.1 How the pieces fit together
 
 - The **Members page** (`/members/`) shows compact cards. Student cards intentionally show **only name + cohort + icons** (we hide email, research interests, homepage, and Google Scholar icons here to keep the page tidy — those are reserved for the per-student profile page). Clicking a name opens that student's profile.
 - The **Professor card** on `/members/` also hides homepage/scholar/github/linkedin icons — clicking the professor's name opens `/members/professor/`.
 - **Student profile pages** pull the hero block (photo, cohort, interests, icons) from `_data/members.yml` via the shared include `_includes/student_profile.liquid`. Biography, Education, and Honors & Awards sections live as plain HTML in each student's `.md` stub — placeholder `TBA` blocks are filled in manually as content arrives.
 
-### 1.2 Adding a new student
+### 2.2 Adding a new student
 
 **Step A — add the roster entry** in `_data/members.yml`. Find the right section (`phd`, `ms`, or `undergrad`) and append:
 
@@ -45,7 +112,7 @@ Member information is split across three places:
   - name: Gildong Hong               # English name, "First Last"
     cohort: "52nd"                   # enrollment cohort; omit for undergrads
     email: ghong                     # KU email local-part only (no @korea.ac.kr)
-    image: members/ghong.jpg         # profile photo filename (see 1.5)
+    image: members/ghong.jpg         # profile photo filename (see 2.5)
     interests: System Security, Side-channel Attacks
     links:
       homepage: https://...          # optional — personal site / Notion CV
@@ -91,14 +158,14 @@ nav: false
 - `slug="ghong"` must match the `email` field in the roster entry — that's how the include looks up the right person.
 - Fill in `Biography`, `Education`, and `Honors & Awards` whenever content is available; leave the `TBA` block in place otherwise.
 
-### 1.3 Rules & tips for the roster entry
+### 2.3 Rules & tips for the roster entry
 
 - Every field except `name` is optional. Leave out any key you don't need — icons auto-hide.
 - `links:` must be present even if empty; use `links: {}`.
 - Supported link types and their icons are: `homepage`, `scholar`, `github`, `linkedin`, `twitter`, `orcid`, `dblp`. Other keys are ignored.
 - On the Members overview page, `homepage` and `scholar` are hidden for all members; the remaining icons appear on student cards if present. On each student's individual profile page, **all** link icons are shown.
 
-### 1.4 Moving a student to Alumni
+### 2.4 Moving a student to Alumni
 
 When a student graduates:
 
@@ -115,7 +182,7 @@ When a student graduates:
 
 Alumni are rendered as a simple table (no photo, no links, no profile page).
 
-### 1.5 Profile photos
+### 2.5 Profile photos
 
 - Put photos in: `assets/img/members/`
 - Filename convention: `<email_local_part>.jpg` (e.g. `ghong.jpg`).
@@ -128,13 +195,13 @@ Alumni are rendered as a simple table (no photo, no links, no profile page).
   card_image: members/ghong_card.jpg    # square crop / used on Members card
   ```
 
-### 1.6 The professor profile page
+### 2.6 The professor profile page
 
 The professor has a bespoke page at `_pages/professor.md` (`permalink: /members/professor/`). The roster entry in `_data/members.yml` still drives the hero block (photo, name, email, icons), but the body sections (Biography, Research Interests, Education, Professional Experience, Invited Talks, Professional Service, Publications) are hand-authored HTML in that file — edit them directly when updating the CV.
 
 ---
 
-## 2. Adding publications
+## 3. Adding publications
 
 All publications live in a single BibTeX file:
 
@@ -144,7 +211,7 @@ _bibliography/papers.bib
 
 The file is grouped by year with `%` comment banners. When adding a new paper, put it under the correct year block, newest year at the top of the file.
 
-### 2.1 Template
+### 3.1 Template
 
 ```bibtex
 @inproceedings{lastname2026shortkey,
@@ -169,7 +236,7 @@ The file is grouped by year with `%` comment banners. When adding a new paper, p
 | `year`       | Four-digit year. |
 | `selected`   | `{true}` makes the paper appear on the home page's featured list. Omit otherwise. |
 
-### 2.2 Optional fields
+### 3.2 Optional fields
 
 ```bibtex
   pdf             = {your_paper.pdf},              % file in /assets/pdf/
@@ -183,7 +250,7 @@ The file is grouped by year with `%` comment banners. When adding a new paper, p
 
 Each of these adds a small button (or inline tag, for `additional_info`) next to the entry on the publications page.
 
-### 2.3 Listing authors
+### 3.3 Listing authors
 
 **All authors must be listed in full** — never use `and others`. The site is configured
 (`max_author_limit:` empty in `_config.yml`) to always display every author, and a
@@ -195,24 +262,24 @@ Use the `Last, First and Last, First and …` format:
 author = {Kim, Taehun and Jang, Hyerean and Shin, Youngjoo},
 ```
 
-### 2.4 Typical flow for a new paper
+### 3.4 Typical flow for a new paper
 
 1. Drop the PDF (and any slides) into `assets/pdf/`.
 2. Add the `@inproceedings{...}` entry at the top of the correct year block in `papers.bib`.
-3. List every co-author (see 2.3).
+3. List every co-author (see 3.3).
 4. Add `code = {…}` if the artifact repo is public on [github.com/koreacsl](https://github.com/koreacsl).
 5. Add `additional_info = {[BK21 IF=N]}` if the paper has a BK21 evaluation score.
 6. If it's a flagship result, add `selected = {true}`.
-7. Commit and push.
+7. Open a PR (see §1).
 
 ---
 
-## 3. Adding gallery photos
+## 4. Adding gallery photos
 
 The gallery page (`/gallery/`) is **folder-based** — in most cases you just drop
 photos into a folder and the site auto-discovers them. No YAML editing required.
 
-### 3.1 The easy path (no metadata)
+### 4.1 The easy path (no metadata)
 
 1. Create a folder under `assets/img/gallery/` with a slug.
    **Prefix with `YYYY-MM-DD-` so events sort chronologically:**
@@ -220,13 +287,13 @@ photos into a folder and the site auto-discovers them. No YAML editing required.
    assets/img/gallery/2026-03-15-kickoff/
    ```
 2. Drop your photos in. `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif` are all auto-detected.
-3. Commit and push. Done.
+3. Open a PR.
 
 The folder name becomes the event title (hyphens → spaces). Events are sorted
 newest-first. Photos within an event are sorted alphabetically by filename —
 name them `01-group.jpg`, `02-stage.jpg`, … if you want a specific order.
 
-### 3.2 With metadata (title / date / place)
+### 4.2 With metadata (title / date / place)
 
 For a prettier title or to show a venue, add an optional YAML file:
 
@@ -246,7 +313,7 @@ place: Anam Campus, Korea University
 Every field is optional. Missing fields fall back to the auto-derived values
 from the folder name.
 
-### 3.3 Photo tips
+### 4.3 Photo tips
 
 - Downsize large files (> 3 MB) before committing. Roughly 1600 px on the long
   edge is plenty. Heavy pages load slowly and eat GitHub Pages bandwidth.
@@ -257,7 +324,7 @@ See also `_data/gallery/README.md` for a shorter reference.
 
 ---
 
-## 4. News items (home page announcements)
+## 5. News items (home page announcements)
 
 The scrollable list on the home page is built from `_news/`.
 Each item is a separate Markdown file:
@@ -285,7 +352,7 @@ Our paper *Paper Title* has been accepted to **USENIX Security 2026**! 🎉
 
 ---
 
-## 5. Repositories page
+## 6. Repositories page
 
 The repositories page (`/repositories/`) is driven by:
 
@@ -305,9 +372,9 @@ Cards are rendered via `github-readme-stats.vercel.app`, so the repo must be **p
 
 ---
 
-## 6. Previewing locally (optional)
+## 7. Previewing locally (optional)
 
-You can build the site without pushing if you want to check something first. Requirements: Ruby 3.x + Bundler.
+You can build the site without opening a PR if you want to check something first. Requirements: Ruby 3.x + Bundler.
 
 ```bash
 bundle install          # first time only
@@ -318,28 +385,29 @@ Then open `http://localhost:4000`. The site rebuilds automatically when you save
 
 If `bundle install` fails with a version error, update the Ruby/Bundler versions in the error message and try again. Using [rbenv](https://github.com/rbenv/rbenv) to manage Ruby is easiest.
 
-You do **not** have to preview locally — pushing to `main` will rebuild on GitHub Pages and any errors show up in the **Actions** tab.
+Local preview is **optional** — once your PR is merged, GitHub Pages rebuilds automatically, and any errors show up in the **Actions** tab.
 
 ---
 
-## 7. Common gotchas
+## 8. Common gotchas
 
 - **YAML is indentation-sensitive.** Use 2 spaces per level and never use tabs. If the site stops building after a members edit, 99% of the time this is why.
 - **Strings with a colon, `#`, or leading/trailing spaces must be quoted.** Example: `cohort: "45th"`. When in doubt, wrap in double quotes.
 - **BibTeX keys must be unique.** If two entries share a key, only one will be rendered.
 - **Image filenames are case-sensitive on GitHub Pages.** `Foo.jpg` and `foo.jpg` are different files.
 - **Don't edit `_config.yml` unless you know what you're doing.** Site-wide settings live there; a typo can break the whole build.
+- **Keep your fork in sync.** If `main` has moved on and your branch is stale, GitHub will flag merge conflicts in the PR — pull from upstream, resolve, and push again.
 
 ---
 
-## 8. Who to ask
+## 9. Who to ask
 
-- Build failing or something broken after a push → check the GitHub **Actions** tab, post the red log in the lab chat.
-- Adding a new section, navbar item, or changing the layout → ping Prof. Shin first.
+- Build failing or something broken after merge → check the GitHub **Actions** tab, post the red log in the lab chat.
+- Adding a new section, navbar item, or changing the layout → ping Prof. Shin first (open an issue rather than opening a surprise PR).
 
 ---
 
-## 9. Further reference
+## 10. Further reference
 
 This site is built on the **al-folio** Jekyll theme. For anything beyond the day-to-day edits covered above — deeper theme customization, new layouts, plugin configuration, advanced features, or upstream updates — refer to the upstream project:
 
