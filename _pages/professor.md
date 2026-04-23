@@ -116,7 +116,7 @@ nav: false
     <div class="contact">
       <div><strong>Email:</strong> syoungjoo [at] korea.ac.kr</div>
       <div><strong>Phone:</strong> +82-2-3290-4884</div>
-      <div><strong>Office:</strong> Robot Convergence Bld. #212</div>
+      <div><strong>Office:</strong> Jung Un-Oh IT Building (정운오IT교양관), Room 320</div>
     </div>
     {% include member_links.liquid links=prof.links %}
   </div>
