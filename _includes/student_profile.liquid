@@ -146,6 +146,41 @@
   {% endif %}
 </div>
 
+{%- assign detail = site.data.students[slug] -%}
+{% if detail %}
+
+{% if detail.biography %}
+<div class="stu-section">
+  <h2>Biography</h2>
+  {{ detail.biography | markdownify }}
+</div>
+{% endif %}
+
+{% for sec in detail.sections %}
+<div class="stu-section">
+  <h2>{{ sec.heading }}</h2>
+  {% if sec.tba %}
+    <p class="tba">TBA — to be filled in.</p>
+  {% elsif sec.type == "timeline" %}
+    <ul class="prof-timeline">
+      {% for it in sec.items %}
+        <li><div class="period">{{ it.period }}</div>
+            <div class="desc">{{ it.desc }}{% if it.where %}<div class="where">{{ it.where }}</div>{% endif %}</div></li>
+      {% endfor %}
+    </ul>
+    {% if sec.note %}<p class="tba">{{ sec.note }}</p>{% endif %}
+  {% elsif sec.type == "bullets" %}
+    <ul>
+      {% for it in sec.items %}<li>{{ it | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+</div>
+{% endfor %}
+
+{% include student_publications.liquid slug=slug %}
+
+{% endif %}
+
 {% else %}
 <p>Member not found.</p>
 {% endif %}

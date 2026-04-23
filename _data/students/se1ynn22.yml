@@ -1,0 +1,21 @@
+biography: |
+  Serin Kim is an M.S. student in the Computer Systems Security Lab at Korea
+  University, advised by Prof. Youngjoo Shin. Her research interests include
+  system security and microarchitectural side-channel attacks.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2025.02 – present", desc: "M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2020 – 2025", desc: "B.S. (GPA 4.0 / 4.5)", where: "Sungshin Women's University" }
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - Best of the Best (BoB) 12th
+      - CVE-2023-49965
+      - "SpaceX / Starlink Bugcrowd Hall of Fame (#6)"
+      - Speaker, Codegate 2024
+      - CISC-S'25 — paper on Apple M3 side channels
+      - WISA 2025 — poster

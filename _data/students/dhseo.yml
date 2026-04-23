@@ -1,0 +1,19 @@
+biography: |
+  Donghyun Seo is an M.S. student in the Computer Systems Security Lab at Korea
+  University, advised by Prof. Youngjoo Shin. His research interests include
+  binary analysis, system security, and network security.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "present", desc: "M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2022 – 2026", desc: "B.S. in Software Engineering (GPA 4.25 / 4.5)", where: "Kookmin University" }
+
+  - heading: Projects & Certifications
+    type: bullets
+    items:
+      - CICIDS2017 DoS detection
+      - Encrypted traffic application identification
+      - AI-based malicious IP detection
+      - "Certifications: ADsP, 정보보안기사 (Information Security Engineer)"

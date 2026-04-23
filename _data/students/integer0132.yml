@@ -1,0 +1,17 @@
+biography: |
+  Jeongsu Kim is an M.S. student in the Computer Systems Security Lab at Korea
+  University, advised by Prof. Youngjoo Shin. His research interests include
+  system security and microarchitectural side-channel attacks.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "present", desc: "M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2019 – 2025", desc: "B.S. in Computer Engineering (GPA 4.05 / 4.5)", where: "Inha University" }
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - Best of the Best (BoB) 13th — Top 30
+      - CVE-2025-4437, CVE-2025-4853, CVE-2025-4854 (Kubernetes)

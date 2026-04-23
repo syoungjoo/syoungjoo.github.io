@@ -1,0 +1,25 @@
+biography: |
+  Jihoon Kwon is an undergraduate intern in the Computer Systems Security Lab
+  at Korea University, advised by Prof. Youngjoo Shin. His research interests
+  include operating system security, kernel-level vulnerability analysis,
+  filesystem security, and system-level exploitation.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2020.03 – 2026.08", desc: "B.S. in Computer Science (GPA 3.74 / 4.5)", where: "Korea University" }
+
+  - heading: Experience
+    type: timeline
+    items:
+      - { period: "2026.01 – present", desc: "Undergraduate intern", where: "Computer Systems Security Lab, Korea University" }
+      - { period: "2025.05 – 2025.12", desc: "Undergraduate Research Assistant", where: "OSVS Research Lab, Soongsil University" }
+      - { period: "2024.07 – 2025.02", desc: "Best of the Best (BoB) 13th — Vulnerability Analysis Track" }
+      - { period: "2023.07 – 2025.07", desc: "KUICS Security Club", where: "Korea University" }
+
+  - heading: Projects
+    type: bullets
+    items:
+      - OS boot process analysis and bootkit malware development
+      - Linux Kernel Library (LKL) for filesystem vulnerability detection in exFAT and ntfs3

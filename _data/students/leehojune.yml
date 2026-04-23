@@ -1,0 +1,19 @@
+biography: |
+  Hojun Lee is an undergraduate intern in the Computer Systems Security Lab at
+  Korea University, advised by Prof. Youngjoo Shin. His research interests
+  include system security, binary analysis, fuzzing, and hardware security.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2021 – present", desc: "B.S. in Computer Science and Engineering / Information Security", where: "Korea University" }
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - CVE-2025-55212
+      - CVE-2025-55298
+      - KUICS (Korea Univ. Information & Cyber-security Society) member
+      - CSL undergraduate intern, 2026–
+      - "Language: TOEIC 980, TOEFL 111, HSK Level 6"

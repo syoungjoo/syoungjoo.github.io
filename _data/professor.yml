@@ -1,0 +1,172 @@
+# Professor profile data.
+# Page template: _pages/professor.md
+
+role_title: Associate Professor
+
+contact:
+  email_local: syoungjoo
+  email_domain: korea.ac.kr
+  phone: "+82-2-3290-4884"
+  office: "Jung Un-Oh IT Building (정운오IT교양관), Room 320"
+
+affiliation:
+  lab:
+    name: Computer Systems Security Lab
+    url: /
+  school:
+    name: School of Cybersecurity
+    url: https://security.korea.ac.kr
+  university: Korea University
+
+biography: |
+  **Youngjoo Shin** is an Associate Professor in the
+  [School of Cybersecurity](https://security.korea.ac.kr) at
+  Korea University, where he directs the Computer Systems Security Lab.
+  His research investigates the security of modern computer systems — from CPU
+  microarchitecture to operating systems, virtualization platforms, and cloud
+  infrastructure — with a particular focus on side-channel and transient-execution
+  attacks, OS kernel defenses, and practical privacy-preserving system design.
+
+  Before joining Korea University in 2020, he was an Assistant Professor at
+  Kwangwoon University (2017–2020), a Senior Researcher at the National Security
+  Research Institute (2008–2017), and a Researcher at LG Electronics' Digital
+  Media Laboratory (2007–2008).
+
+interests:
+  - System Security
+  - Microarchitectural Side-channel Attacks
+  - Transient Execution Attacks
+  - OS & Hypervisor Security
+  - Cloud & Container Security
+  - Network Security
+  - Applied Cryptography
+
+education:
+  - period: Ph.D.
+    desc: Computer Science
+    where: KAIST, Korea
+  - period: M.S.
+    desc: Computer Science
+    where: KAIST, Korea
+  - period: B.S.
+    desc: Computer Science and Engineering
+    where: Korea University, Korea
+
+experience:
+  - period: "2022.3 – present"
+    desc: Associate Professor
+    where: School of Cybersecurity, Korea University
+  - period: "2020.9 – 2022.2"
+    desc: Assistant Professor
+    where: School of Cybersecurity, Korea University
+  - period: "2017.3 – 2020.8"
+    desc: Assistant Professor
+    where: Kwangwoon University
+  - period: "2008.4 – 2017.2"
+    desc: Senior Researcher
+    where: National Security Research Institute (NSR)
+  - period: "2007.11 – 2008.3"
+    desc: Researcher
+    where: Digital Media Laboratory, LG Electronics
+  - period: "2006.3 – 2007.12"
+    desc: Research Assistant
+    where: Mobile Multimedia Platform Center, KAIST
+
+invited_talks:
+  - year: 2026
+    items:
+      - NetSec-KR 2026, IITP Special Session (invited talk)
+  - year: 2025
+    items:
+      - WDSC 2025 (invited lecture)
+      - Drone Cybersecurity Seminar
+      - Unification & Sharing Policy Research Seminar
+  - year: 2024
+    items:
+      - NetSec-KR 2024
+  - year: 2023
+    items:
+      - KAIST Colloquium
+      - KSC 2023
+      - ROK Navy Cybersecurity Seminar
+      - WebAssembly Security Seminar
+  - year: 2022
+    items:
+      - Hansung University
+  - year: 2021
+    items:
+      - NSR
+      - Hansung University
+      - Sejong University
+  - year: 2020
+    items:
+      - Side-Channel Analysis Workshop
+      - NSR
+      - Hoseo University
+      - SeoulTech
+      - Hansung University
+      - Sejong University
+      - Kookmin University
+  - year: 2019
+    items:
+      - KAIST
+      - Korea University
+      - SeoulTech
+      - Sejong University
+      - Hansung University
+      - Kookmin University
+      - WISC 2019
+      - Side-Channel Analysis Workshop
+  - year: 2018
+    items:
+      - NetSec-KR 2018
+      - KICS
+      - ETRI
+      - NSR
+      - WISC 2018
+      - Side-Channel Analysis Workshop
+      - Sejong / Kookmin / Hansung / Hannam Universities
+  - year: 2017
+    items:
+      - KCC 2017
+      - SDN/NFV Forum Security WG
+      - NSR
+      - Korea / Kookmin / Hansung Universities
+
+service:
+  - heading: Government & Public-Sector Advisory
+    items:
+      - "IITP Preliminary Feasibility Study, *Intelligent Cyber-Shield Dome* Program — Subcommittee Member (2025–)"
+      - Cloud Security Assurance Program (CSAP) Certification Committee (2023–2024)
+      - National Security Research Institute (NSR) — Digital-Signature Advisory (2022)
+      - National Intelligence Service — Mid-/Long-Term Security Strategy Advisory (2019)
+      - IITP Preliminary Feasibility Study on Connected-Device Security — Committee Member (2017)
+
+  - heading: Peer Review & Evaluation
+    items:
+      - Korea Data Agency (KoData) — KOSDAQ Technology Assessment Advisor, ICT Sector
+      - Korea Internet & Security Agency (KISA) — Evaluation Committee Member (2017, 2018)
+
+  - heading: Program Committee
+    items:
+      - "**2026:** PST 2026; SECRYPT 2026; SecureComm 2026 (EAI); IFIP SEC 2026"
+      - "**2024:** ICISC 2024; SmartSP 2024"
+      - "**2023:** ICISC 2023"
+      - "**2022:** WoNEXT 2022; CISC-W 2022"
+      - "**2020:** KCS 2020"
+      - "**2018:** Security 2018 (사이버보안 논문 공모전)"
+
+  - heading: Standards, Guidelines & Industry
+    items:
+      - "Korea Association for Industrial Technology Security (KAITS) — Contribution/Advisory on *The Future of Sovereign Cloud*"
+      - KISA — Key-Management Guidelines Review Advisory
+      - IDEC — External Advisor (2024)
+      - LG U+ — Security Advisory (2019)
+      - KANI; SDN/NFV Forum Security Working Group (2017)
+
+  - heading: Academia
+    items:
+      - Kwangwoon University — Faculty Recruitment Review Committee (2024)
+      - Kookmin University — Faculty Review Committee (2018)
+
+dblp_url: https://dblp.org/pid/33/2332.html

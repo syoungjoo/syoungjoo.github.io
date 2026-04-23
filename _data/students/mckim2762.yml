@@ -1,0 +1,19 @@
+biography: |
+  Minchang Kim is an M.S. student in the Computer Systems Security Lab at Korea
+  University, advised by Prof. Youngjoo Shin. His research interests include
+  network security, cloud security, and binary analysis. Prior to joining the
+  lab he served as an Army Cyber Operations Officer and worked at the National
+  Defense Integrated Data Center.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2026 – present", desc: "M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2015 – 2019", desc: "B.S. in Computer Science and Military Science", where: "Korea Military Academy" }
+
+  - heading: Experience
+    type: timeline
+    items:
+      - { period: "2025 – 2026", desc: "National Defense Integrated Data Center" }
+      - { period: "2021 – 2024", desc: "Cyber Operations Officer", where: "Republic of Korea Army" }

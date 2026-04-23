@@ -1,0 +1,23 @@
+biography: |
+  Taehun Kim is a Ph.D. student in the Computer Systems Security Lab at
+  Korea University, advised by Prof. Youngjoo Shin. His research centers on
+  CPU microarchitectural attacks and defenses across Intel, AMD, ARM, and
+  Apple Silicon processors, with particular interest in device-driven attacks
+  leveraging SmartNICs, GPUs, and NPUs, and in the security evaluation of
+  trusted execution environments including Intel SGX/TDX, AMD SEV, and ARM TrustZone.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "Ph.D. (in progress)", desc: "School of Cybersecurity", where: "Korea University" }
+    note: "Earlier degrees — TBA."
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - Grand Prize, Cybersecurity Paper Competition (2024)
+      - KISTI Director's Award (2024)
+      - Best Paper Award, Korea Software Congress (KSC 2022)
+      - Excellence Award, Cybersecurity Paper Competition (2021)
+      - Multiple conference presentation awards (2019–2023)

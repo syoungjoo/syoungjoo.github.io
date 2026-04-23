@@ -1,0 +1,17 @@
+biography: |
+  Geonung Kim is an integrated Ph.D./M.S. student in the Computer Systems Security
+  Lab at Korea University, advised by Prof. Youngjoo Shin. His research interests
+  include binary analysis, embedded system security, and defense security. Before
+  joining the lab, he worked as a Source Code Security Engineer at Fin Security.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2025 – present", desc: "Integrated Ph.D./M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2017 – 2024", desc: "B.S. in Software Engineering", where: "Jeonbuk National University" }
+
+  - heading: Experience
+    type: timeline
+    items:
+      - { period: "2023 – 2025", desc: "Source Code Security Engineer", where: "Fin Security" }

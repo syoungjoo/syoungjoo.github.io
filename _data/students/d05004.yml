@@ -1,0 +1,19 @@
+biography: |
+  Dongjoo Kim is an integrated Ph.D./M.S. student in the Computer Systems Security
+  Lab at Korea University, advised by Prof. Youngjoo Shin. His research focuses on
+  system security, binary analysis, and fuzzing.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2024.03 – present", desc: "Integrated Ph.D./M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2018 – 2024", desc: "B.S.", where: "Sejong University" }
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - CVE-2024-28283
+      - KVE-2023-0023, KVE-2023-0024
+      - Best of the Best (BoB) 11th
+      - Groom OS vulnerability analysis project; MECCI project

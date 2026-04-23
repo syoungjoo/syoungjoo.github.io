@@ -1,0 +1,17 @@
+biography: |
+  Seonghun Park is an M.S. student in the Computer Systems Security Lab at Korea
+  University, advised by Prof. Youngjoo Shin. His research interests include
+  system security, binary analysis, network security, and AI security.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2025 – 2027", desc: "M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2017 – 2023", desc: "B.S. in Mathematics and Information Security", where: "Korea University" }
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - S-Developer 2nd Cohort
+      - SQLD Certification

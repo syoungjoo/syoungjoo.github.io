@@ -1,0 +1,27 @@
+biography: |
+  Jihu Cha is an undergraduate intern in the Computer Systems Security Lab at
+  Korea University, advised by Prof. Youngjoo Shin. Pursuing a double major in
+  Smart Security and Biomedical Engineering, her interests span embedded
+  systems security, side-channel attacks, and security for medical and IoMT
+  devices.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2023.03 – present", desc: "B.S., School of Smart Security and School of Biomedical Engineering", where: "Korea University" }
+
+  - heading: Experience
+    type: timeline
+    items:
+      - { period: "2026.01 – present", desc: "Undergraduate intern", where: "Computer Systems Security Lab, Korea University" }
+      - { period: "2025.12 – present", desc: "Groom Deep Dive: Information Security Expert Course", where: "Digital forensics, CERT, penetration testing" }
+      - { period: "2024.03 – 2024.07", desc: "BEAT Biosensor Team" }
+
+  - heading: Projects & Certifications
+    type: bullets
+    items:
+      - "Brain Tractography Analysis — deterministic/local fiber tracking with DTI Studio (2025.09–12)"
+      - "3D segmentation and volumetric analysis of enlarged Perivascular Spaces with 3D Slicer (2025.09–12)"
+      - Cambridge Linguaskill Business B2
+      - "Duolingo English Test: Advanced, CEFR C1 (145)"

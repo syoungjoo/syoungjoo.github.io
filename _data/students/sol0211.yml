@@ -1,0 +1,18 @@
+biography: |
+  Junho Lee is an M.S. student in the Computer Systems Security Lab at Korea
+  University, advised by Prof. Youngjoo Shin. His research interests include
+  system security, binary analysis, and cloud security.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "present", desc: "M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2020 – 2026", desc: "B.S., School of Software", where: "Kwangwoon University" }
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - CISC-W'25 — paper on WASI runtime fuzzing
+      - Dean's List, Spring 2024
+      - Dean's List, Fall 2024

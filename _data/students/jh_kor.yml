@@ -1,0 +1,19 @@
+biography: |
+  Jihye Lee is an integrated Ph.D./M.S. student in the Computer Systems Security
+  Lab at Korea University, advised by Prof. Youngjoo Shin. Her research interests
+  include system software security and network systems security.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2023.09 – present", desc: "Integrated Ph.D./M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2018 – 2022", desc: "B.S.", where: "Beihang University, China" }
+
+  - heading: Honors & Awards
+    type: bullets
+    items:
+      - Accepted paper, IEEE ICOIN 2026
+      - Domestic conference papers (CISC, KSC)
+      - Three patent applications
+      - "Language: TOEIC 820, HSK Level 5"
