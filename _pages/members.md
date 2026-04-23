@@ -107,7 +107,7 @@ nav_order: 1
   }
 </style>
 
-{% assign m = site.data.members.roster %}
+{% assign m = site.data.members %}
 
 <!-- Professor -->
 <div class="member-group">

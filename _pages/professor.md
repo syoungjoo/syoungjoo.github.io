@@ -105,7 +105,7 @@ nav: false
   }
 </style>
 
-{% assign prof = site.data.members.roster.professor[0] %}
+{% assign prof = site.data.members.professor[0] %}
 {% assign p = site.data.professor %}
 
 <div class="prof-hero">
