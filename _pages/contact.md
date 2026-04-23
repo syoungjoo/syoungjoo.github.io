@@ -81,7 +81,10 @@ nav_order: 7
     <span class="ico"><i class="fa-solid fa-location-dot"></i></span>
     <span class="label">Office</span>
     <span class="val">
-      Robot Convergence Bld., Room 212
+      <strong>Professor's Office</strong> — Jung Un-Oh IT Building, Room 320
+      <span class="sub">145 Anam-ro, Seongbuk-gu, Seoul 02841, Republic of Korea</span>
+      <span class="sub" lang="ko">서울특별시 성북구 안암로 145 고려대학교 정운오IT교양관 320호</span>
+      <div style="margin-top: 0.6rem;"><strong>Student Lab</strong> — Robot Convergence Building, Room 212</div>
       <span class="sub">145 Anam-ro, Seongbuk-gu, Seoul 02841, Republic of Korea</span>
       <span class="sub" lang="ko">서울특별시 성북구 안암로 145 고려대학교 로봇융합관 212호</span>
     </span>
