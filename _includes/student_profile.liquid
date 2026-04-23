@@ -7,7 +7,7 @@
 
 {%- assign group = include.group -%}
 {%- assign slug = include.slug -%}
-{%- assign roster = site.data.members[group] -%}
+{%- assign roster = site.data.members.roster[group] -%}
 {%- assign s = nil -%}
 {%- for m in roster -%}
   {%- if m.email == slug -%}{%- assign s = m -%}{%- endif -%}
@@ -147,7 +147,7 @@
 </div>
 
 {%- assign name_slug = s.name | downcase | replace: " ", "-" -%}
-{%- assign detail = site.data.students[name_slug] -%}
+{%- assign detail = site.data.members[name_slug] -%}
 {% if detail %}
 
 {% if detail.biography %}
