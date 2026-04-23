@@ -12,20 +12,30 @@
       <a href="{{ L.scholar }}" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
     {%- endif -%}
   {%- endunless -%}
-  {%- if L.github and L.github != '' -%}
-    <a href="{{ L.github }}" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-  {%- endif -%}
-  {%- if L.linkedin and L.linkedin != '' -%}
-    <a href="{{ L.linkedin }}" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-  {%- endif -%}
-  {%- if L.twitter and L.twitter != '' -%}
-    <a href="{{ L.twitter }}" title="X / Twitter" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-  {%- endif -%}
-  {%- if L.orcid and L.orcid != '' -%}
-    <a href="{{ L.orcid }}" title="ORCID" aria-label="ORCID" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i></a>
-  {%- endif -%}
-  {%- if L.dblp and L.dblp != '' -%}
-    <a href="{{ L.dblp }}" title="DBLP" aria-label="DBLP" target="_blank" rel="noopener"><i class="ai ai-dblp"></i></a>
-  {%- endif -%}
+  {%- unless exclude contains "github" -%}
+    {%- if L.github and L.github != '' -%}
+      <a href="{{ L.github }}" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
+  {%- unless exclude contains "linkedin" -%}
+    {%- if L.linkedin and L.linkedin != '' -%}
+      <a href="{{ L.linkedin }}" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
+  {%- unless exclude contains "twitter" -%}
+    {%- if L.twitter and L.twitter != '' -%}
+      <a href="{{ L.twitter }}" title="X / Twitter" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
+  {%- unless exclude contains "orcid" -%}
+    {%- if L.orcid and L.orcid != '' -%}
+      <a href="{{ L.orcid }}" title="ORCID" aria-label="ORCID" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
+  {%- unless exclude contains "dblp" -%}
+    {%- if L.dblp and L.dblp != '' -%}
+      <a href="{{ L.dblp }}" title="DBLP" aria-label="DBLP" target="_blank" rel="noopener"><i class="ai ai-dblp"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
 </div>
 {%- endif -%}

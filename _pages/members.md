@@ -121,7 +121,7 @@ nav_order: 1
         <div style="color: var(--global-text-color-light); margin-bottom: 0.5rem;">{{ p.role }}</div>
         {% if p.email %}<div style="font-family: var(--global-code-font-family, monospace); font-size: 0.9rem; margin-bottom: 0.5rem;">{{ p.email }} [at] korea.ac.kr</div>{% endif %}
         {% if p.interests %}<div><strong>Research:</strong> {{ p.interests }}</div>{% endif %}
-        {% include member_links.liquid links=p.links exclude="homepage,scholar" %}
+        {% include member_links.liquid links=p.links exclude="homepage,scholar,github,linkedin" %}
       </div>
     </div>
   {% endfor %}
