@@ -226,11 +226,8 @@ nav: false
   <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Government &amp; Public-Sector Advisory</h3>
   <ul>
     <li>IITP Preliminary Feasibility Study, <em>Intelligent Cyber-Shield Dome</em> Program — Subcommittee Member (2025–)</li>
-    <li>National Strategic Technology Expert Advisory Committee (2024)</li>
-    <li>Ministry of Science and ICT — Minister's Commendation Nomination Committee (2024)</li>
-    <li>Cloud Security Certification Committee (2024)</li>
+    <li>Cloud Security Assurance Program (CSAP) Certification Committee (2023–2024)</li>
     <li>National Security Research Institute (NSR) &amp; Ministry of the Interior — Digital-Signature Advisory (2022)</li>
-    <li>National Security Research Institute — Advisory Member (2021)</li>
     <li>National Intelligence Service — Mid-/Long-Term Security Strategy Advisory (2019)</li>
     <li>IITP Preliminary Feasibility Study on Connected-Device Security — Committee Member (2017)</li>
   </ul>
@@ -243,7 +240,16 @@ nav: false
     <li>Korean Institute of Communications and Information Sciences (KICS) — Paper Reviewer (2018)</li>
     <li>National Cryptography Contest 2018 — Judge</li>
     <li>Korea Internet &amp; Security Agency (KISA) — Evaluation Committee Member (2017, 2018)</li>
-    <li>Program Committee — KCS 2020, Security 2018</li>
+  </ul>
+
+  <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Program Committee</h3>
+  <ul>
+    <li><strong>2026:</strong> PST 2026; SECRYPT 2026; SecureComm 2026 (EAI); IFIP SEC 2026</li>
+    <li><strong>2024:</strong> ICISC 2024; SmartSP 2024</li>
+    <li><strong>2023:</strong> ICISC 2023</li>
+    <li><strong>2022:</strong> WoNEXT 2022; CISC-W 2022</li>
+    <li><strong>2020:</strong> KCS 2020</li>
+    <li><strong>2018:</strong> Security 2018 (사이버보안 논문 공모전)</li>
   </ul>
 
   <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Standards, Guidelines &amp; Industry</h3>
@@ -259,7 +265,6 @@ nav: false
   <ul>
     <li>Kwangwoon University — Faculty Recruitment Review Committee (2024)</li>
     <li>Kookmin University — Faculty Review Committee (2018)</li>
-    <li>Korea University, School of Cybersecurity — 50th-Anniversary History Compilation Committee (2023)</li>
   </ul>
 </div>
 
