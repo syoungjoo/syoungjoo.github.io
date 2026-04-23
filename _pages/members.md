@@ -110,8 +110,9 @@ nav_order: 1
   <h2>Professor</h2>
   {% for p in m.professor %}
     <div class="member-professor">
-      {% if p.image %}
-        <img src="{{ p.image | prepend: '/assets/img/' | relative_url }}" alt="{{ p.name }}">
+      {% assign prof_img = p.card_image | default: p.image %}
+      {% if prof_img %}
+        <img src="{{ prof_img | prepend: '/assets/img/' | relative_url }}" alt="{{ p.name }}">
       {% endif %}
       <div>
         <div style="font-weight: 600; font-size: 1.3rem; margin-bottom: 0.2rem;">
