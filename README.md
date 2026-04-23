@@ -7,7 +7,8 @@ This guide is organized around the four things lab members actually do:
 1. **How to contribute updates** — the Fork + Pull Request workflow (read this first).
 2. **Updating member profiles** — roster entries and per-student profile pages.
 3. **Adding publications** — `_bibliography/papers.bib`.
-4. **Adding gallery photos** — `assets/img/gallery/` + optional per-event metadata.
+4. **Adding CVEs** — entries on the `/cves/` disclosure page.
+5. **Adding gallery photos** — `assets/img/gallery/` + optional per-event metadata.
 
 Shorter sections on news, repositories, local preview, and common gotchas follow at the end.
 
@@ -274,12 +275,79 @@ author = {Kim, Taehun and Jang, Hyerean and Shin, Youngjoo},
 
 ---
 
-## 4. Adding gallery photos
+## 4. Adding CVEs
+
+Vulnerabilities that lab members report through CVE (global) or KVE (Korea) are listed on `/cves/`. This page is hand-authored HTML (not data-driven), which keeps the formatting flexible but means each new entry is a small copy-paste job in one file:
+
+```
+_pages/cves.md
+```
+
+Entries are **grouped by year**, newest year at the top. Inside each year, list newest IDs first.
+
+### 4.1 Adding a new entry
+
+1. Open `_pages/cves.md`.
+2. Find (or create) the `<h2 class="cve-year">YYYY</h2>` block for the disclosure year. The items for that year live in the `<ul class="cve-list"> … </ul>` right below.
+3. Paste this template as a new `<li>` at the top of the list and fill it in:
+
+   ```html
+   <li class="cve-item">
+     <div class="cve-id"><a href="https://nvd.nist.gov/vuln/detail/CVE-YYYY-NNNNN" target="_blank" rel="noopener">CVE-YYYY-NNNNN</a></div>
+     <div class="cve-body">
+       <div class="cve-title">One-line vulnerability title (product + what breaks)</div>
+       <div class="cve-meta"><span class="tag dos">DoS</span> Reporter: Firstname Lastname · Binary analysis</div>
+       <div class="cve-desc">
+         2–3 sentences: affected product/version, the root cause, impact, and
+         CVSS score if known. Keep it factual; this is a public page.
+       </div>
+     </div>
+   </li>
+   ```
+
+4. For **KVE** entries, link to the KISA advisory portal:
+   ```html
+   <a href="https://knvd.krcert.or.kr/" target="_blank" rel="noopener">KVE-YYYY-NNNN</a>
+   ```
+5. If the finding is tied to a lab paper, add a highlighted block **inside** `cve-body`, right after `cve-desc`:
+
+   ```html
+   <div class="cve-pub">
+     <strong>Related publication:</strong>
+     Author A, Author B, Youngjoo Shin.
+     <em>"Paper Title."</em>
+     Venue YYYY.
+     <a href="{{ '/publications/' | relative_url }}">[lab publications]</a>
+     · <a href="https://github.com/koreacsl/Repo" target="_blank" rel="noopener">[code]</a>
+   </div>
+   ```
+
+### 4.2 Tag conventions
+
+The small colored pill next to the reporter uses one of these classes — pick the closest one (or add your own class in the `<style>` block at the top of the file):
+
+| Class       | Use for                          |
+|-------------|----------------------------------|
+| `tag dos`   | Denial of service                |
+| `tag rce`   | Remote / arbitrary code execution|
+| `tag cmd`   | Command or shell injection       |
+| `tag kbypass` | KASLR / ASLR / mitigation bypass |
+
+### 4.3 Style & tone
+
+- **Neutral, factual language.** This is a lab deliverables page, not marketing. Don't editorialize.
+- **Use the vendor's real product name** and firmware/version string (e.g. *Tenda AC9 firmware 15.03.06.42*).
+- **CVSS:** cite the numeric base score and severity band (e.g. "CVSS 8.8 (High)") when available.
+- If the advisory is still in `RESERVED` status on NVD, leave the link as-is — it'll resolve once the entry is published.
+
+---
+
+## 5. Adding gallery photos
 
 The gallery page (`/gallery/`) is **folder-based** — in most cases you just drop
 photos into a folder and the site auto-discovers them. No YAML editing required.
 
-### 4.1 The easy path (no metadata)
+### 5.1 The easy path (no metadata)
 
 1. Create a folder under `assets/img/gallery/` with a slug.
    **Prefix with `YYYY-MM-DD-` so events sort chronologically:**
@@ -293,7 +361,7 @@ The folder name becomes the event title (hyphens → spaces). Events are sorted
 newest-first. Photos within an event are sorted alphabetically by filename —
 name them `01-group.jpg`, `02-stage.jpg`, … if you want a specific order.
 
-### 4.2 With metadata (title / date / place)
+### 5.2 With metadata (title / date / place)
 
 For a prettier title or to show a venue, add an optional YAML file:
 
@@ -313,7 +381,7 @@ place: Anam Campus, Korea University
 Every field is optional. Missing fields fall back to the auto-derived values
 from the folder name.
 
-### 4.3 Photo tips
+### 5.3 Photo tips
 
 - Downsize large files (> 3 MB) before committing. Roughly 1600 px on the long
   edge is plenty. Heavy pages load slowly and eat GitHub Pages bandwidth.
@@ -324,7 +392,7 @@ See also `_data/gallery/README.md` for a shorter reference.
 
 ---
 
-## 5. News items (home page announcements)
+## 6. News items (home page announcements)
 
 The scrollable list on the home page is built from `_news/`.
 Each item is a separate Markdown file:
@@ -352,7 +420,7 @@ Our paper *Paper Title* has been accepted to **USENIX Security 2026**! 🎉
 
 ---
 
-## 6. Repositories page
+## 7. Repositories page
 
 The repositories page (`/repositories/`) is driven by:
 
@@ -372,7 +440,7 @@ Cards are rendered via `github-readme-stats.vercel.app`, so the repo must be **p
 
 ---
 
-## 7. Previewing locally (optional)
+## 8. Previewing locally (optional)
 
 You can build the site without opening a PR if you want to check something first. Requirements: Ruby 3.x + Bundler.
 
@@ -389,7 +457,7 @@ Local preview is **optional** — once your PR is merged, GitHub Pages rebuilds 
 
 ---
 
-## 8. Common gotchas
+## 9. Common gotchas
 
 - **YAML is indentation-sensitive.** Use 2 spaces per level and never use tabs. If the site stops building after a members edit, 99% of the time this is why.
 - **Strings with a colon, `#`, or leading/trailing spaces must be quoted.** Example: `cohort: "45th"`. When in doubt, wrap in double quotes.
@@ -400,14 +468,14 @@ Local preview is **optional** — once your PR is merged, GitHub Pages rebuilds 
 
 ---
 
-## 9. Who to ask
+## 10. Who to ask
 
 - Build failing or something broken after merge → check the GitHub **Actions** tab, post the red log in the lab chat.
 - Adding a new section, navbar item, or changing the layout → ping Prof. Shin first (open an issue rather than opening a surprise PR).
 
 ---
 
-## 10. Further reference
+## 11. Further reference
 
 This site is built on the **al-folio** Jekyll theme. For anything beyond the day-to-day edits covered above — deeper theme customization, new layouts, plugin configuration, advanced features, or upstream updates — refer to the upstream project:
 
