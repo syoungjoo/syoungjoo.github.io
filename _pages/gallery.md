@@ -30,10 +30,12 @@ nav_order: 7
   .gal-meta .dot { margin: 0 0.4rem; }
 
   .gal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.6rem;
   }
+  .gal-tile { flex: 0 1 270px; }
   .gal-tile {
     position: relative;
     aspect-ratio: 3 / 2;
