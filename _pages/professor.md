@@ -208,6 +208,6 @@ nav: false
     See the <a href="{{ '/publications/' | relative_url }}">publications page</a> for a full list,
     or browse external profiles:
     <a href="{{ prof.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a>,
-    <a href="https://dblp.org/pid/39/10213.html" target="_blank" rel="noopener">DBLP</a>.
+    <a href="https://dblp.org/pid/33/2332.html" target="_blank" rel="noopener">DBLP</a>.
   </p>
 </div>

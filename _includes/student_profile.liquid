@@ -1,0 +1,145 @@
+{%- comment -%}
+  Shared student profile layout.
+  Usage (from a page):
+    {% include student_profile.liquid group="phd" slug="taehunk" %}
+  The `slug` must match the `email` field of the entry in _data/members.yml.
+{%- endcomment -%}
+
+{%- assign group = include.group -%}
+{%- assign slug = include.slug -%}
+{%- assign roster = site.data.members[group] -%}
+{%- assign s = nil -%}
+{%- for m in roster -%}
+  {%- if m.email == slug -%}{%- assign s = m -%}{%- endif -%}
+{%- endfor -%}
+
+{%- if group == "phd" -%}{%- assign role_label = "Ph.D. Student" -%}
+{%- elsif group == "ms" -%}{%- assign role_label = "M.S. Student" -%}
+{%- elsif group == "undergrad" -%}{%- assign role_label = "Undergraduate Student" -%}
+{%- else -%}{%- assign role_label = "Student" -%}
+{%- endif -%}
+
+<style>
+  .stu-hero {
+    display: flex;
+    gap: 1.6rem;
+    align-items: flex-start;
+    padding: 1.2rem 0 1.6rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    margin-bottom: 1.8rem;
+  }
+  .stu-hero img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .stu-hero .meta { flex: 1; }
+  .stu-hero .name { font-weight: 600; font-size: 1.35rem; margin: 0 0 0.2rem; }
+  .stu-hero .role { color: var(--global-text-color-light); font-size: 0.95rem; margin-bottom: 0.7rem; }
+  .stu-hero .contact {
+    font-size: 0.88rem;
+    font-family: var(--global-code-font-family, monospace);
+    line-height: 1.6;
+  }
+  .stu-hero .member-links { margin-top: 0.6rem; font-size: 1.05rem; }
+  .stu-back {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+  }
+  .stu-back:hover { color: var(--global-theme-color, #b509ac); }
+
+  .stu-section { margin: 1.6rem 0; }
+  .stu-section h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 0.7rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .stu-section .tba {
+    color: var(--global-text-color-light);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .stu-interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+  }
+  .stu-interest-tags span {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    background: var(--global-card-bg-color, transparent);
+  }
+
+  @media (max-width: 576px) {
+    .stu-hero { flex-direction: column; align-items: center; text-align: center; }
+  }
+</style>
+
+<a class="stu-back" href="{{ '/members/' | relative_url }}">&larr; Back to members</a>
+
+{% if s %}
+<div class="stu-hero">
+  {% if s.image %}
+    <img src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">
+  {% endif %}
+  <div class="meta">
+    <div class="name">{{ s.name }}</div>
+    <div class="role">
+      {{ role_label }}
+      {% if s.cohort %} · {{ s.cohort }} semester{% endif %}
+    </div>
+    <div class="contact">
+      {% if s.email %}<div><strong>Email:</strong> {{ s.email }} [at] korea.ac.kr</div>{% endif %}
+    </div>
+    {% include member_links.liquid links=s.links %}
+  </div>
+</div>
+
+<div class="stu-section">
+  <h2>Research Interests</h2>
+  {% if s.interests %}
+    <div class="stu-interest-tags">
+      {% assign tags = s.interests | split: "," %}
+      {% for t in tags %}<span>{{ t | strip }}</span>{% endfor %}
+    </div>
+  {% else %}
+    <p class="tba">TBA</p>
+  {% endif %}
+</div>
+
+<div class="stu-section">
+  <h2>Biography</h2>
+  <p class="tba">TBA — to be filled in.</p>
+</div>
+
+<div class="stu-section">
+  <h2>Education</h2>
+  <p class="tba">TBA — to be filled in.</p>
+</div>
+
+<div class="stu-section">
+  <h2>Publications</h2>
+  <p>
+    See the <a href="{{ '/publications/' | relative_url }}">publications page</a> for the lab's full list.
+  </p>
+</div>
+
+<div class="stu-section">
+  <h2>Honors &amp; Awards</h2>
+  <p class="tba">TBA — to be filled in.</p>
+</div>
+
+{% else %}
+<p>Member not found.</p>
+{% endif %}

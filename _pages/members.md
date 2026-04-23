@@ -136,7 +136,8 @@ nav_order: 1
         {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
         <div class="body">
           <div class="name">
-            {% if s.links.homepage %}<a href="{{ s.links.homepage }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+            {% assign stu_slug = s.name | downcase | replace: " ", "-" %}
+            <a href="{{ '/members/' | append: stu_slug | append: '/' | relative_url }}">{{ s.name }}</a>
           </div>
           {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
@@ -159,7 +160,8 @@ nav_order: 1
         {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
         <div class="body">
           <div class="name">
-            {% if s.links.homepage %}<a href="{{ s.links.homepage }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+            {% assign stu_slug = s.name | downcase | replace: " ", "-" %}
+            <a href="{{ '/members/' | append: stu_slug | append: '/' | relative_url }}">{{ s.name }}</a>
           </div>
           {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
@@ -182,7 +184,8 @@ nav_order: 1
         {% if s.image %}<img class="photo" src="{{ s.image | prepend: '/assets/img/' | relative_url }}" alt="{{ s.name }}">{% endif %}
         <div class="body">
           <div class="name">
-            {% if s.links.homepage %}<a href="{{ s.links.homepage }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+            {% assign stu_slug = s.name | downcase | replace: " ", "-" %}
+            <a href="{{ '/members/' | append: stu_slug | append: '/' | relative_url }}">{{ s.name }}</a>
           </div>
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
           {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
