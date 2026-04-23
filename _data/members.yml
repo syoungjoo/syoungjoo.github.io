@@ -9,6 +9,7 @@ professor:
     role: Professor
     email: syoungjoo
     image: members/syoungjoo.jpg
+    card_image: members/syoungjoo_card.jpg
     interests: System Security, Microarchitectural Side-channel Attacks, Cloud Security, Network Security
     links:
       scholar: https://scholar.google.co.kr/citations?user=Db9Vqw4AAAAJ&hl=en
