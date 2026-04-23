@@ -122,7 +122,11 @@ nav_order: 7
   Optional metadata: _data/gallery/<slug>.yml  (title / date / place / cover)
 {%- endcomment -%}
 
-{%- assign image_exts = "jpg,jpeg,png,webp,gif,JPG,JPEG,PNG" | split: "," -%}
+{%- comment -%}
+  Only count originals — al-folio auto-generates responsive .webp variants
+  (-480/-800/-1400) that must be excluded from the gallery grid.
+{%- endcomment -%}
+{%- assign image_exts = "jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF" | split: "," -%}
 {%- assign gallery_files = site.static_files | where_exp: "f", "f.path contains '/assets/img/gallery/'" -%}
 
 {%- comment -%} Build a comma-delimited blob of unique slugs {%- endcomment -%}
