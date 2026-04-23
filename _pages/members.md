@@ -143,7 +143,7 @@ nav_order: 1
           {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
           {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
-          {% include member_links.liquid links=s.links %}
+          {% include member_links.liquid links=s.links exclude="homepage,scholar" %}
         </div>
       </div>
     {% endfor %}
@@ -167,7 +167,7 @@ nav_order: 1
           {% if s.cohort %}<div class="cohort">{{ s.cohort }} semester</div>{% endif %}
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
           {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
-          {% include member_links.liquid links=s.links %}
+          {% include member_links.liquid links=s.links exclude="homepage,scholar" %}
         </div>
       </div>
     {% endfor %}
@@ -190,7 +190,7 @@ nav_order: 1
           </div>
           {% if s.email %}<div class="email">{{ s.email }} [at] korea.ac.kr</div>{% endif %}
           {% if s.interests %}<div class="interests">{{ s.interests }}</div>{% endif %}
-          {% include member_links.liquid links=s.links %}
+          {% include member_links.liquid links=s.links exclude="homepage,scholar" %}
         </div>
       </div>
     {% endfor %}

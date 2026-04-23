@@ -1,12 +1,17 @@
 {%- assign L = include.links -%}
+{%- assign exclude = include.exclude | default: "" -%}
 {%- if L -%}
 <div class="member-links">
-  {%- if L.homepage and L.homepage != '' -%}
-    <a href="{{ L.homepage }}" title="Homepage" aria-label="Homepage" target="_blank" rel="noopener"><i class="fa-solid fa-house"></i></a>
-  {%- endif -%}
-  {%- if L.scholar and L.scholar != '' -%}
-    <a href="{{ L.scholar }}" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
-  {%- endif -%}
+  {%- unless exclude contains "homepage" -%}
+    {%- if L.homepage and L.homepage != '' -%}
+      <a href="{{ L.homepage }}" title="Homepage" aria-label="Homepage" target="_blank" rel="noopener"><i class="fa-solid fa-house"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
+  {%- unless exclude contains "scholar" -%}
+    {%- if L.scholar and L.scholar != '' -%}
+      <a href="{{ L.scholar }}" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
   {%- if L.github and L.github != '' -%}
     <a href="{{ L.github }}" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
   {%- endif -%}
