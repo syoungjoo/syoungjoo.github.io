@@ -126,12 +126,12 @@ latest_posts:
 <!-- HERO -->
 <section class="hero">
   <div class="hero-photo">
-    <img src="{{ '/assets/img/site/lab_photo.jpg' | relative_url }}" alt="CSS Lab members">
+    <img src="{{ '/assets/img/site/lab_photo.jpg' | relative_url }}" alt="CSL members">
   </div>
   <div class="hero-text">
     <h2>Security of computer systems, from the microarchitecture to the cloud.</h2>
     <p>
-      The <strong>Computer Systems Security Lab (CSS Lab)</strong> at
+      The <strong>Computer Systems Security Lab (CSL)</strong> at
       <a href="https://korea.ac.kr">Korea University</a> is led by
       Prof. <a href="https://sites.google.com/view/youngjoo-shin/" target="_blank" rel="noopener">Youngjoo Shin</a> and based in the
       <a href="https://security.korea.ac.kr">School of Cybersecurity</a>.
