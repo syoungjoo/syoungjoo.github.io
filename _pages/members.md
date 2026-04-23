@@ -91,7 +91,11 @@ nav_order: 1
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9rem;
+    table-layout: fixed;
   }
+  .alumni-table col.col-name { width: 22%; }
+  .alumni-table col.col-degree { width: 33%; }
+  .alumni-table col.col-affiliation { width: 45%; }
   .alumni-table th, .alumni-table td {
     padding: 0.5rem 0.7rem;
     text-align: left;
@@ -215,6 +219,11 @@ nav_order: 1
 <div class="member-group">
   <h2>Part-time Students</h2>
   <table class="alumni-table">
+    <colgroup>
+      <col class="col-name">
+      <col class="col-degree">
+      <col class="col-affiliation">
+    </colgroup>
     <thead>
       <tr><th>Name</th><th>Degree / Cohort</th><th>Current Affiliation</th></tr>
     </thead>
@@ -239,6 +248,11 @@ nav_order: 1
 <div class="member-group">
   <h2>Alumni</h2>
   <table class="alumni-table">
+    <colgroup>
+      <col class="col-name">
+      <col class="col-degree">
+      <col class="col-affiliation">
+    </colgroup>
     <thead>
       <tr><th>Name</th><th>Degree / Cohort</th><th>Current Affiliation</th></tr>
     </thead>
