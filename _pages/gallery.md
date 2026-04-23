@@ -32,10 +32,10 @@ nav_order: 7
   .gal-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.6rem;
   }
-  .gal-tile { flex: 0 1 270px; }
+  .gal-tile { flex: 0 1 324px; }
   .gal-tile {
     position: relative;
     aspect-ratio: 3 / 2;
