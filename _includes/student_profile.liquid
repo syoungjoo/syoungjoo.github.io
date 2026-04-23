@@ -123,8 +123,7 @@
   {% if s.papers and s.papers.size > 0 %}
     <div class="publications">
       {% for pkey in s.papers %}
-        {%- assign pq = "@" | append: pkey -%}
-        {% bibliography --query pq %}
+        {% bibliography --query @{{pkey}} %}
       {% endfor %}
     </div>
   {% else %}
