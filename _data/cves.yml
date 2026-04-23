@@ -1,0 +1,224 @@
+# CVE / KVE entries disclosed by CSL members.
+# Page template: _pages/cves.md
+#
+# Each entry:
+#   id:        CVE-YYYY-NNNN or KVE-YYYY-NNNN
+#   url:       advisory URL (omit to fall back to KVE portal)
+#   title:     short title shown in bold
+#   tag:       dos | rce | cmd | kbypass   (drives colored badge)
+#   tag_label: text shown in the badge (defaults to tag upper-case)
+#   reporter:  name of the CSL reporter
+#   category:  short descriptor after reporter (e.g., "Binary analysis")
+#   desc:      one-paragraph description (markdown OK)
+#   publication: optional — {text: ..., links: [{label, url}]}
+#
+# Entries are grouped by `year` blocks which are rendered in the order
+# they appear here (put newest first).
+
+kve_portal: https://knvd.krcert.or.kr/
+
+groups:
+  - year: 2025
+    items:
+      - id: KVE-2025-0470
+        url: https://knvd.krcert.or.kr/
+        title: Remote Code Execution in AhnLab V3 Lite
+        tag: rce
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Remote code execution vulnerability identified in AhnLab V3 Lite, a
+          consumer anti-malware product widely deployed in Korea. Reported to
+          the vendor and coordinated through KrCERT/CC.
+
+      - id: KVE-2025-0471
+        url: https://knvd.krcert.or.kr/
+        title: Denial of Service in AhnLab V3 Lite
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Denial-of-service flaw in AhnLab V3 Lite enabling a local attacker to
+          crash or disable the anti-malware agent.
+
+      - id: KVE-2025-0472
+        url: https://knvd.krcert.or.kr/
+        title: Remote Code Execution in AhnLab V3 Lite
+        tag: rce
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Second RCE primitive affecting AhnLab V3 Lite, distinct from
+          KVE-2025-0470. Disclosed in coordination with the vendor.
+
+      - id: KVE-2025-0473
+        url: https://knvd.krcert.or.kr/
+        title: Denial of Service in SGA EPS Virus Chaser
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Denial-of-service vulnerability in SGA Solutions' EPS Virus Chaser
+          endpoint protection product that allows the security service to be
+          terminated or left in an inconsistent state.
+
+      - id: CVE-2025-45856
+        url: https://nvd.nist.gov/vuln/detail/CVE-2025-45856
+        title: Denial of Service in CatchPulse Pro
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Denial-of-service flaw in the CatchPulse Pro endpoint security product
+          (formerly SecureAge APEX) allowing a local attacker to disable the
+          protection driver.
+
+      - id: CVE-2025-51620
+        url: https://nvd.nist.gov/vuln/detail/CVE-2025-51620
+        title: Denial of Service in IObit Malware Fighter
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Denial-of-service vulnerability in IObit Malware Fighter that
+          terminates or destabilizes the security agent's kernel-mode driver.
+
+      - id: CVE-2025-55456
+        url: https://nvd.nist.gov/vuln/detail/CVE-2025-55456
+        title: Denial of Service in iTop Easy Desktop
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Flaw in iTop Easy Desktop that can be abused to crash the
+          application's helper service, leading to denial of service.
+
+      - id: CVE-2025-55457
+        url: https://nvd.nist.gov/vuln/detail/CVE-2025-55457
+        title: Denial of Service in iTop VPN
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Denial-of-service vulnerability in the iTop VPN client that allows an
+          attacker to terminate the service from an unprivileged context.
+
+  - year: 2024
+    items:
+      - id: CVE-2024-54531
+        url: https://nvd.nist.gov/vuln/detail/CVE-2024-54531
+        title: KASLR Bypass in macOS for Apple Silicon
+        tag: kbypass
+        tag_label: KASLR Bypass
+        reporter: Hyerean Jang
+        category: Kernel / microarchitecture
+        desc: |
+          A memory-handling issue in macOS Sequoia (&lt; 15.2) that allows an
+          application to bypass kernel address space layout randomization
+          (KASLR). The flaw was reported to Apple and mitigated in macOS
+          Sequoia 15.2 through improved memory handling. CVSS 5.5.
+        publication:
+          text: |
+            Hyerean Jang, Taehun Kim, Youngjoo Shin.
+            *"SysBumps: Exploiting Speculative Execution in System Calls for
+            Breaking KASLR in macOS for Apple Silicon."*
+            ACM CCS 2024 — also presented at Black Hat Europe 2024.
+          links:
+            - { label: "[lab publications]", url: "/publications/", relative: true }
+            - { label: "[code]", url: "https://github.com/koreacsl/SysBumps" }
+
+      - id: CVE-2024-37027
+        url: https://nvd.nist.gov/vuln/detail/CVE-2024-37027
+        title: Improper Input Validation in Intel Developer Toolkits
+        tag: rce
+        tag_label: Local DoS / RCE
+        reporter: Chanhee Park
+        category: Driver / toolchain
+        desc: |
+          Improper input validation affecting Intel VTune Profiler
+          (&lt; 2024.2.0), Intel OneAPI Base Toolkit (&lt; 2024.2), and Intel
+          System Bring-Up Toolkit (&lt; 2024.2.0), which may allow an
+          authenticated local user to trigger denial of service through the
+          underlying Intel driver.
+
+      - id: CVE-2024-42634
+        url: https://nvd.nist.gov/vuln/detail/CVE-2024-42634
+        title: Command Injection in Tenda AC9 (formWriteFacMac)
+        tag: cmd
+        tag_label: Command Injection
+        reporter: Dongsoo Kim
+        category: Binary analysis
+        desc: |
+          Command-injection flaw in the <code>formWriteFacMac</code> handler of
+          the <code>httpd</code> binary in Tenda AC9 firmware 15.03.06.42.
+          Remote attackers can execute OS commands with root privileges.
+          CVSS 8.8 (High).
+
+      - id: CVE-2024-42633
+        url: https://nvd.nist.gov/vuln/detail/CVE-2024-42633
+        title: Command Injection in Linksys E1500 (do_upgrade_post)
+        tag: cmd
+        tag_label: Command Injection
+        reporter: Dongsoo Kim
+        category: Binary analysis
+        desc: |
+          Command-injection vulnerability in the <code>do_upgrade_post</code>
+          function of the <code>httpd</code> binary in Linksys E1500 firmware
+          1.0.06.001. An authenticated attacker can execute OS commands with
+          root privileges. CVSS 8.8 (High).
+
+      - id: CVE-2024-25468
+        url: https://nvd.nist.gov/vuln/detail/CVE-2024-25468
+        title: Command Injection in TOTOLINK X5000R (NTPSyncWithHost)
+        tag: cmd
+        tag_label: Command Injection
+        reporter: Taeho Kim
+        category: Binary analysis
+        desc: |
+          Command-injection vulnerability in the <code>NTPSyncWithHost</code>
+          component of TOTOLINK X5000R firmware 9.1.0u.6369_B20230113. A remote
+          attacker can inject shell commands through the <code>host_time</code>
+          parameter. CVSS 7.5 (High).
+
+      - id: CVE-2024-22651
+        url: https://nvd.nist.gov/vuln/detail/CVE-2024-22651
+        title: Command Injection in D-Link DIR-815 (ssdpcgi_main)
+        tag: cmd
+        tag_label: Command Injection
+        reporter: Dongsoo Kim
+        category: Binary analysis
+        desc: |
+          Unauthenticated command-injection flaw in the <code>ssdpcgi_main</code>
+          function of the <code>cgibin</code> binary in D-Link DIR-815 firmware
+          1.04. Remote attackers can execute arbitrary commands without
+          authentication. CVSS 9.8 (Critical).
+
+      - id: KVE-2024-0168
+        url: https://knvd.krcert.or.kr/
+        title: Denial of Service in "Protect Online" Security Driver
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Denial-of-service flaw in the "Protect Online" kernel-mode security
+          driver that allows an unprivileged local user to crash the driver.
+
+      - id: KVE-2024-0169
+        url: https://knvd.krcert.or.kr/
+        title: Denial of Service in "Protect Online" Security Driver
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Additional DoS primitive in the "Protect Online" security driver,
+          independent of KVE-2024-0168.
+
+      - id: KVE-2024-0170
+        url: https://knvd.krcert.or.kr/
+        title: Denial of Service in "Protect Online" Security Driver
+        tag: dos
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Third DoS vector disclosed against the "Protect Online" driver, rounding
+          out a set of flaws that affect the driver's IOCTL interface.
