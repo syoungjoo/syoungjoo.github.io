@@ -235,10 +235,6 @@ nav: false
   <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Peer Review &amp; Evaluation</h3>
   <ul>
     <li>Korea Data Agency (KoData) — KOSDAQ Technology Assessment Advisor, ICT Sector</li>
-    <li>National Research Foundation of Korea — Research Grant Reviewer (2021)</li>
-    <li>Korean Institute of Information Security &amp; Cryptology (KIISC) — Reviewer, including CISC-W 2020 and the KIISC Journal</li>
-    <li>Korean Institute of Communications and Information Sciences (KICS) — Paper Reviewer (2018)</li>
-    <li>National Cryptography Contest 2018 — Judge</li>
     <li>Korea Internet &amp; Security Agency (KISA) — Evaluation Committee Member (2017, 2018)</li>
   </ul>
 
