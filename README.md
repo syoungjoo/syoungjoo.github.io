@@ -10,9 +10,8 @@ Most content is **data-driven**: edit YAML under `_data/`, don't touch HTML.
 | A student's bio / education / honors | `_data/profiles/<name-slug>.yml`           |
 | CVE / KVE entries                    | `_data/cves.yml`                           |
 | Publications                         | `_bibliography/papers.bib`                 |
-| Repositories grid                    | `_data/repositories.yml`                   |
 | Gallery event metadata               | `_data/gallery/<slug>.yml` (optional)      |
-| Home-page news                       | `_news/announcement_YYYY-MM-DD.md`         |
+| Homepage news                        | `_news/announcement_YYYY-MM-DD.md`         |
 
 ---
 
