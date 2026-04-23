@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-cves",
+          title: "CVEs",
+          description: "Vulnerabilities discovered and disclosed by members of the Computer Systems Security Lab.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cves/";
+          },
         },{id: "nav-repositories",
           title: "repositories",
           description: "",
