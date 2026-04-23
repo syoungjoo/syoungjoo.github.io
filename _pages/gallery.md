@@ -35,7 +35,7 @@ nav_order: 7
     justify-content: flex-start;
     gap: 0.6rem;
   }
-  .gal-tile { flex: 0 1 324px; }
+  .gal-tile { flex: 0 0 calc((100% - 1.2rem) / 3); }
   .gal-tile {
     position: relative;
     aspect-ratio: 3 / 2;
