@@ -203,6 +203,67 @@ nav: false
 </div>
 
 <div class="prof-section">
+  <h2>Invited Talks &amp; Seminars</h2>
+  <ul class="prof-timeline">
+    <li><div class="period">2026</div><div class="desc">NetSec-KR 2026, IITP Special Session (invited talk)</div></li>
+    <li><div class="period">2025</div><div class="desc">WDSC 2025 (invited lecture); Drone Cybersecurity Seminar; Unification &amp; Sharing Policy Research Seminar</div></li>
+    <li><div class="period">2024</div><div class="desc">NetSec-KR 2024</div></li>
+    <li><div class="period">2023</div><div class="desc">KAIST Colloquium; KSC 2023; ROK Navy Cybersecurity Seminar; WebAssembly Security Seminar</div></li>
+    <li><div class="period">2022</div><div class="desc">Hansung University</div></li>
+    <li><div class="period">2021</div><div class="desc">IEEE ICOIN 2021; NSR; Hansung University; Sejong University</div></li>
+    <li><div class="period">2020</div><div class="desc">IEEE INFOCOM 2020; Side-Channel Analysis Workshop; NSR; Hoseo University; SeoulTech; Hansung University; Sejong University; Kookmin University</div></li>
+    <li><div class="period">2019</div><div class="desc">KAIST; Korea University; SeoulTech; Sejong University; Hansung University; Kookmin University; WISC 2019; Side-Channel Analysis Workshop</div></li>
+    <li><div class="period">2018</div><div class="desc">ACM CCS 2018; NetSec-KR 2018; KICS; ETRI; NSR; WISC 2018; Side-Channel Analysis Workshop; Sejong / Kookmin / Hansung / Hannam Universities</div></li>
+    <li><div class="period">2017</div><div class="desc">KCC 2017; SDN/NFV Forum Security WG; NSR; Korea / Kookmin / Hansung Universities</div></li>
+    <li><div class="period">2016</div><div class="desc">Research Briefing on Security-Equipment Analysis</div></li>
+    <li><div class="period">2015</div><div class="desc">Best of the Best (BoB) Lecture</div></li>
+  </ul>
+</div>
+
+<div class="prof-section">
+  <h2>Professional Service &amp; External Expertise</h2>
+
+  <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Government &amp; Public-Sector Advisory</h3>
+  <ul>
+    <li>IITP Preliminary Feasibility Study, <em>Intelligent Cyber-Shield Dome</em> Program — Subcommittee Member (2025–)</li>
+    <li>National Strategic Technology Expert Advisory Committee (2024)</li>
+    <li>Ministry of Science and ICT — Minister's Commendation Nomination Committee (2024)</li>
+    <li>Cloud Security Certification Committee (2024)</li>
+    <li>National Security Research Institute (NSR) &amp; Ministry of the Interior — Digital-Signature Advisory (2022)</li>
+    <li>National Security Research Institute — Advisory Member (2021)</li>
+    <li>National Intelligence Service — Mid-/Long-Term Security Strategy Advisory (2019)</li>
+    <li>IITP Preliminary Feasibility Study on Connected-Device Security — Committee Member (2017)</li>
+  </ul>
+
+  <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Peer Review &amp; Evaluation</h3>
+  <ul>
+    <li>Korea Data Agency (KoData) — KOSDAQ Technology Assessment Advisor, ICT Sector</li>
+    <li>National Research Foundation of Korea — Research Grant Reviewer (2021)</li>
+    <li>Korean Institute of Information Security &amp; Cryptology (KIISC) — Reviewer, including CISC-W 2020 and the KIISC Journal</li>
+    <li>Korean Institute of Communications and Information Sciences (KICS) — Paper Reviewer (2018)</li>
+    <li>National Cryptography Contest 2018 — Judge</li>
+    <li>Korea Internet &amp; Security Agency (KISA) — Evaluation Committee Member (2017, 2018)</li>
+    <li>Program Committee — KCS 2020, Security 2018</li>
+  </ul>
+
+  <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Standards, Guidelines &amp; Industry</h3>
+  <ul>
+    <li>Korea Association for Industrial Technology Security (KAITS) — Contribution/Advisory on <em>The Future of Sovereign Cloud</em></li>
+    <li>KISA — Key-Management Guidelines Review Advisory</li>
+    <li>IDEC — External Advisor (2024)</li>
+    <li>LG U+ — Security Advisory (2019)</li>
+    <li>KANI; SDN/NFV Forum Security Working Group (2017)</li>
+  </ul>
+
+  <h3 style="font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.5rem;">Academia</h3>
+  <ul>
+    <li>Kwangwoon University — Faculty Recruitment Review Committee (2024)</li>
+    <li>Kookmin University — Faculty Review Committee (2018)</li>
+    <li>Korea University, School of Cybersecurity — 50th-Anniversary History Compilation Committee (2023)</li>
+  </ul>
+</div>
+
+<div class="prof-section">
   <h2>Publications</h2>
   <p>
     See the <a href="{{ '/publications/' | relative_url }}">publications page</a> for a full list,
