@@ -210,6 +210,30 @@ nav_order: 1
 </div>
 {% endif %}
 
+<!-- Part-time Students -->
+{% if m.part_time and m.part_time.size > 0 %}
+<div class="member-group">
+  <h2>Part-time Students</h2>
+  <table class="alumni-table">
+    <thead>
+      <tr><th>Name</th><th>Degree / Cohort</th><th>Current Affiliation</th></tr>
+    </thead>
+    <tbody>
+      {% for p in m.part_time %}
+        <tr>
+          <td>{{ p.name }}</td>
+          <td>
+            {% if p.degree %}{{ p.degree }}{% endif %}
+            {% if p.cohort %} · {{ p.cohort }}{% endif %}
+          </td>
+          <td>{{ p.affiliation }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
 <!-- Alumni -->
 {% if m.alumni and m.alumni.size > 0 %}
 <div class="member-group">

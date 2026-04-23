@@ -137,6 +137,72 @@ staff:
     role: Administrative Staff
     image: members/mhpark.png
 
+part_time:
+  - name: Jihoon Kim
+    degree: Integrated M.S./Ph.D. Course
+    cohort: "41st"
+    affiliation: 사이버사령부
+  - name: Kwangho Choi
+    degree: Integrated M.S./Ph.D. Course
+    cohort: "41st"
+    affiliation: 안랩
+  - name: Changhoon Lee
+    degree: Ph.D. Course
+    cohort: "43rd"
+    affiliation: 삼성SDS
+  - name: Jongseok Lee
+    degree: M.S. Course
+    cohort: "46th"
+    affiliation: 사이버사령부
+  - name: Bonggeun Choi
+    degree: M.S. Course
+    cohort: "46th"
+    affiliation: 사이버사령부
+  - name: Hyundo Jeong
+    degree: Integrated M.S./Ph.D. Course
+    cohort: "47th"
+    affiliation: 사이버사령부
+  - name: Junseop Shim
+    degree: M.S. Course
+    cohort: "47th"
+    affiliation: 사이버사령부
+  - name: Jongmin Bae
+    degree: Ph.D. Course
+    cohort: "48th"
+    affiliation: 지아이티
+  - name: Seungjun Yoon
+    degree: M.S. Course
+    cohort: "48th"
+    affiliation: 국방부
+  - name: Minchan Park
+    degree: M.S. Course
+    cohort: "48th"
+    affiliation: SSD 랩스
+  - name: Eunju Kim
+    degree: M.S. Course
+    cohort: "49th"
+    affiliation: (주)동훈아이텍
+  - name: Yoonhee Lee
+    degree: M.S. Course
+    cohort: "49th"
+    affiliation: 금융보안원
+  - name: Songyi Kim
+    degree: Ph.D. Course
+    cohort: "50th"
+    affiliation: 한국특허전략개발원
+  - name: Hyuna Jeong
+    degree: M.S. Course
+    cohort: "50th"
+    affiliation: SK쉴더스
+  - name: Jinwoo Lee
+    degree: M.S. Course
+    cohort: "50th"
+    affiliation: 하임시큐리티
+  - name: Hyunmin Jo
+    degree: M.S. Course
+    cohort: "50th"
+    affiliation: HDC 랩스
+
 alumni:
   - name: Hyerean Jang
     degree: Ph.D. Course
