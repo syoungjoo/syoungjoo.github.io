@@ -15,9 +15,10 @@ nav: false
     margin-bottom: 2rem;
   }
   .prof-hero img {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 300px;
     object-fit: cover;
+    object-position: center top;
     border-radius: 6px;
     flex-shrink: 0;
   }
