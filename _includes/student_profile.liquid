@@ -118,24 +118,22 @@
   {% endif %}
 </div>
 
-{%- comment -%} Derive "Last, First" bib key from s.name, unless overridden. {%- endcomment -%}
-{%- if s.bib_author -%}
-  {%- assign bib_author = s.bib_author -%}
-{%- else -%}
-  {%- assign name_parts = s.name | split: " " -%}
-  {%- assign last_name = name_parts | last -%}
-  {%- assign first_name = s.name | remove_first: last_name | strip -%}
-  {%- assign bib_author = last_name | append: ", " | append: first_name -%}
-{%- endif -%}
-
 <div class="stu-section">
   <h2>Publications</h2>
-  <div class="publications">
-    {% bibliography --query "@*[author~={{ bib_author }}]" %}
-  </div>
-  <p class="tba" style="margin-top: 0.6rem;">
-    See the <a href="{{ '/publications/' | relative_url }}">lab publications page</a> for the full list.
-  </p>
+  {% if s.papers and s.papers.size > 0 %}
+    <div class="publications">
+      {%- assign keys_regex = s.papers | join: "|" -%}
+      {% bibliography --query "@*[key~=^({{ keys_regex }})$]" %}
+    </div>
+    <p class="tba" style="margin-top: 0.6rem;">
+      See the <a href="{{ '/publications/' | relative_url }}">lab publications page</a> for the full list.
+    </p>
+  {% else %}
+    <p class="tba">
+      No publications yet — see the
+      <a href="{{ '/publications/' | relative_url }}">lab publications page</a>.
+    </p>
+  {% endif %}
 </div>
 
 {% else %}

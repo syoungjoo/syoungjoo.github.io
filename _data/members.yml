@@ -25,6 +25,22 @@ phd:
     links:
       homepage: https://sites.google.com/view/ktaehun/
       scholar: https://scholar.google.com/citations?user=0jKNu8kAAAAJ
+    papers:
+      - kim2025survey
+      - lee2025ttime
+      - kim2025cache
+      - jang2024sysbumps
+      - lee2024sgx
+      - han2024szac
+      - bae2023ksm
+      - kim2023devious
+      - kim2022thermal
+      - lee2021meltdown
+      - kim2021covert
+      - kim2021kaslr
+      - kim2020memshare
+      - kim2020gpu
+      - cho2020realtime
   - name: Chanhee Park
     cohort: "45th"
     email: pch2180
@@ -32,6 +48,9 @@ phd:
     interests: System Security, Binary Analysis, Network Security
     links:
       homepage: https://ch4rli3kop.notion.site/Who-am-I-996551d8de634f8993b7954643afeda8
+    papers:
+      - park2026sysdiver
+      - lee2026bmc
   - name: Jihye Lee
     cohort: "46th"
     email: jh_kor
@@ -39,6 +58,8 @@ phd:
     interests: System Security, Binary Analysis
     links:
       homepage: https://thirsty-doolgibi.notion.site/LEE-JIHYE-54136dc166c74ba18b501fa2f3d2353a
+    papers:
+      - lee2026bmc
   - name: Dongjoo Kim
     cohort: "47th"
     email: d05004
@@ -46,16 +67,19 @@ phd:
     interests: System Security, Binary Analysis, Fuzzing
     links:
       homepage: https://d05004.notion.site/CV-922d7120fd8b46049af096fcb5ac6b57
+    papers:
+      - park2026sysdiver
 
 ms:
   - name: Serin Kim
     cohort: "49th"
     email: se1ynn22
     image: members/se1ynn22.jpg
-    bib_author: "Kim, Selynn"
     interests: System Security, Side-channel Attacks
     links:
       homepage: https://holly-bush-0cc.notion.site/Se-Lynn-Kim-843ff95c9df941fe9cf12581bd426797
+    papers:
+      - kim2025survey
   - name: Junseok Ko
     cohort: "47th"
     email: junseokk

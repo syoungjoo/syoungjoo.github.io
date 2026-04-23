@@ -123,6 +123,9 @@ Member information is split across three places:
       twitter:  https://x.com/...
       orcid:    https://orcid.org/...
       dblp:     https://dblp.org/pid/...
+    papers:                          # optional — BibTeX cite keys from papers.bib
+      - kim2025cache                 # renders as a filtered publication list on the profile page
+      - jang2024sysbumps
 ```
 
 **Step B — create the profile stub** at `_pages/members/<first-last>.md` where the slug is the English name lowercased with spaces → hyphens (e.g. `gildong-hong.md`). Copy this template:
@@ -165,6 +168,7 @@ nav: false
 - `links:` must be present even if empty; use `links: {}`.
 - Supported link types and their icons are: `homepage`, `scholar`, `github`, `linkedin`, `twitter`, `orcid`, `dblp`. Other keys are ignored.
 - On the Members overview page, `homepage` and `scholar` are hidden for all members; the remaining icons appear on student cards if present. On each student's individual profile page, **all** link icons are shown.
+- **`papers:`** lists the BibTeX cite keys (from `_bibliography/papers.bib`) of papers the student co-authored. The profile page renders exactly these entries — in the order listed — under the "Publications" section. When a new paper is added to `papers.bib`, remember to add its cite key to every co-author's `papers:` list. If `papers:` is missing or empty, the profile page shows "No publications yet."
 
 ### 2.4 Moving a student to Alumni
 
