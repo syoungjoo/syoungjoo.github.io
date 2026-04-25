@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "",
+          description: "Open-source code and artifacts from the Computer Systems Security Lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
