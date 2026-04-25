@@ -1,0 +1,73 @@
+name: Sync repositories
+
+# Refreshes _data/repositories.yml with the public, non-fork, non-archived
+# repositories under the koreacsl GitHub organization. Runs weekly and on
+# manual dispatch. If the file changes, commits and triggers deploy.yml.
+
+on:
+  schedule:
+    # Every Monday 00:00 UTC (= 09:00 KST)
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write    # needed to dispatch the deploy workflow
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch repository list from koreacsl
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # --source excludes forks; --no-archived excludes archived repos.
+          # Sort by pushedAt desc so the most active repos appear first.
+          gh repo list koreacsl \
+            --limit 200 \
+            --source \
+            --no-archived \
+            --visibility public \
+            --json nameWithOwner,pushedAt \
+            --jq 'sort_by(.pushedAt) | reverse | .[].nameWithOwner' \
+            > /tmp/repos.txt
+          echo "Found $(wc -l < /tmp/repos.txt) repositories:"
+          cat /tmp/repos.txt
+
+      - name: Write _data/repositories.yml
+        run: |
+          {
+            echo "github_users:"
+            echo "  - koreacsl"
+            echo ""
+            echo "github_repos:"
+            sed 's/^/  - /' /tmp/repos.txt
+          } > _data/repositories.yml
+          echo "--- new file ---"
+          cat _data/repositories.yml
+
+      - name: Commit changes
+        id: commit
+        run: |
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/repositories.yml
+          if git diff --cached --quiet; then
+            echo "No changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: sync repositories from koreacsl"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # GITHUB_TOKEN-pushed commits don't trigger other workflows, so we
+      # explicitly dispatch the deploy workflow when something changed.
+      - name: Trigger deploy workflow
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main
