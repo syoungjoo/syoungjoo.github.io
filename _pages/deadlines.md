@@ -109,6 +109,7 @@ nav_order: 6
 <p class="dl-note">
   Countdowns are computed in your local timezone. Deadlines are typically given in <strong>AoE (Anywhere on Earth, UTC−12)</strong> — the timer below reflects that. Data adapted from
   <a href="https://sec-deadlines.github.io/" target="_blank" rel="noopener">sec-deadlines.github.io</a> (MIT licensed).
+  {% if site.data.conferences_meta.last_updated %}<br>Last updated: {{ site.data.conferences_meta.last_updated }}.{% endif %}
 </p>
 
 <div class="dl-filters">

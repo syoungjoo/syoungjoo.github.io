@@ -36,6 +36,10 @@ jobs:
             echo "No changes — skipping commit."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
+            # Stamp the sync timestamp (UTC) for display on the deadlines page.
+            printf 'last_updated: "%s"\n' "$(date -u +'%Y-%m-%d %H:%M UTC')" \
+              > _data/conferences_meta.yml
+            git add _data/conferences_meta.yml
             git commit -m "chore: sync conferences.yml from sec-deadlines"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
