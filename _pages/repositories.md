@@ -2,10 +2,16 @@
 layout: page
 permalink: /repositories/
 title: repositories
-#description: Open-source code and artifacts from the Computer Systems Security Lab.
+description: Open-source code and artifacts from the Computer Systems Security Lab.
 nav: true
 nav_order: 5
 ---
+
+{% if site.data.repositories_meta.last_updated %}
+<p style="font-size: 0.85rem; color: var(--global-text-color-light); margin-bottom: 1.2rem;">
+  Last updated: {{ site.data.repositories_meta.last_updated }}.
+</p>
+{% endif %}
 
 {% if site.data.repositories.github_users %}
 
