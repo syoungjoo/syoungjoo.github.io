@@ -45,7 +45,7 @@ jobs:
           rendercv render _data/cv.yml
           mkdir -p assets/rendercv
           rm -rf assets/rendercv/rendercv_output
-          mv rendercv_output assets/rendercv/rendercv_output
+          mv _data/rendercv_output assets/rendercv/rendercv_output
 
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v4
