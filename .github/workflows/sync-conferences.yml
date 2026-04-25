@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: write    # needed to dispatch the deploy workflow
 
 jobs:
   sync:
@@ -26,13 +27,24 @@ jobs:
             -o _data/conferences.yml
 
       - name: Commit if changed
+        id: commit
         run: |
           git config --global user.name  "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add _data/conferences.yml
           if git diff --cached --quiet; then
             echo "No changes — skipping commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: sync conferences.yml from sec-deadlines"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # GITHUB_TOKEN-pushed commits don't trigger other workflows, so we
+      # explicitly dispatch the deploy workflow when something changed.
+      - name: Trigger deploy workflow
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main
