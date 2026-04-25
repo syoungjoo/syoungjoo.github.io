@@ -1,7 +1,7 @@
 # Lab members, grouped by category.
 
 # Each member may have a `links:` block. Supported keys (all optional):
-#   homepage, github, scholar, linkedin, twitter, orcid, dblp
+#   homepage, github, scholar, linkedin, cv, twitter, orcid, dblp
 # Leave a key out (or leave the value blank) to hide that icon.
 
 professor:
@@ -12,9 +12,10 @@ professor:
     card_image: members/syoungjoo_card.png
     interests: System Security, Microarchitectural Side-channel Attacks, Cloud Security, Network Security
     links:
-      scholar: https://scholar.google.co.kr/citations?user=Db9Vqw4AAAAJ&hl=en
-      github: https://github.com/syoungjoo
+      scholar:  https://scholar.google.co.kr/citations?user=Db9Vqw4AAAAJ&hl=en
+      github:   https://github.com/syoungjoo
       linkedin: https://www.linkedin.com/in/youngjoo-shin-b8b14a55/
+      cv:       /assets/rendercv/rendercv_output/Youngjoo_Shin_CV.pdf
 
 phd:
   - name: Taehun Kim

@@ -22,6 +22,11 @@
       <a href="{{ L.linkedin }}" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
     {%- endif -%}
   {%- endunless -%}
+  {%- unless exclude contains "cv" -%}
+    {%- if L.cv and L.cv != '' -%}
+      <a href="{{ L.cv | relative_url }}" title="CV (PDF)" aria-label="CV" target="_blank" rel="noopener"><i class="ai ai-cv"></i></a>
+    {%- endif -%}
+  {%- endunless -%}
   {%- unless exclude contains "twitter" -%}
     {%- if L.twitter and L.twitter != '' -%}
       <a href="{{ L.twitter }}" title="X / Twitter" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
