@@ -186,7 +186,7 @@ latest_posts:
 <div class="section-head">Join Us</div>
 
 **We are always looking for motivated students** interested in systems security.
-If you are a Korea University undergraduate curious about research, or a prospective graduate
+If you are  curious about research, or a prospective graduate
 applicant, please reach out to Prof. Shin by email.
 
 <!-- FOOTER LOGOS + ADDRESS -->
