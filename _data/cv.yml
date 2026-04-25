@@ -622,6 +622,4 @@ cv:
 design:
   theme: sb2nov
 locale:
-  language: en
-rendercv_settings:
-  date: null
+  language: english
