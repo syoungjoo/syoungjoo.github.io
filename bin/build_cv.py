@@ -207,8 +207,15 @@ def build_cv() -> dict:
     return {
         "cv": cv,
         "design": {"theme": "sb2nov"},
-        "locale": {"language": "en"},
-        "rendercv_settings": {"date": None},
+        "locale": {"language": "english"},
+        "rendercv_settings": {
+            "render_command": {
+                "output_folder_name": "assets/rendercv/rendercv_output",
+                "dont_generate_html": True,
+                "dont_generate_markdown": True,
+                "dont_generate_png": True,
+            },
+        },
     }
 
 

@@ -43,11 +43,7 @@ jobs:
       - name: Render CV to PDF
         run: |
           mkdir -p assets/rendercv/rendercv_output
-          rendercv render _data/cv.yml \
-            --output-folder-name assets/rendercv/rendercv_output \
-            --dont-generate-html \
-            --dont-generate-markdown \
-            --dont-generate-png
+          rendercv render _data/cv.yml
 
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v4
