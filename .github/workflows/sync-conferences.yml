@@ -1,0 +1,38 @@
+name: Sync conferences.yml
+
+# Pulls the latest security-conferences deadline list from
+# sec-deadlines/sec-deadlines.github.io and overwrites
+# _data/conferences.yml. Runs every Monday 00:00 UTC (09:00 KST) and
+# can also be triggered manually from the Actions tab.
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"   # every Monday 00:00 UTC = 09:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download latest conferences.yml
+        run: |
+          curl -fsSL \
+            https://raw.githubusercontent.com/sec-deadlines/sec-deadlines.github.io/refs/heads/master/_data/conferences.yml \
+            -o _data/conferences.yml
+
+      - name: Commit if changed
+        run: |
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/conferences.yml
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit."
+          else
+            git commit -m "chore: sync conferences.yml from sec-deadlines"
+            git push
+          fi
