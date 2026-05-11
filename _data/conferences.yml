@@ -47,8 +47,8 @@
   deadline:
     - "2026-05-06 23:59"
     - "2026-08-19 23:59"
-  date: "TBD"
-  place: TBD
+  date: "March 22-26"
+  place: Seoul, Republic of Korea
   tags: [SEC, PRIV, CONF, ASTAR, TOP4]
 
 - name: ESORICS
@@ -330,12 +330,12 @@
 
 - name: PKC
   description: International Conference on Practice and Theory of Public Key Cryptography
-  year: 2026
-  link: https://pkc.iacr.org/2026/
+  year: 2027
+  link: https://pkc.iacr.org/2027/
   dblp: https://dblp.org/db/conf/pkc/index.html
-  deadline: ["2025-10-24 09:59"]
-  date: May 25-28
-  place: West Palm Beach, FL, USA
+  deadline: ["2026-08-03 23:59"]
+  date: March 1-4
+  place: Taipei, Taiwan
   tags: [CRYPTO, CONF, CORE-B]
 
 - name: CT-RSA
@@ -884,6 +884,17 @@
 
 # Workshops
 
+- name: ANUBIS
+  description: Assessment with New methodologies, Unified Benchmarks, and environments, of Intrusion detection and response Systems
+  year: 2026
+  link: https://superviz.inria.fr/anubis26/
+  deadline:
+    - "2026-06-12 23:59"
+  comment: Co-located with ESORICS 2026.
+  date: September 14-18
+  place: Rome, Italy
+  tags: [SEC, PRIV, SHOP, OTHERS]
+
 - name: TRUST-AI
   description: Workshop on Trustworthy AI for IoMT (Internet of Medical Things)
   year: 2026
@@ -1061,7 +1072,7 @@
   description: IEEE Conference on Communications and Network Security
   year: 2026
   link: https://cns2026.ieee-cns.org/
-  deadline: ["2026-05-11 23:59"]
+  deadline: ["2026-05-18 23:59"]
   date: September 14 - 17
   place: Newark, DE, USA
   tags: [SEC, PRIV, CONF]
@@ -1814,7 +1825,7 @@
   description: International Workshop on Applied Trust and Cyber Resilience
   year: 2026
   link: https://www.ares-conference.eu/cyrestrust
-  deadline: ["2026-05-04 23:59"]
+  deadline: ["2026-05-18 23:59"]
   comment: Co-located with ARES
   date: August 24-27
   place: Linköping, SE
@@ -1864,7 +1875,7 @@
   description: Workshop on Sustainable Security And Awareness For Next Generation Infrastructures
   year: 2026
   link: https://www.ares-conference.eu/safer
-  deadline: ["2026-05-04 23:59"]
+  deadline: ["2026-05-18 23:59"]
   comment: Co-located with ARES
   date: August 24-27
   place: Linköping, SE
