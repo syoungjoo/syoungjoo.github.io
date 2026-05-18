@@ -189,7 +189,7 @@
 - name: PETS
   description: Privacy Enhancing Technologies Symposium
   year: 2027
-  link: https://www.petsymposium.org/cfp26.php
+  link: https://www.petsymposium.org/cfp27.php
   dblp: https://dblp.org/db/conf/pet/index.html
   deadline:
     - "%Y-05-31 23:59"
@@ -197,8 +197,8 @@
     - "%Y-11-30 23:59"
     - "%y-02-28 23:59"
   comment: Rolling deadline every quarter
-  date: TBD
-  place: TBD
+  date: TBA
+  place: TBA (Europe)
   tags: [PRIV, CONF, CORE-A]
 
 - name: SOUPS
@@ -1259,23 +1259,23 @@
 
 - name: DPM
   description: Data Privacy Management International Workshop
-  comment: Co-located with ESORICS 2025
-  year: 2025
-  link: https://deic.uab.cat/dpm/dpm2025/
-  deadline: ["2025-06-30 23:59"]
-  place: Toulouse, France
-  date: September 25
+  comment: Co-located with ESORICS 2026
+  year: 2026
+  link: https://deic.uab.cat/dpm/dpm2026/
+  deadline: ["2026-06-16 23:59"]
+  place: Rome, Italy
+  date: September 26
   tags: [SEC, PRIV, SHOP, OTHERS]
 
 - name: CBT
   description: International Workshop on Cryptocurrencies and Blockchain Technology
-  comment: Co-located with ESORICS 2025
-  year: 2025
+  comment: Co-located with ESORICS 2026
+  year: 2026
   link: http://cbtworkshop.org/
   deadline:
-    - "2025-06-30 23:59"
-  place: Toulouse, France
-  date: September 25
+    - "2026-06-17 23:59"
+  place: Rome, Italy
+  date: September 26
   tags: [SEC, CRYPTO, SHOP, OTHERS]
 
 - name: CyberHunt
@@ -1945,7 +1945,7 @@
   description: "Workshop on Agentic AI for Cybersecurity: Offensive and Defensive Perspectives"
   year: 2026
   link: https://www.ares-conference.eu/agentcy
-  deadline: ["2026-05-10 23:59"]
+  deadline: ["2026-05-18 23:59"]
   comment: Co-located with ARES
   date: August 24-27
   place: Linköping, SE
@@ -2027,4 +2027,13 @@
   deadline: ["2026-06-05 23:59"]
   date: October 30
   place: Austin, USA
+  tags: [SEC, PRIV, SHOP, ]
+
+- name: WIFS
+  description: IEEE International Workshop on Information Forensics and Security 
+  year: 2026
+  link: https://wifs2026.utt.fr/
+  deadline: ["2026-07-15 23:59"]
+  date: December 7-11
+  place: Sendai, Japan
   tags: [SEC, PRIV, SHOP, OTHERS]
