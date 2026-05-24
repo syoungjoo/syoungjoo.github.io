@@ -97,6 +97,16 @@ System Security, Microarchitectural Side-channel Attacks, Transient Execution At
 
 
 # Publications
+## **Input-Agnostic Runtime Metric Based Memory Optimization for Serverless Functions**
+
+Jan 2026
+
+Seunghun Kim, Youngjoo Shin
+
+ (IEEE International Conference on Cloud Computing (CLOUD))
+
+
+
 ## **TIMESLICE-SANDWICH: A GPU Side-channel Attack Exploiting Time-Sliced Scheduling**
 
 Jan 2026
