@@ -120,12 +120,6 @@ undergrad:
     interests: System Security, Binary Analysis, Fuzzing
     links:
       homepage: https://www.notion.so/Hojun-Lee-2a330016da9780888c4fe1bf63f7d0bb
-  - name: Jihoon Kwon
-    email: jimmyxyz
-    image: members/jimmyxyz.jpg
-    interests: Side-channel Attacks, System Security, Fuzzing
-    links:
-      homepage: https://cliff-noise-9bf.notion.site/Jihoon-Kwon-305fe5564fb48005b7fef298aee0977e
   - name: Jihu Cha
     email: stark0809
     image: members/stark0809.jpg
