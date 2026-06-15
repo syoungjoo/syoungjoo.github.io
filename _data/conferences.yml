@@ -104,7 +104,7 @@
   year: 2026
   link: https://uow-ic2.github.io/cans2026/index.html
   dblp: https://dblp.org/db/conf/cans/index.html
-  deadline: ["2026-06-10 23:59"]
+  deadline: ["2026-06-19 23:59"]
   date: November 23-25
   place: Wollongong, Australia
   tags: [SEC, CRYPTO, CONF, CORE-B]
@@ -153,12 +153,12 @@
 
 - name: FPS
   description: International Symposium on Foundations & Practice of Security
-  year: 2025
-  link: https://hub.imt-atlantique.fr/fps2025/
+  year: 2026
+  link: https://fps2026.uqo.ca/
   dblp: https://dblp.org/db/conf/fps/index.html
-  deadline: ["2025-09-15 23:59"]
-  date: November 25-27
-  place: Brest, France
+  deadline: ["2026-07-20 23:59"]
+  date: October 13-16
+  place: Gatineau, Canada
   tags: [SEC, PRIV, CRYPTO, CONF, CORE-B]
 
 - name: SecureComm
@@ -197,8 +197,8 @@
     - "%Y-11-30 23:59"
     - "%y-02-28 23:59"
   comment: Rolling deadline every quarter
-  date: TBA
-  place: TBA (Europe)
+  date: July 19-24
+  place: Delft, Netherlands
   tags: [PRIV, CONF, CORE-A]
 
 - name: SOUPS
@@ -534,7 +534,7 @@
   tags: [CRYPTO, SEC, CONF, PRIV, OTHERS]
 
 - name: DBSec
-  description: Conference on Data and Applications Security and Privacy
+  description: IFIP WG 11.3 Conference on Data and Applications Security and Privacy
   year: 2026
   link: https://dbsec2026.gmu.edu/
   dblp: https://dblp.org/db/conf/dbsec/index.html
@@ -607,13 +607,13 @@
   tags: [SEC, CONF, CORE-B]
 
 - name: CRISIS
-  year: 2025
+  year: 2026
   description: International Conference on Risks and Security of Internet and Systems
-  link: https://crisis2025.uqo.ca
+  link: https://sites.google.com/view/crisis26
   dblp: https://dblp.org/db/conf/crisis/index.html
-  deadline: ["2025-07-15 23:59"]
-  date: October 22-24
-  place: Gatineau, Canada
+  deadline: ["2026-07-15 23:59"]
+  date: November 25-27
+  place: Rabat, Morocco
   tags: [SEC, PRIV, CONF, CORE-C]
 
 - name: ProvSec
@@ -882,6 +882,15 @@
   place: San Jose, CA, USA
   tags: [SEC, CONF, OTHERS]
 
+- name: ICETCS
+  description: International Conference on Emerging Trends in Cybersecurity
+  year: 2026
+  link: https://ritechs.org/conferences/ICETCS2026
+  deadline: ["2026-07-31 23:59"]
+  date: October 12-13
+  place: Genoa, Italy
+  tags: [SEC, CONF, OTHERS]
+
 # Workshops
 
 - name: ANUBIS
@@ -889,9 +898,9 @@
   year: 2026
   link: https://superviz.inria.fr/anubis26/
   deadline:
-    - "2026-06-12 23:59"
+    - "2026-06-26 23:59"
   comment: Co-located with ESORICS 2026.
-  date: September 14-18
+  date: September 18
   place: Rome, Italy
   tags: [SEC, PRIV, SHOP, OTHERS]
 
@@ -1228,12 +1237,12 @@
 
 - name: SECAI
   description: Workshop on Security and Artificial Intelligance
-  year: 2024
-  link: https://sites.google.com/view/secai2024
-  deadline: ["2024-06-29 23:59"]
-  comment: Co-located with ESORICS 2024
-  date: September 16-20
-  place: Bydgoszcz, Poland
+  year: 2026
+  link: https://sites.google.com/view/secai2026
+  deadline: ["2026-06-17 23:59"]
+  comment: Co-located with ESORICS 2026
+  date: September 17-18
+  place: Rome, Italy
   tags: [SEC, PRIV, SHOP, OTHERS]
 
 - name: ASHES
@@ -1332,7 +1341,7 @@
   description: International Workshop on Security
   year: 2026
   link: https://www.iwsec.org/2026/index.html
-  deadline: ["2026-06-08 23:59"]
+  deadline: ["2026-06-18 23:59"]
   date: November 24-26
   place: Tokyo, JP
   tags: [SEC, PRIV, CRYPTO, SHOP, OTHERS]
@@ -1500,7 +1509,7 @@
   description: Workshop on Mobile and IoT Security Technologies
   year: 2026
   link: https://mist-workshop.github.io/
-  deadline: ["2026-06-30 23:59"]
+  deadline: ["2026-06-20 23:59"]
   comment: Co-located with ESORICS 2026
   date: September 14-18
   place: Rome, Italy
@@ -1963,11 +1972,11 @@
 
 - name: LightSEC
   description: International Workshop on Lightweight Cryptography for Security and Privacy
-  year: 2025
-  date: September 01-03
-  link: https://www.encrypt-on.com/activities/conferences/lightsec-2025/
-  deadline: ["2025-04-18 23:59"]
-  place: Istanbul, Turkiye
+  year: 2026
+  date: October 11
+  link: https://lightsec2026.com/
+  deadline: ["2026-06-19 23:59"]
+  place: Antalya, Turkiye
   tags: [SEC, PRIV, SHOP, OTHERS, CRYPTO]
 
 - name: IFIP WNDSS
@@ -2047,3 +2056,13 @@
   place: The Hague, The Netherlands
   tags: [SEC, SHOP, OTHERS]
   comment: Co-located with CCS 2026
+
+- name: RASE
+  description: Workshop on Reliable and trustworthy Automated Software Engineering
+  year: 2026
+  link: https://conf.researchr.org/home/ase-2026/rase-2026
+  comment: Co-located with ASE 2026
+  deadline: ["2026-07-24 23:59"]
+  date: October 12-16
+  place: Munich, Germany
+  tags: [SEC, SHOP, OTHERS]
