@@ -72,6 +72,12 @@ cv:
       position: Research Assistant
       date: 2006.3 – 2007.12
     publications:
+    - title: A Systematic Survey of Side-Channel Attack Surfaces in Intel TDX
+      authors:
+      - Taehun Kim
+      - Youngjoo Shin
+      date: '2026'
+      journal: Computers \& Security
     - title: Input-Agnostic Runtime Metric Based Memory Optimization for Serverless Functions
       authors:
       - Seunghun Kim
