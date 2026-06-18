@@ -97,6 +97,16 @@ System Security, Microarchitectural Side-channel Attacks, Transient Execution At
 
 
 # Publications
+## **A Systematic Survey of Side-Channel Attack Surfaces in Intel TDX**
+
+Jan 2026
+
+Taehun Kim, Youngjoo Shin
+
+ (Computers \& Security)
+
+
+
 ## **Input-Agnostic Runtime Metric Based Memory Optimization for Serverless Functions**
 
 Jan 2026
