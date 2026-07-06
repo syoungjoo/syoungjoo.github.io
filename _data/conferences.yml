@@ -268,12 +268,12 @@
 
 - name: Eurocrypt
   description: European Cryptology Conference
-  year: 2026
-  link: https://eurocrypt.iacr.org/2026/
+  year: 2027
+  link: https://eurocrypt.iacr.org/2027/
   dblp: https://dblp.org/db/conf/eurocrypt/index.html
-  deadline: ["2025-10-02 23:59"]
-  date: May 10-14
-  place: Rome, Italy
+  deadline: ["2026-09-17 23:59"]
+  date: April 11-15
+  place: Eindhoven, Netherlands
   tags: [CRYPTO, CONF, ASTAR]
 
 - name: SAC
@@ -400,7 +400,7 @@
 - name: CHES
   description: IACR Transactions on Cryptographic Hardware and Embedded Systems
   year: 2027
-  link: https://ches.iacr.org/2026/
+  link: https://ches.iacr.org/2027/
   dblp: https://dblp.org/db/journals/tches/index.html
   deadline:
     - "%Y-07-15 23:59"
@@ -466,13 +466,13 @@
 
 - name: DSN
   description: The International Conference on Dependable Systems and Networks
-  year: 2026
-  link: https://dsn2026.github.io/
+  year: 2027
+  link: https://dsn2027-berlin.github.io/
   dblp: https://dblp.org/db/conf/dsn/index.html
-  deadline: ["2025-12-04 23:59"]
+  deadline: ["2026-12-02 23:59"]
   comment: Abstract registration required (1 week before deadline AoE).
   date: June 22-25
-  place: Charlotte, NC, USA
+  place: Berlin, Germany
   tags: [SEC, CONF, CORE-A]
 
 - name: ACNS
@@ -641,14 +641,14 @@
 
 - name: HOST
   description: IEEE International Symposium on Hardware Oriented Security and Trust
-  year: 2026
-  link: http://www.hostsymposium.org/
+  year: 2027
+  link: https://host.conferences.computer.org/2027/
   dblp: https://dblp.org/db/conf/host/index.html
   deadline:
-    - "2025-08-26 23:59"
-    - "2025-12-08 23:59"
+    - "2026-07-23 11:59"
+    - "2026-11-08 23:59"
   comment: Abstract registration required (1 week before deadline AoE).
-  date: May 4-7
+  date: May 3-6
   place: Washington DC, USA
   tags: [SEC, CONF, OTHERS]
 
@@ -677,14 +677,24 @@
 
 - name: CASCADE
   description: Constructive Approaches for Security Analysis and Design of Embedded Systems
-  year: 2026
-  link: https://cascade-conference.org/index.html
+  year: 2027
+  link: https://cascade-conference.org/
   deadline:
-    - "2025-06-27 23:59"
-    - "2025-12-05 23:59"
-  date: March 30 - April 1
-  place: Regensburg, Germany
+    - "2026-07-03 23:59"
+    - "2026-11-10 23:59"
+  date: April 4-7
+  place: Heilbronn, Germany
   tags: [CRYPTO, CONF, OTHERS]
+
+- name: DSC
+  description: IEEE Conference on Dependable and Secure Computing
+  year: 2026
+  link: https://attend.ieee.org/dsc-2025/dsc-2026/
+  deadline: ["2026-07-15 23:59"]
+  comment: Abstract registration required (1 week before deadline AoE).
+  date: October 9-11
+  place: NYC, USA
+  tags: [SEC, CONF, OTHERS]
 
 # Software Engineering (Research Track only)
 - name: ICSE
@@ -845,12 +855,12 @@
   tags: [SEC, PRIV, CONF, CORE-C]
 
 - name: SaTML
-  year: 2026
-  date: March 23-25
+  year: 2027
+  date: TBD
   description: IEEE Conference on Secure and Trustworthy Machine Learning
   link: https://satml.org/
-  deadline: ["2025-09-24 23:59"]
-  place: Munich, Germany
+  deadline: ["2026-09-29 23:59"]
+  place: Reykjavik, Iceland
   tags: [SEC, PRIV, CONF, OTHERS]
 
 - name: NordSec
