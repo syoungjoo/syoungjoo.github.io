@@ -1,5 +1,4 @@
 # Security and Privacy
-
 - name: S&P (Oakland)
   year: 2027
   date: TBA
@@ -924,6 +923,17 @@
   place: Xi'an, China
   tags: [SEC, PRIV, CONF, CORE-C]
 
+- name: SECITC
+  description: International Conference on Security for Information Technology and Communications
+  year: 2026
+  link: https://secitc.eu/
+  dblp: https://dblp.uni-trier.de/db/conf/secitc/index.html
+  deadline: ["2026-09-07 23:59"] # must be a list
+  timezone: UTC
+  date: November 12-13
+  place: Bucharest, Romania
+  tags: [SEC, CRYPTO, CONF, OTHERS]
+
 # Workshops
 - name: HumSec
   description: Workshop on Human-Targeted Cyber Threats and Defenses
@@ -934,8 +944,6 @@
   comment: Co-located with ESORICS 2026
   place: Rome, Italy
   tags: [SEC, SHOP, OTHERS]
-
-
 
 - name: ANUBIS
   description: Assessment with New methodologies, Unified Benchmarks, and environments, of Intrusion detection and response Systems
@@ -1437,7 +1445,7 @@
   link: https://smartsp.eai-conferences.org/
   deadline:
     - "2026-05-08 23:59"
-    - "2026-07-16 23:59"
+    - "2026-07-23 23:59"
   date: November 5–6
   place: Detroit, MI, USA
   tags: [SEC, PRIV, CONF]
@@ -1464,12 +1472,12 @@
 
 - name: WAITI
   description: Workshop on AI for Cyber Threat Intelligence
-  year: 2025
+  year: 2026
   link: https://waiti-workshop.github.io/
-  deadline: ["2025-10-06 23:59"]
-  comment: Co-located with ACSAC 2025
-  date: December 8
-  place: Waikiki, Hawaii, USA
+  deadline: ["2026-10-05 23:59"]
+  comment: Co-located with ACSAC 2026
+  date: December 7
+  place: Los Angeles, California, USA
   tags: [SEC, PRIV, SHOP, OTHERS]
 
 - name: TAC
@@ -1589,7 +1597,7 @@
   year: 2026
   link: https://optimist-ose.org/ches26
   deadline:
-    - "2026-06-21 23:59"
+    - "2026-07-15 23:59"
   comment: Co-located with CHES 26.
   date: October 11
   place: Antalya, Türkiye
@@ -2011,7 +2019,8 @@
   year: 2026
   date: October 11
   link: https://lightsec2026.com/
-  deadline: ["2026-07-13 23:59"]
+  deadline: ["2026-07-17 23:59"]
+  comment: Co-located with CHES '26
   place: Antalya, Turkiye
   tags: [SEC, PRIV, SHOP, OTHERS, CRYPTO]
 
