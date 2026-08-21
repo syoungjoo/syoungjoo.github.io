@@ -107,6 +107,26 @@ Taehun Kim, Youngjoo Shin
 
 
 
+## **RandDelay: Mitigating Fine-Grained Timing-Based Controlled-Channel Attacks on Intel TDX via Randomized SEAMCALL Latency**
+
+Jan 2026
+
+Youngjoo Shin
+
+ (Electronics)
+
+
+
+## **Exploiting Intel Integrated GPU for Covert Channel Attack in the Cloud Computing**
+
+Jan 2026
+
+Taehun Kim, Youngjoo Shin
+
+ (IEICE Transactions on Information and Systems)
+
+
+
 ## **Input-Agnostic Runtime Metric Based Memory Optimization for Serverless Functions**
 
 Jan 2026
