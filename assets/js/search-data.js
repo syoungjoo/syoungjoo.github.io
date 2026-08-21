@@ -86,6 +86,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-sysdiver-lightweight-and-fast-static-analysis-for-windows-kernel-drivers-has-been-accepted-to-asiaccs-2026",
           title: 'Our paper SysDiver: Lightweight and Fast Static Analysis for Windows Kernel Drivers has...',
           description: "",
+          section: "News",},{id: "news-our-paper-supermicro-bmc의-oem-ipmi-명령-처리-구조-복원-및-취약점-분석-received-the-best-paper-award-at-wdsc-2026",
+          title: 'Our paper Supermicro BMC의 OEM IPMI 명령 처리 구조 복원 및 취약점 분석...',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
