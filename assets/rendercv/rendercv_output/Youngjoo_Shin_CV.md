@@ -97,6 +97,16 @@ System Security, Microarchitectural Side-channel Attacks, Transient Execution At
 
 
 # Publications
+## **AsyncMiss: Exploiting Failed Pathname Lookup for an Asynchronous Covert Channel**
+
+Jan 2026
+
+Hongkuk Yoon, Hodong Kim, Seunghee Shin, Youngjoo Shin, Junbeom Hur
+
+ (International Conference on Cryptology and Network Security)
+
+
+
 ## **A Systematic Survey of Side-Channel Attack Surfaces in Intel TDX**
 
 Jan 2026
@@ -104,16 +114,6 @@ Jan 2026
 Taehun Kim, Youngjoo Shin
 
  (Computers \& Security)
-
-
-
-## **RandDelay: Mitigating Fine-Grained Timing-Based Controlled-Channel Attacks on Intel TDX via Randomized SEAMCALL Latency**
-
-Jan 2026
-
-Youngjoo Shin
-
- (Electronics)
 
 
 
