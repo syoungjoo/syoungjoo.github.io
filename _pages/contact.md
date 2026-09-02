@@ -96,8 +96,8 @@ nav_order: 8
     <span class="val">
       syoungjoo [at] korea.ac.kr
       <span class="sub">Prof. Youngjoo Shin — general inquiries &amp; prospective students</span>
-      <div style="margin-top: 0.4rem;">taehunk [at] korea.ac.kr</div>
-      <span class="sub">Taehun Kim (Ph.D. student) — Lab Lead (랩장)</span>
+      <div style="margin-top: 0.4rem;">pch2180 [at] korea.ac.kr</div>
+      <span class="sub">Chanhee Park (Ph.D. student) — Lab Lead (랩장)</span>
     </span>
   </div>
 </div>
