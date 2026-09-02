@@ -1,0 +1,26 @@
+biography: |
+  Seyong Lee is an M.S. student in the Computer Systems Security Lab at Korea
+  University, advised by Prof. Youngjoo Shin. His research interests include
+  system security and network security.
+
+sections:
+  - heading: Education
+    type: timeline
+    items:
+      - { period: "2026 – present", desc: "M.S., School of Cybersecurity", where: "Korea University" }
+      - { period: "2009 – 2015", desc: "B.S. in Computer and Mathematics Education(Double Major)", where: "Sungkyunkwan University" }
+  - heading: Experience
+    type: timeline
+    items:
+      - { period: "2016 - present", desc: "Security Assessment T/F, Information Security Department / Senior Manager", where: "Korea Electric Power Corporation (KEPCO)"}
+      - { period: "2015 - 2016", desc: "IDC Network Team / Associate", where: "Hyundai Autoever"}
+
+  - heading: Certifications
+    type: bullets
+    items:
+      - Engineer Information Security
+      - Engineer Information Processing
+      - Engineer Information Communication
+      - Special-Level Information and Communication Construction Supervisor
+      - Engineer Construction Safety
+      - "Language: TOEIC 895, JLPT Level 3"

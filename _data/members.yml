@@ -105,14 +105,22 @@ ms:
     interests: Network Security, Cloud Security, Binary Analysis
     links:
       homepage: https://www.notion.so/CV-de3770dca0d28245a3be81086d4562a4
-
-undergrad:
+  - name: Seyong Lee
+    cohort: "52nd"
+    email: seyong919
+    image: members/seyong919.jpg
+    interests: System Security, Network Security
+    links:
+      homepage: https://seyonglee.notion.site/Seyong-Lee-3ced9fc4a3e280fea7bccefaf9f401bc
   - name: Hojun Lee
+    cohort: "52nd"
     email: leehojune
     image: members/leehojune.png
     interests: System Security, Binary Analysis, Fuzzing
     links:
       homepage: https://www.notion.so/Hojun-Lee-2a330016da9780888c4fe1bf63f7d0bb
+
+undergrad:
   - name: Jihu Cha
     email: stark0809
     image: members/stark0809.jpg
