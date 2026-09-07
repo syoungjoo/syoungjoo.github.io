@@ -1,4 +1,5 @@
 # Security and Privacy
+  
 - name: S&P (Oakland)
   year: 2027
   date: May 17-20
@@ -312,7 +313,7 @@
   year: 2027
   link: https://fc27.ifca.ai/
   dblp: https://dblp.org/db/conf/fc/index.html
-  deadline: ["2026-09-17 23:59"]
+  deadline: ["2026-09-24 23:59"]
   date: February 8–12
   place: Barbados
   tags: [SEC, CRYPTO, CONF, CORE-A]
@@ -510,14 +511,14 @@
 
 - name: SACMAT
   description: ACM Symposium on Access Control Models and Technologies
-  year: 2026
-  link: https://www.sacmat.org/2026/
+  year: 2027
+  link: https://www.sacmat.org/2027/
   dblp: https://dblp.org/db/conf/sacmat/index.html
   deadline: 
-    - "2025-10-27 23:59"
-    - "2026-03-06 23:59"
-  date: July 8-10
-  place: Waterloo, Canada
+    - "2026-10-30 23:59"
+    - "2027-02-12 23:59"
+  date: July 19-21
+  place: Durham, England, United Kingdom
   tags: [CRYPTO, SEC, CONF, PRIV, CORE-C]
 
 - name: ARES
@@ -557,7 +558,7 @@
   year: 2027
   link: https://acmweb2027.org/
   dblp: https://dblp.org/db/conf/www/index.html
-  deadline: ["2026-10-18 23:59"]
+  deadline: ["2026-10-25 23:59"]
   comment: Abstract registration required (1 week before deadline AoE).
   date: May 10-14
   place: Dublin, Ireland
@@ -603,6 +604,15 @@
   deadline: ["2026-02-24 23:59"]
   date: August 10-11
   place: Baltimore, USA
+  tags: [SEC, PRIV, CONF, OTHERS]
+
+- name: SAIS
+  description: USENIX Conference on Secure Agentic-AI Systems
+  year: 2027
+  link: https://www.usenix.org/conference/sais27
+  deadline: ["2027-02-04 23:59"]
+  date: June 7–8
+  place: Santa Clara, CA, USA
   tags: [SEC, PRIV, CONF, OTHERS]
 
 - name: NCA
@@ -1116,7 +1126,7 @@
   description: Workshop on Recent Advances in Resilient and Trustworthy MAchine learning-driveN systems
   year: 2026
   link: https://artman-workshop.gitlab.io/
-  deadline: ["2026-08-31 23:59"]
+  deadline: ["2026-09-15 23:59"]
   comment: In conjunction with ACSAC
   date: December 8
   place: Los Angeles, CA, USA
