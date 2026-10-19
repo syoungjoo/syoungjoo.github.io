@@ -422,6 +422,18 @@
   place: Cancún, Mexico
   tags: [CRYPTO, CONF, JRN, CORE-A]
 
+- name: CiC
+  description: IACR Communications in Cryptology
+  year: 2026
+  link: https://cic.iacr.org/page/callforpapers
+  deadline:
+    - "2026-02-02 23:59"
+    - "2026-05-04 23:59"
+    - "2026-07-27 23:59"
+    - "2026-10-26 23:59"
+  comment: "Volume 3, 2026"
+  tags: [CRYPTO, JRN]
+
 - name: C&C
   description: IMA International Conference on Cryptography and Coding
   year: 2026
@@ -499,14 +511,15 @@
 
 - name: DIMVA
   description: The Conference on Detection of Intrusions and Malware & Vulnerability Assessment
-  year: 2026
-  link: https://www.dimva.org/dimva2026/
+  year: 2027
+  link: https://www.dimva.org/dimva2027/
   dblp: https://dblp.org/db/conf/dimva/index.html
   deadline:
-    - "2025-12-03 23:59"
-    - "2026-02-11 23:59"
-  date: July 01-03
-  place: Chania, Greece
+    - "2026-12-10 23:59"
+    - "2027-02-18 23:59"
+  comment: Abstract registration required (1 week before deadline AoE).
+  date: June 30 - July 2
+  place: Enschede, The Netherlands
   tags: [SEC, CONF, CORE-B]
 
 - name: SACMAT
@@ -585,25 +598,27 @@
   tags: [SEC, PRIV, CONF, OTHERS]
 
 - name: PAM
-  year: 2026
-  date: "March 23-25"
+  year: 2027
+  date: "March 22-24"
   description: Passive and Active Measurement Conference
   dblp: https://dblp.org/db/conf/pam/index.html
-  link: https://pam2026.at/
-  deadline: ["2025-10-08 23:59"]
+  link: https://pam2027.furg.br/
+  deadline: ["2026-11-06 23:59"]
   comment: Abstract registration required (1 week before deadline AoE).
   place: Virtual
   tags: [SEC, PRIV, CONF, CORE-B]
 
 - name: VehicleSec
   description: USENIX Symposium on Vehicle Security and Privacy
-  year: 2026
-  link: https://www.usenix.org/conference/vehiclesec26
+  year: 2027
+  link: https://www.usenix.org/conference/vehiclesec27
   dblp: https://dblp.org/db/conf/vehiclesec/index.html
-  comment: Co-located with USENIX Security 2026
-  deadline: ["2026-02-24 23:59"]
-  date: August 10-11
-  place: Baltimore, USA
+  comment: Co-located with USENIX Security 2027
+  deadline:
+    - "2026-12-15 23:59"
+    - "2027-03-11 23:59"
+  date: August 9-10
+  place: Denver, CO, USA
   tags: [SEC, PRIV, CONF, OTHERS]
 
 - name: SAIS
@@ -646,16 +661,15 @@
   tags: [SEC, PRIV, CONF, CORE-C]
 
 - name: IMC
-  year: 2026
+  year: 2027
   description: ACM Internet Measurement Conference
-  link: https://conferences.sigcomm.org/imc/2026/
+  link: https://conferences.sigcomm.org/imc/2027/
   dblp: https://dblp.org/db/conf/imc/index.html
   deadline:
-    - "2025-11-20 23:59"
-    - "2026-04-29 23:59"
+    - "2026-11-17 23:59"
   comment: Abstract registration required (1 week before deadline AoE).
-  date: November 3-6
-  place: Karlsruhe, Germany
+  date: October 25-29
+  place: Atlanta, GA, USA
   tags: [SEC, PRIV, CONF, CORE-A]
 
 - name: HOST
