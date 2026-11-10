@@ -25,6 +25,7 @@ groups:
         title: Remote Code Execution in Supermicro BMC Firmware
         tag: rce
         reporter: Jihye Lee
+        category: Binary analysis
         desc: |
           An OS command injection vulnerability exists because of insufficient input
           filtering. An attacker can inject a command payload into a BMC function; the
@@ -35,6 +36,7 @@ groups:
         title: Denial of Service in Supermicro BMC Firmware
         tag: dos
         reporter: Jihye Lee
+        category: Binary analysis
         desc: |
           An authenticated BMC administrator can directly read/write the PHY (MII) registers
           of the management-network NIC through an undocumented OEM command.
