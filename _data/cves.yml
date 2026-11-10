@@ -18,6 +18,28 @@
 kve_portal: https://knvd.krcert.or.kr/
 
 groups:
+  - year: 2026
+    items:
+      - id: CVE-2026-16521
+        url: https://nvd.nist.gov/vuln/detail/CVE-2026-16521
+        title: Remote Code Execution in Supermicro BMC Firmware
+        tag: rce
+        reporter: Jihye Lee
+        category: Binary analysis
+        desc: |
+          An OS command injection vulnerability exists because of insufficient input
+          filtering. An attacker can inject a command payload into a BMC function; the
+          payload may execute when the related service is restarted.
+
+      - id: CVE-2026-115187
+        url: https://nvd.nist.gov/vuln/detail/CVE-2026-115187
+        title: Denial of Service in Supermicro BMC Firmware
+        tag: dos
+        reporter: Jihye Lee
+        category: Binary analysis
+        desc: |
+          An authenticated BMC administrator can directly read/write the PHY (MII) registers
+          of the management-network NIC through an undocumented OEM command.
   - year: 2025
     items:
       - id: KVE-2025-0470
