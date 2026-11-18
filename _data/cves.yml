@@ -18,16 +18,135 @@
 kve_portal: https://knvd.krcert.or.kr/
 
 groups:
-  - year: 2025
+  - year: 2026
     items:
-      - id: KVE-2025-0470
-        url: https://knvd.krcert.or.kr/
-        title: Remote Code Execution in AhnLab V3 Lite
+      - id: CVE-2026-124019
+        url: https://nvd.nist.gov/vuln/detail/CVE-2026-124019
+        title: VB-Audio VB-CABLE Kernel Driver Out-of-Bounds Write
+        tag: lpe
+        reporter: Chanhee Park, Hojun Lee
+        category: Binary analysis
+        desc: |
+          VB-Audio VB-CABLE virtual audio device kernel streaming driver (vbaudio_cable64_win10.sys
+          10.0.10011.16384) contains out-of-bounds read and write vulnerabilities in its
+          KSPROPSETID_Audio MUTE, VOLUMELEVEL, and PEAKMETER2 property handlers that allow a local
+          standard user to supply an all-channels sentinel value which is improperly used
+          as a loop terminator or array index instead of being bounds-checked. Attackers
+          can exploit the accessible low-integrity KS filter device object to write
+          attacker-controlled values sequentially into kernel memory corrupting kernel globals
+          and object pointers, or read past an array boundary to leak kernel memory, resulting
+          in local privilege escalation or denial of service via a kernel bug check.
+
+      - id: CVE-2026-75882
+        url: https://nvd.nist.gov/vuln/detail/CVE-2026-75882
+        title: VB-Audio VB-CABLE Kernel Driver Out-of-Bounds Write
+        tag: information disclosure
+        reporter: Chanhee Park, Hojun Lee
+        category: Binary analysis
+        desc: |
+          An improper access control vulnerability in ESET Endpoint Encryption and ESET Full Disk
+          Encryption allow attacker with standard user permissions access a device interface
+          belonging to a privileged kernel driver and send specially crafted requests.
+
+      - id: CVE-2026-69403
+        url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69403
+        title: Windows SMB Server Information Disclosure Vulnerability
+        tag: information disclosure
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Missing authorization in Windows SMB Server allows an authorized attacker to disclose 
+          information locally.
+
+      - id: CVE-2026-69548
+        url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69548
+        title: Windows RNDIS Information Disclosure Vulnerability
+        tag: information disclosure
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Heap-based buffer overflow in Windows RNDIS allows an unauthorized attacker to disclose
+          information with a physical attack.
+
+      - id: CVE-2026-68839
+        url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68839
+        title: Windows USB Mass Storage Class Driver Remote Code Execution Vulnerability
         tag: rce
         reporter: Chanhee Park
         category: Binary analysis
         desc: |
-          Remote code execution vulnerability identified in AhnLab V3 Lite, a
+          Heap-based buffer overflow in Windows USB Mass Storage Class Driver allows an unauthorized
+          attacker to execute code over a network.
+
+      - id: CVE-2026-85341
+        url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85341
+        title: Windows USB Video Driver Elevation of Privilege Vulnerability
+        tag: lpe
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Heap-based buffer overflow in Windows USB Video Driver allows an authorized attacker to
+          elevate privileges locally.
+
+      - id: CVE-2026-108403
+        url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-108403
+        title: Windows Kernel Elevation of Privilege Vulnerability
+        tag: lpe
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Use after free in Windows Kernel allows an authorized attacker to elevate privileges locally.
+
+      - id: CVE-2026-112990
+        url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-112990
+        title: Windows USB Video Driver Elevation of Privilege Vulnerability
+        tag: lpe
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Buffer over-read in Windows USB Video Driver allows an authorized attacker to elevate
+          privileges locally.
+
+      - id: CVE-2026-119851
+        url: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-119851
+        title: Windows Storage Spaces Controller Elevation of Privilege Vulnerability
+        tag: lpe
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Time-of-check time-of-use (toctou) race condition in Windows Storage Spaces Controller 
+          allows an authorized attacker to elevate privileges locally.
+
+      - id: CVE-2026-16521
+        url: https://nvd.nist.gov/vuln/detail/CVE-2026-16521
+        title: Remote Code Execution in Supermicro BMC Firmware
+        tag: rce
+        reporter: Jihye Lee
+        category: Binary analysis
+        desc: |
+          An OS command injection vulnerability exists because of insufficient input
+          filtering. An attacker can inject a command payload into a BMC function; the
+          payload may execute when the related service is restarted.
+
+      - id: CVE-2026-115187
+        url: https://nvd.nist.gov/vuln/detail/CVE-2026-115187
+        title: Denial of Service in Supermicro BMC Firmware
+        tag: dos
+        reporter: Jihye Lee
+        category: Binary analysis
+        desc: |
+          An authenticated BMC administrator can directly read/write the PHY (MII) registers
+          of the management-network NIC through an undocumented OEM command.
+  - year: 2025
+    items:
+      - id: KVE-2025-0470
+        url: https://knvd.krcert.or.kr/
+        title: Out-of-bounds Write in AhnLab V3 Lite
+        tag: lpe
+        reporter: Chanhee Park
+        category: Binary analysis
+        desc: |
+          Out-of-bounds Write  vulnerability identified in AhnLab V3 Lite, a
           consumer anti-malware product widely deployed in Korea. Reported to
           the vendor and coordinated through KrCERT/CC.
 
@@ -43,13 +162,13 @@ groups:
 
       - id: KVE-2025-0472
         url: https://knvd.krcert.or.kr/
-        title: Remote Code Execution in AhnLab V3 Lite
-        tag: rce
+        title: Out-of-bounds Read in AhnLab V3 Lite
+        tag: dos
         reporter: Chanhee Park
         category: Binary analysis
         desc: |
-          Second RCE primitive affecting AhnLab V3 Lite, distinct from
-          KVE-2025-0470. Disclosed in coordination with the vendor.
+          Out-of-bounds Read vulnerability identified in AhnLab V3 Lite. Disclosed in
+          coordination with the vendor.
 
       - id: KVE-2025-0473
         url: https://knvd.krcert.or.kr/
@@ -130,8 +249,8 @@ groups:
       - id: CVE-2024-37027
         url: https://nvd.nist.gov/vuln/detail/CVE-2024-37027
         title: Improper Input Validation in Intel Developer Toolkits
-        tag: rce
-        tag_label: Local DoS / RCE
+        tag: dos
+        tag_label: OOB Write / DOS
         reporter: Chanhee Park
         category: Driver / toolchain
         desc: |
