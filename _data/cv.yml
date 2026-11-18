@@ -72,6 +72,21 @@ cv:
       position: Research Assistant
       date: 2006.3 – 2007.12
     publications:
+    - title: 'PaC-MDU: Prime-and-Count Workload Fingerprinting on the Apple Silicon M3 Memory Disambiguation
+        Unit'
+      authors:
+      - Serin Kim
+      - Taehun and Kim
+      - Youngjoo Shin
+      date: '2026'
+      journal: IEEE Access
+    - title: 'AsyncMiss: Exploiting Failed Pathname Lookup for an Asynchronous Covert Channel'
+      authors:
+      - Seonghun Park
+      - Chanhee Park
+      - Youngjoo Shin
+      date: '2026'
+      journal: International Conference on ICT Convergence (ICTC)
     - title: 'AsyncMiss: Exploiting Failed Pathname Lookup for an Asynchronous Covert Channel'
       authors:
       - Hongkuk Yoon
