@@ -97,6 +97,26 @@ System Security, Microarchitectural Side-channel Attacks, Transient Execution At
 
 
 # Publications
+## **PaC-MDU: Prime-and-Count Workload Fingerprinting on the Apple Silicon M3 Memory Disambiguation Unit**
+
+Jan 2026
+
+Serin Kim, Taehun and Kim, Youngjoo Shin
+
+ (IEEE Access)
+
+
+
+## **AsyncMiss: Exploiting Failed Pathname Lookup for an Asynchronous Covert Channel**
+
+Jan 2026
+
+Seonghun Park, Chanhee Park, Youngjoo Shin
+
+ (International Conference on ICT Convergence (ICTC))
+
+
+
 ## **AsyncMiss: Exploiting Failed Pathname Lookup for an Asynchronous Covert Channel**
 
 Jan 2026
