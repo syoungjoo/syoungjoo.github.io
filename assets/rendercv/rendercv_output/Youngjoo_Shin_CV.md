@@ -107,7 +107,7 @@ Serin Kim, Taehun and Kim, Youngjoo Shin
 
 
 
-## **AsyncMiss: Exploiting Failed Pathname Lookup for an Asynchronous Covert Channel**
+## **Vulnerability-Oriented Backward Dependence Analysis of Decompiled Binaries Guided by LLM-Generated Summaries**
 
 Jan 2026
 
